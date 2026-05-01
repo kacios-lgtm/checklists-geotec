@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklists Geotec Boyles Bros</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul: #1B3A6B;
+  --azul-medio: #2E5FA3;
+  --amarillo: #F5C400;
+  --verde: #198754;
+  --rojo: #dc3545;
+  --gris: #6c757d;
+  --verde-claro: #d4edda;
+  --rojo-claro: #f8d7da;
+  --gris-claro: #e2e3e5;
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --border: #dee2e6;
+  --text: #212529;
+  --text-sec: #6c757d;
+  --font: 'IBM Plex Sans', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); font-size: 15px; }
+
+/* NAV */
+.nav { background: var(--azul); padding: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.nav-inner { max-width: 780px; margin: 0 auto; display: flex; align-items: center; gap: 0; }
+.nav-brand { padding: 14px 20px; color: #fff; font-weight: 600; font-size: 15px; border-right: 1px solid rgba(255,255,255,0.15); white-space: nowrap; }
+.nav-brand span { color: var(--amarillo); }
+.nav-tabs { display: flex; flex: 1; overflow-x: auto; }
+.nav-tab { padding: 14px 18px; color: rgba(255,255,255,0.65); font-size: 13px; cursor: pointer; border: none; background: none; white-space: nowrap; border-bottom: 3px solid transparent; transition: all 0.15s; font-family: var(--font); }
+.nav-tab:hover { color: #fff; background: rgba(255,255,255,0.07); }
+.nav-tab.active { color: var(--amarillo); border-bottom-color: var(--amarillo); }
+
+/* PAGES */
+.page { display: none; max-width: 780px; margin: 0 auto; padding: 20px 16px 40px; }
+.page.active { display: block; }
+
+/* HOME */
+.home-hero { background: var(--azul); border-radius: 12px; padding: 28px 28px 24px; color: #fff; margin-bottom: 20px; }
+.home-hero h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+.home-hero p { font-size: 13px; opacity: 0.7; }
+.home-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.home-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; cursor: pointer; transition: all 0.15s; }
+.home-card:hover { border-color: var(--azul-medio); box-shadow: 0 4px 12px rgba(27,58,107,0.12); transform: translateY(-1px); }
+.home-card-icon { font-size: 28px; margin-bottom: 10px; }
+.home-card h3 { font-size: 14px; font-weight: 600; color: var(--azul); margin-bottom: 4px; }
+.home-card p { font-size: 12px; color: var(--text-sec); }
+.home-card .badge-count { display: inline-block; background: var(--azul); color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-top: 8px; font-family: var(--mono); }
+
+/* CHECKLIST PAGE */
+.cl-header { background: var(--azul); border-radius: 10px; padding: 16px 20px; color: #fff; margin-bottom: 16px; }
+.cl-header h2 { font-size: 16px; font-weight: 600; margin-bottom: 3px; }
+.cl-header p { font-size: 11px; opacity: 0.65; }
+.cl-header .conn { display: inline-flex; align-items: center; gap-5px; margin-top: 6px; background: rgba(255,255,255,0.12); padding: 3px 10px; border-radius: 20px; font-size: 11px; }
+
+.meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.meta-grid input, .meta-grid select {
+  width: 100%; padding: 8px 12px;
+  border: 1px solid var(--border); border-radius: 7px;
+  background: var(--card); color: var(--text); font-size: 13px; font-family: var(--font);
+  transition: border-color 0.15s;
+}
+.meta-grid input:focus, .meta-grid select:focus { outline: none; border-color: var(--azul-medio); }
+.meta-grid input::placeholder { color: #adb5bd; }
+
+.legend { display: flex; gap: 14px; padding: 10px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-sec); }
+
+.stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 10px; }
+.stat { text-align: center; padding: 10px 8px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; }
+.stat-n { font-size: 22px; font-weight: 600; font-family: var(--mono); }
+.stat-l { font-size: 11px; color: var(--text-sec); margin-top: 2px; }
+.sB { color: var(--verde); } .sM { color: var(--rojo); } .sNA { color: var(--gris); }
+
+.progress-wrap { margin-bottom: 14px; }
+.progress-bar { background: #e9ecef; border-radius: 4px; height: 6px; overflow: hidden; margin-bottom: 5px; }
+.progress-fill { height: 100%; background: var(--azul); border-radius: 4px; transition: width 0.3s; }
+.prog-label { font-size: 12px; color: var(--text-sec); font-family: var(--mono); }
+
+/* TABS */
+.cl-tabs { display: flex; border-bottom: 1px solid var(--border); margin-bottom: 0; background: var(--card); border-radius: 8px 8px 0 0; overflow: hidden; }
+.cl-tab { flex: 1; padding: 11px 8px; text-align: center; font-size: 13px; cursor: pointer; color: var(--text-sec); border: none; background: none; border-bottom: 2px solid transparent; transition: all 0.15s; font-family: var(--font); }
+.cl-tab:hover { background: var(--bg); }
+.cl-tab.active { color: var(--azul); border-bottom-color: var(--azul); font-weight: 500; }
+.cl-tab-content { display: none; background: var(--card); border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; padding: 14px; margin-bottom: 16px; }
+.cl-tab-content.active { display: block; }
+
+/* ITEMS */
+.sec-title { background: var(--azul); color: #fff; padding: 8px 14px; font-size: 12px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.3px; }
+.sec-title span { opacity: 0.6; font-family: var(--mono); font-size: 11px; }
+.item-card { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+.item-row { display: grid; grid-template-columns: 32px 1fr auto; gap: 8px; align-items: center; padding: 8px 10px; border-bottom: 1px solid #f1f3f5; transition: background 0.1s; }
+.item-row:hover { background: #f8f9fa; }
+.item-row:last-child { border-bottom: none; }
+.item-num { font-size: 11px; color: #adb5bd; text-align: center; font-family: var(--mono); }
+.item-desc { font-size: 13px; line-height: 1.4; }
+.item-action { font-size: 11px; color: #adb5bd; margin-bottom: 2px; }
+.item-controls { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+.item-badges { display: flex; gap: 3px; }
+
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  font-size: 11px; font-weight: 500; cursor: pointer; border: none;
+  flex-shrink: 0; transition: transform 0.1s, box-shadow 0.1s;
+  font-family: var(--mono);
+}
+.badge:hover { transform: scale(1.12); }
+.bB { background: var(--verde-claro); color: #155724; }
+.bM { background: var(--rojo-claro); color: #721c24; }
+.bNA { background: var(--gris-claro); color: #383d41; }
+.bB.sel { background: var(--verde); color: #fff; box-shadow: 0 0 0 2px var(--verde); }
+.bM.sel { background: var(--rojo); color: #fff; box-shadow: 0 0 0 2px var(--rojo); }
+.bNA.sel { background: var(--gris); color: #fff; box-shadow: 0 0 0 2px var(--gris); }
+
+.obs-input {
+  width: 130px; padding: 4px 8px;
+  border: 1px solid var(--border); border-radius: 5px;
+  font-size: 11px; background: var(--bg); color: var(--text); font-family: var(--font);
+}
+.obs-input::placeholder { color: #adb5bd; }
+
+/* ALERT */
+.alert-malo { display: none; background: var(--rojo-claro); border: 1px solid #f5c6cb; color: #721c24; padding: 10px 14px; border-radius: 7px; font-size: 12px; margin-bottom: 12px; }
+
+/* MALOS TAB */
+.malos-hdr { display: grid; grid-template-columns: 44px 1fr 130px; gap: 8px; padding: 7px 0; font-size: 11px; color: var(--text-sec); font-weight: 500; border-bottom: 1px solid var(--border); }
+.malos-row { display: grid; grid-template-columns: 44px 1fr 130px; gap: 8px; padding: 8px 0; border-bottom: 1px solid #f1f3f5; font-size: 12px; align-items: center; }
+.mi { padding: 5px 8px; border: 1px solid var(--border); border-radius: 5px; font-size: 12px; background: var(--bg); color: var(--text); width: 100%; font-family: var(--font); }
+.num-malo { font-weight: 600; color: var(--rojo); font-family: var(--mono); }
+
+/* FIRMAS */
+.firma-area label { font-size: 12px; color: var(--text-sec); display: block; margin-bottom: 4px; margin-top: 12px; }
+.firma-area input, .firma-area textarea {
+  width: 100%; padding: 8px 12px;
+  border: 1px solid var(--border); border-radius: 7px;
+  background: var(--bg); color: var(--text); font-size: 13px; font-family: var(--font);
+}
+.firma-area textarea { min-height: 70px; resize: vertical; }
+
+/* BTN */
+.btn-submit {
+  width: 100%; padding: 13px;
+  background: var(--azul); color: #fff;
+  border: none; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  margin-top: 14px; transition: opacity 0.15s;
+  font-family: var(--font); letter-spacing: 0.3px;
+}
+.btn-submit:hover { opacity: 0.88; }
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.spinner { display: none; text-align: center; padding: 10px; font-size: 13px; color: var(--text-sec); }
+.success-msg { display: none; padding: 12px; border-radius: 7px; text-align: center; font-size: 13px; margin-top: 10px; }
+.success-ok { background: var(--verde-claro); color: #155724; }
+.success-err { background: var(--rojo-claro); color: #721c24; }
+
+.role-selector { display: flex; gap: 8px; margin-bottom: 14px; }
+.role-btn {
+  flex: 1; padding: 9px; border: 1px solid var(--border); border-radius: 7px;
+  font-size: 13px; cursor: pointer; background: var(--card);
+  color: var(--text-sec); transition: all 0.15s; text-align: center; font-family: var(--font);
+}
+.role-btn.active { background: var(--azul); color: #fff; border-color: var(--azul); }
+
+.empty-state { padding: 24px; text-align: center; color: var(--text-sec); font-size: 13px; }
+
+@media (max-width: 500px) {
+  .home-cards { grid-template-columns: 1fr; }
+  .meta-grid { grid-template-columns: 1fr; }
+  .obs-input { width: 100px; }
+  .nav-brand { font-size: 13px; padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">⬡ <span>GEOTEC</span> Checklists</div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showPage('home',this)">Inicio</button>
+      <button class="nav-tab" onclick="showPage('cl1',this)">CS-3001 RH Frontal</button>
+      <button class="nav-tab" onclick="showPage('cl2',this)">Herramientas DDH</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="home-hero">
+    <h1>Checklists Digitales</h1>
+    <p>Geotec Boyles Bros S.A. — Sistema de verificación operacional en línea</p>
+  </div>
+  <div class="home-cards">
+    <div class="home-card" onclick="showPage('cl1', document.querySelectorAll('.nav-tab')[1])">
+      <div class="home-card-icon">⚙️</div>
+      <h3>Check-List Diario CS-3001</h3>
+      <p>Con Rod Handler Frontal — PE-MANT-03/F11</p>
+      <div class="badge-count">139 ítems · Cada 12 hrs</div>
+    </div>
+    <div class="home-card" onclick="showPage('cl2', document.querySelectorAll('.nav-tab')[2])">
+      <div class="home-card-icon">🔧</div>
+      <h3>Herramientas Preventivas DDH</h3>
+      <p>Lista de verificación — MN-SER-05-F1</p>
+      <div class="badge-count">24 ítems · Por turno</div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKLIST 1: CS-3001 -->
+<div class="page" id="page-cl1">
+  <div class="cl-header">
+    <h2>Check-List Diario — CS-3001 con RH Frontal</h2>
+    <p>PE-MANT-03/F11 · Rev. 8 · Frecuencia: cada 12 horas</p>
+    <div class="conn">🟢 Conectado a Google Sheets</div>
+  </div>
+
+  <div class="role-selector">
+    <button class="role-btn active" onclick="setRole(this)">👷 Operador</button>
+    <button class="role-btn" onclick="setRole(this)">🦺 Supervisor</button>
+  </div>
+
+  <div class="meta-grid">
+    <input type="text" id="cl1-operador" placeholder="Nombre operador">
+    <input type="text" id="cl1-fecha" placeholder="Fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+    <input type="text" id="cl1-ch" placeholder="CH (código equipo)">
+    <input type="text" id="cl1-horometro" placeholder="Horómetro">
+    <input type="text" id="cl1-pozo" placeholder="Pozo">
+    <input type="text" id="cl1-faena" placeholder="Faena">
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="badge bB sel">B</div> Bueno</div>
+    <div class="legend-item"><div class="badge bM sel">M</div> Malo — detener equipo</div>
+    <div class="legend-item"><div class="badge bNA sel">NA</div> No aplica</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-n sB" id="cl1-cntB">0</div><div class="stat-l">Buenos</div></div>
+    <div class="stat"><div class="stat-n sM" id="cl1-cntM">0</div><div class="stat-l">Malos</div></div>
+    <div class="stat"><div class="stat-n sNA" id="cl1-cntNA">0</div><div class="stat-l">No aplica</div></div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="cl1-prog" style="width:0%"></div></div>
+    <div class="prog-label" id="cl1-prog-label">0 / 139 ítems completados</div>
+  </div>
+
+  <div class="cl-tabs">
+    <button class="cl-tab active" onclick="showClTab('cl1','items',this)">Checklist (139)</button>
+    <button class="cl-tab" id="cl1-tab-malos" onclick="showClTab('cl1','malos',this)">Ítems malos</button>
+    <button class="cl-tab" onclick="showClTab('cl1','firmas',this)">Firmas y envío</button>
+  </div>
+  <div class="cl-tab-content active" id="cl1-tab-items"><div id="cl1-items"></div></div>
+  <div class="cl-tab-content" id="cl1-tab-malos-content">
+    <div class="alert-malo" id="cl1-alert">⚠️ Ítems MALOS detectados. El equipo NO debe operar hasta su reparación.</div>
+    <div class="malos-hdr"><div>N°</div><div>Descripción / Observación</div><div>Plan de acción</div></div>
+    <div id="cl1-malos-list"></div>
+  </div>
+  <div class="cl-tab-content" id="cl1-tab-firmas">
+    <div class="firma-area">
+      <label>Supervisor de terreno</label>
+      <input type="text" id="cl1-sup-terreno" placeholder="Nombre completo">
+      <label>Supervisor de mantenimiento</label>
+      <input type="text" id="cl1-sup-mant" placeholder="Nombre completo">
+      <label>Observaciones generales del turno</label>
+      <textarea id="cl1-obs" placeholder="Ingrese observaciones..."></textarea>
+    </div>
+    <button class="btn-submit" id="cl1-btn" onclick="submitCL('cl1')">💾 Guardar y enviar a Google Sheets</button>
+    <div class="spinner" id="cl1-spinner">⏳ Enviando datos...</div>
+    <div class="success-msg" id="cl1-msg"></div>
+  </div>
+</div>
+
+<!-- CHECKLIST 2: HERRAMIENTAS -->
+<div class="page" id="page-cl2">
+  <div class="cl-header">
+    <h2>Lista de Verificación — Herramientas Preventivas DDH</h2>
+    <p>MN-SER-05-F1 · Rev. 4 · Nomenclatura: B / M / NA</p>
+    <div class="conn">🟢 Conectado a Google Sheets</div>
+  </div>
+
+  <div class="role-selector">
+    <button class="role-btn active" onclick="setRole(this)">👷 Operador / Perforista</button>
+    <button class="role-btn" onclick="setRole(this)">🦺 Supervisor</button>
+  </div>
+
+  <div class="meta-grid">
+    <input type="text" id="cl2-proyecto" placeholder="Proyecto">
+    <input type="text" id="cl2-equipo" placeholder="Equipo">
+    <input type="text" id="cl2-fecha" placeholder="Fecha" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+    <select id="cl2-turno"><option value="">Turno...</option><option>Turno día</option><option>Turno noche</option></select>
+    <input type="text" id="cl2-perforista" placeholder="Nombre perforista">
+    <input type="text" id="cl2-supervisor" placeholder="Nombre supervisor">
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="badge bB sel">B</div> Bueno</div>
+    <div class="legend-item"><div class="badge bM sel">M</div> Malo</div>
+    <div class="legend-item"><div class="badge bNA sel">NA</div> No aplica</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-n sB" id="cl2-cntB">0</div><div class="stat-l">Buenos</div></div>
+    <div class="stat"><div class="stat-n sM" id="cl2-cntM">0</div><div class="stat-l">Malos</div></div>
+    <div class="stat"><div class="stat-n sNA" id="cl2-cntNA">0</div><div class="stat-l">No aplica</div></div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="cl2-prog" style="width:0%"></div></div>
+    <div class="prog-label" id="cl2-prog-label">0 / 24 ítems completados</div>
+  </div>
+
+  <div class="cl-tabs">
+    <button class="cl-tab active" onclick="showClTab('cl2','items',this)">Herramientas (24)</button>
+    <button class="cl-tab" id="cl2-tab-malos" onclick="showClTab('cl2','malos',this)">Malos</button>
+    <button class="cl-tab" onclick="showClTab('cl2','firmas',this)">Firmas y envío</button>
+  </div>
+  <div class="cl-tab-content active" id="cl2-tab-items"><div id="cl2-items"></div></div>
+  <div class="cl-tab-content" id="cl2-tab-malos-content">
+    <div class="alert-malo" id="cl2-alert">⚠️ Herramientas en estado MALO. Deben repararse o reemplazarse antes de operar.</div>
+    <div class="malos-hdr"><div>N°</div><div>Herramienta / Observación</div><div>Plan de acción</div></div>
+    <div id="cl2-malos-list"></div>
+  </div>
+  <div class="cl-tab-content" id="cl2-tab-firmas">
+    <div class="firma-area">
+      <label>Observaciones generales del turno</label>
+      <textarea id="cl2-obs" placeholder="Ingrese observaciones..."></textarea>
+    </div>
+    <button class="btn-submit" id="cl2-btn" onclick="submitCL('cl2')">💾 Guardar y enviar a Google Sheets</button>
+    <div class="spinner" id="cl2-spinner">⏳ Enviando datos...</div>
+    <div class="success-msg" id="cl2-msg"></div>
+  </div>
+</div>
+
+<script>
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxdlse-WSe2-OpEOxrVNBJqTh3J3330Qkx9AXHbRjlr_TO90QolsH08uM_NyNtDIOA9Ig/exec';
+
+// ── DATOS ──────────────────────────────────────────────
+const CL1_SECCIONES = [
+  {s:"Equipo general",items:[{n:1,a:"Revisar",d:"Adhesivos próxima mantención"},{n:2,a:"Revisar",d:"Número identificación cliente"},{n:3,a:"Revisar",d:"Estado de adhesivos y señaléticas"},{n:4,a:"Realizar",d:"Revisión de pernos sueltos"},{n:5,a:"Revisar",d:"Estado estructura en general"}]},
+  {s:"Sistema eléctrico",items:[{n:6,a:"Revisar",d:"Estado de conexión de puesta a tierra eléctrica"},{n:7,a:"Verificar",d:"Profundidad de barra cooper en el piso (50 cm)"},{n:8,a:"Revisar",d:"Funcionamiento paradas de emergencia en consola y laterales"},{n:9,a:"Revisar",d:"Funcionamiento de corta corriente"},{n:10,a:"Revisar",d:"Iluminación equipo sonda"},{n:11,a:"Revisar",d:"Baliza y pértiga"},{n:12,a:"Revisar",d:"Funcionamiento rotación cero cabezal rotación (inter-lock)"},{n:13,a:"Revisar",d:"Estado de alarma de movimiento de cabezal rotación"},{n:14,a:"Revisar",d:"Estado y funcionamiento de luces de camión"},{n:15,a:"Revisar",d:"Switch de bloqueo huinche principal"},{n:16,a:"Revisar",d:"Estado de controles tablero operación"}]},
+  {s:"Motor Diésel",items:[{n:17,a:"Realizar",d:"Verificación visual del estado del motor diésel"},{n:18,a:"Revisar",d:"Fugas de aceite motor"},{n:19,a:"Revisar",d:"Nivel de aceite motor diesel sonda"},{n:20,a:"Revisar",d:"Fugas de refrigerante"},{n:21,a:"Revisar",d:"Nivel de refrigerante"},{n:22,a:"Revisar",d:"Filtro Racor separador de agua"},{n:23,a:"Revisar",d:"Estado de mangueras y abrazaderas del sistema de admisión de aire"},{n:24,a:"Revisar",d:"Estado de correa (suelta, cortada y/o desgastada)"},{n:25,a:"Revisar",d:"Nivel de combustible"}]},
+  {s:"Sistema hidráulico",items:[{n:26,a:"Revisar",d:"Nivel de aceite hidráulico"},{n:27,a:"Revisar",d:"Fugas de aceite hidráulico en conexiones y juntas"},{n:28,a:"Revisar",d:"Estado de indicadores de saturación filtros hidráulicos"},{n:29,a:"Realizar",d:"Drenaje de filtro de presurización de estanque"},{n:30,a:"Revisar",d:"Estado de mangueras hidráulicas sueltas o con desgastes"}]},
+  {s:"Huinche principal",items:[{n:31,a:"Realizar",d:"Verificación visual del estado de huinche principal"},{n:32,a:"Revisar",d:"Estado de rodillo y guía del tambor del cable"},{n:33,a:"Revisar",d:"Estado del cable principal"},{n:34,a:"Revisar",d:"Fugas de aceite huinche principal"},{n:35,a:"Revisar",d:"Estado de protección de huinche principal"},{n:36,a:"Revisar",d:"Estado de terminal del cable (G-416)"}]},
+  {s:"Huinche wire line",items:[{n:37,a:"Realizar",d:"Verificación visual del estado de huinche wire line"},{n:38,a:"Realizar",d:"Lubricación de sin fin del ordenador de cable"},{n:39,a:"Realizar",d:"Lubricación de rodamiento enrollador de cable"},{n:40,a:"Revisar",d:"Estado de protección de huinche wire line"},{n:41,a:"Revisar",d:"Estado de cadena transmisión motor hidráulico - tambor de huinche"},{n:42,a:"Revisar",d:"Estado de cable wireline"}]},
+  {s:"Torre perforación",items:[{n:43,a:"Realizar",d:"Verificación visual del estado de torre de perforación"},{n:44,a:"Revisar",d:"Estado de poleas mástil"},{n:45,a:"Realizar",d:"Lubricación de poleas mástil"},{n:46,a:"Revisar",d:"Fisuras y/o pernos sueltos"},{n:47,a:"Revisar",d:"Base de cilindros de levante mástil"},{n:48,a:"Revisar",d:"Base de cilindro desplazamiento mástil"},{n:49,a:"Revisar",d:"Base de cilindro de avance"}]},
+  {s:"Bomba de lodo",items:[{n:50,a:"Realizar",d:"Verificación visual del estado de bomba de lodo"},{n:51,a:"Revisar",d:"Nivel de aceite de bomba de lodo"},{n:52,a:"Revisar",d:"Estado de mangueras bomba de lodo"},{n:53,a:"Revisar",d:"Estado de mallas seguridad mangueras bomba de lodo"},{n:54,a:"Revisar",d:"Estado de válvula de seguridad (calibrar 1000 PSI)"},{n:55,a:"Revisar",d:"Estado de anclaje de mallas de seguridad"},{n:56,a:"Revisar",d:"Estado de protección machón de acoplamiento de bomba de lodo"},{n:57,a:"Revisar",d:"Fugas de aceite"}]},
+  {s:"Cabeza de inyección",items:[{n:58,a:"Realizar",d:"Verificación visual del estado de cabeza de inyección"},{n:59,a:"Revisar",d:"Cabeza inyección lodo, grillete, hilos"},{n:60,a:"Lubricar",d:"Cabeza inyección lodo"}]},
+  {s:"Cabezal de rotación",items:[{n:61,a:"Realizar",d:"Verificación visual del estado de cabezal de rotación"},{n:62,a:"Revisar",d:"Flujo de aceite manguera transparente de lubricación"},{n:63,a:"Realizar",d:"Lubricación de puntos de engrase de Chuck"},{n:64,a:"Revisar",d:"Fugas de aceite"},{n:65,a:"Revisar",d:"Nivel aceite caja de transmisión"},{n:66,a:"Revisar",d:"Nivel aceite cabezal de rotación"},{n:67,a:"Revisar",d:"Estado de malla de seguridad"},{n:68,a:"Revisar",d:"Estado de mordazas del Chuck"}]},
+  {s:"Carro cabezal de rotación",items:[{n:69,a:"Revisar",d:"Pernos sueltos del carro de avance"},{n:70,a:"Realizar",d:"Lubricación de rodamientos del carro de avance"},{n:71,a:"Revisar",d:"Kit pasadores y bujes carro cabezal rotación"}]},
+  {s:"Cilindros nivelación",items:[{n:72,a:"Realizar",d:"Verificación visual del estado de los cilindros de nivelación"},{n:73,a:"Revisar",d:"Fugas hidráulicas"},{n:74,a:"Revisar",d:"Instalación y estado de pasadores en los 4 cilindros de nivelación"}]},
+  {s:"Cilindros levante torre",items:[{n:75,a:"Realizar",d:"Verificación visual del estado de los cilindros levante torre"},{n:76,a:"Revisar",d:"Fugas hidráulicas"}]},
+  {s:"Cilindros de avance",items:[{n:77,a:"Realizar",d:"Verificación visual del estado de cilindro de avance"},{n:78,a:"Revisar",d:"Fugas hidráulicas"},{n:79,a:"Revisar",d:"Estado de base y pasador de cilindro de avance"}]},
+  {s:"Cilindro desplazamiento torre",items:[{n:80,a:"Realizar",d:"Verificación visual del estado de cilindro desplazamiento torre"},{n:81,a:"Revisar",d:"Fugas hidráulicas"},{n:82,a:"Revisar",d:"Estado de base y pasador de cilindros levante mástil"}]},
+  {s:"Patas telescópicas inclinación torre",items:[{n:83,a:"Revisar",d:"Instalación y estado de pasadores cilindros mecánicos inclinación del mástil"}]},
+  {s:"Prensa de barras tipo UDR",items:[{n:84,a:"Realizar",d:"Verificación visual del estado de la prensa de barra tipo UDR"},{n:85,a:"Realizar",d:"Lubricación de prensa hidráulica"},{n:86,a:"Revisar",d:"Estado de mordazas y porta mordazas"},{n:87,a:"Revisar",d:"Estado de pasadores y seguros"},{n:88,a:"Realizar",d:"Revisión de estado de prensa hidráulica"}]},
+  {s:"Consola operación",items:[{n:89,a:"Revisar",d:"Sistema de presurización estanque de aceite"},{n:90,a:"Revisar",d:"Funcionamiento de manómetros"},{n:91,a:"Revisar",d:"Fugas de aceite hidráulico en comandos y válvulas"},{n:92,a:"Revisar",d:"Estado de llaves de bolas para agua"},{n:93,a:"Revisar",d:"Estado general de los comando hidráulicos"},{n:94,a:"Revisar",d:"Estado de panel de operación"}]},
+  {s:"Brazo manipulador rod handler",items:[{n:95,a:"Realizar",d:"Verificación visual del estado de brazo manipulador rod handler"},{n:96,a:"Revisar",d:"Cilindro de levante de brazo manipulador 5\""},{n:97,a:"Lubricar",d:"Pasador pivote de brazo manipulador"},{n:98,a:"Revisar",d:"Seguros de pasador de angulación de brazo manipulador"},{n:99,a:"Revisar",d:"Perno de regulación de tope de brazo manipulador"},{n:100,a:"Revisar",d:"Pasadores y seguros de cilindro levante brazo manipulador"},{n:101,a:"Revisar",d:"Cilindro hidráulico gatillo"},{n:102,a:"Revisar",d:"Estructura de gatillo"},{n:103,a:"Revisar",d:"Seguro mecánico"},{n:104,a:"Revisar",d:"Pasadores de seguro mecánico"},{n:105,a:"Revisar",d:"Cilindro de seguro mecánico"},{n:106,a:"Revisar",d:"Protección de seguro mecánico"},{n:107,a:"Revisar",d:"Estado de flexibles hidráulicos"}]},
+  {s:"Prensa de barra flotante",items:[{n:108,a:"Realizar",d:"Verificación visual del estado de prensa flotante"},{n:109,a:"Revisar",d:"Estado de mordazas"},{n:110,a:"Revisar",d:"Guías de barras HQ-NQ"},{n:111,a:"Revisar",d:"Cilindro hidráulico de prensa de barras"},{n:112,a:"Revisar",d:"Rodillos de giro barras"},{n:113,a:"Revisar",d:"Cilindro hidráulico de apriete de barras"},{n:114,a:"Revisar",d:"Motor hidráulico de giro barra"},{n:115,a:"Revisar",d:"Guías deslizamiento de prensa flotante"},{n:116,a:"Revisar",d:"Riel deslizamiento de prensa flotante"},{n:117,a:"Revisar",d:"Cilindro hidráulico deslizamiento prensa flotante"},{n:118,a:"Revisar",d:"Abrazaderas de cilindro deslizamiento prensa flotante"},{n:119,a:"Revisar",d:"Estado de flexibles hidráulicos"}]},
+  {s:"Brazo de barra guía (Kelly)",items:[{n:120,a:"Realizar",d:"Verificación visual del estado de brazo de barra guía (Kelly)"},{n:121,a:"Revisar",d:"Eje estriado deslizante"},{n:122,a:"Revisar",d:"Cilindro hidráulico giro brazo"},{n:123,a:"Revisar",d:"Cilindro hidráulico de apriete barra"},{n:124,a:"Revisar",d:"Motor hidráulico de giro barra"},{n:125,a:"Revisar",d:"Rodillos de giro barras"},{n:126,a:"Revisar",d:"Estructura de brazo de barra guía"},{n:127,a:"Revisar",d:"Perno de regulación de tope de brazo guía de barra"},{n:128,a:"Revisar",d:"Válvulas de contra balance"},{n:129,a:"Revisar",d:"Flexibles hidráulicos"}]},
+  {s:"Accesorios y otros",items:[{n:130,a:"Revisar",d:"Estado de cabeza inyección de agua"},{n:131,a:"Realizar",d:"Lubricación de cabeza inyección de agua"},{n:132,a:"Revisar",d:"Estado de cabeza tubo interior"},{n:133,a:"Revisar",d:"Funcionamiento bomba caracola"},{n:134,a:"Revisar",d:"Funcionamiento del mezclador de lodos"},{n:135,a:"Revisar",d:"Estado de carga y vencimiento de extintores"},{n:136,a:"Revisar",d:"Estado de protecciones y guardas"},{n:137,a:"Revisar",d:"Parrillas, pasamanos y escalera acceso a plataforma equipo"},{n:138,a:"Realizar",d:"Revisión de estado de parrilla de operación y ayudantes"},{n:139,a:"Realizar",d:"Revisión de mezclador de lodo"}]},
+];
+
+const CL2_SECCIONES = [
+  {s:"Revisión general — Herramientas DDH",items:[
+    {n:1,d:"Asa tubo interior NQ, HQ, PQ"},{n:2,d:"Atril corta tubo interior"},{n:3,d:"Atril U / portabarras (2 unidades)"},
+    {n:4,d:"Pasador de bola"},{n:5,d:"Clava estacas"},{n:6,d:"Copa testeo de hilos de barras NQ, HQ"},
+    {n:7,d:"Empuñadura llave Stillson 18\", 24\" y 36\""},{n:8,d:"Espadas (2 unidades)"},{n:9,d:"Gancho de acercamiento \"J\""},
+    {n:10,d:"Gancho para orden de barras en rod sloop"},{n:11,d:"Herramienta para escuchar tubo interior"},{n:12,d:"Kit instalador de lainas"},
+    {n:13,d:"Llave Parmalee con empuñadura NQ, HQ, PQ (2 unidades)"},{n:14,d:"Locking pin"},{n:15,d:"Mesa saca testigo hidráulica"},
+    {n:16,d:"Mordazas, porta mordazas con protección NQ, HQ, HWT"},{n:17,d:"Prensa cable wireline"},
+    {n:18,d:"Saca muestra porta resorte HQ-NQ"},{n:19,d:"Pinocho"},
+  ]},
+  {s:"Revisión general — Herramientas para habilitación",items:[
+    {n:20,d:"Espadas de manipulación de barras tremie o PVC"},{n:21,d:"Porta roldanas en torre equipo sonda"},
+    {n:22,d:"Base prensa manual instalada"},{n:23,d:"Prensa ajustable"},{n:24,d:"Elevador de acero"},
+  ]}
+];
+
+// ── ESTADO ─────────────────────────────────────────────
+const states = { cl1: {}, cl2: {} };
+const itemMaps = { cl1: {}, cl2: {} };
+const totals = { cl1: 139, cl2: 24 };
+
+CL1_SECCIONES.forEach(s => s.items.forEach(it => itemMaps.cl1[it.n] = it));
+CL2_SECCIONES.forEach(s => s.items.forEach(it => itemMaps.cl2[it.n] = it));
+
+// ── NAVEGACIÓN ─────────────────────────────────────────
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+function showClTab(cl, tab, btn) {
+  const tabs = ['items','malos','firmas'];
+  tabs.forEach(t => {
+    const el = document.getElementById(cl+'-tab-'+(t==='items'?'items':t==='malos'?'malos-content':'firmas'));
+    if (el) el.classList.remove('active');
+  });
+  document.querySelectorAll('#page-'+cl+' .cl-tab').forEach(t => t.classList.remove('active'));
+  const target = tab === 'items' ? cl+'-tab-items' : tab === 'malos' ? cl+'-tab-malos-content' : cl+'-tab-firmas';
+  document.getElementById(target).classList.add('active');
+  btn.classList.add('active');
+  if (tab === 'malos') renderMalos(cl);
+}
+function setRole(btn) {
+  btn.closest('.role-selector').querySelectorAll('.role-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// ── LÓGICA CHECKLIST ───────────────────────────────────
+function setStatus(cl, n, v) {
+  states[cl][n] = states[cl][n] === v ? null : v;
+  document.querySelectorAll('.badge[data-cl="'+cl+'"][data-n="'+n+'"]').forEach(b => {
+    b.classList.remove('sel');
+    if (states[cl][n] && b.dataset.v === states[cl][n]) b.classList.add('sel');
+  });
+  updateProgress(cl);
+}
+
+function updateProgress(cl) {
+  const done = Object.values(states[cl]).filter(v => v !== null).length;
+  const total = totals[cl];
+  const p = Math.round(done / total * 100);
+  document.getElementById(cl+'-prog').style.width = p + '%';
+  document.getElementById(cl+'-prog-label').textContent = done + ' / ' + total + ' ítems completados (' + p + '%)';
+  let cB=0, cM=0, cNA=0;
+  Object.values(states[cl]).forEach(v => { if(v==='B') cB++; else if(v==='M') cM++; else if(v==='NA') cNA++; });
+  document.getElementById(cl+'-cntB').textContent = cB;
+  document.getElementById(cl+'-cntM').textContent = cM;
+  document.getElementById(cl+'-cntNA').textContent = cNA;
+  const tabM = document.getElementById(cl+'-tab-malos');
+  if (tabM) { tabM.textContent = cM > 0 ? 'Ítems malos (' + cM + ')' : (cl==='cl2'?'Malos':'Ítems malos'); tabM.style.color = cM > 0 ? 'var(--rojo)' : ''; }
+}
+
+function renderMalos(cl) {
+  const list = document.getElementById(cl+'-malos-list');
+  const alert = document.getElementById(cl+'-alert');
+  list.innerHTML = '';
+  const malos = Object.entries(states[cl]).filter(([k,v]) => v === 'M');
+  alert.style.display = malos.length > 0 ? 'block' : 'none';
+  if (malos.length === 0) { list.innerHTML = '<div class="empty-state">No hay ítems marcados como malos ✓</div>'; return; }
+  malos.forEach(([n]) => {
+    const it = itemMaps[cl][n];
+    const obs = document.getElementById(cl+'-obs-'+n) ? document.getElementById(cl+'-obs-'+n).value : '';
+    const row = document.createElement('div');
+    row.className = 'malos-row';
+    row.innerHTML = '<div class="num-malo">'+n+'</div>'+
+      '<input class="mi" value="'+obs+'" placeholder="'+(it.d||it.d)+'">'+
+      '<input class="mi" placeholder="Plan de acción">';
+    list.appendChild(row);
+  });
+}
+
+// ── RENDER ITEMS ───────────────────────────────────────
+function renderCL(cl, secciones) {
+  let html = '';
+  secciones.forEach(sec => {
+    html += '<div class="item-card"><div class="sec-title">'+sec.s+'<span>'+sec.items.length+'</span></div>';
+    sec.items.forEach(it => {
+      html += '<div class="item-row">'+
+        '<div class="item-num">'+it.n+'</div>'+
+        '<div>'+(it.a?'<div class="item-action">'+it.a+'</div>':'')+'<div class="item-desc">'+it.d+'</div></div>'+
+        '<div class="item-controls">'+
+          '<div class="item-badges">'+
+            '<button class="badge bB" data-cl="'+cl+'" data-n="'+it.n+'" data-v="B" onclick="setStatus(\''+cl+'\','+it.n+',\'B\')">B</button>'+
+            '<button class="badge bM" data-cl="'+cl+'" data-n="'+it.n+'" data-v="M" onclick="setStatus(\''+cl+'\','+it.n+',\'M\')">M</button>'+
+            '<button class="badge bNA" data-cl="'+cl+'" data-n="'+it.n+'" data-v="NA" onclick="setStatus(\''+cl+'\','+it.n+',\'NA\')">NA</button>'+
+          '</div>'+
+          '<input class="obs-input" id="'+cl+'-obs-'+it.n+'" placeholder="Observación...">'+
+        '</div>'+
+      '</div>';
+    });
+    html += '</div>';
+  });
+  document.getElementById(cl+'-items').innerHTML = html;
+}
+
+// ── ENVÍO ──────────────────────────────────────────────
+async function submitCL(cl) {
+  const btn = document.getElementById(cl+'-btn');
+  const spinner = document.getElementById(cl+'-spinner');
+  const msg = document.getElementById(cl+'-msg');
+  const secciones = cl === 'cl1' ? CL1_SECCIONES : CL2_SECCIONES;
+
+  const detalle = [];
+  secciones.forEach(sec => sec.items.forEach(it => {
+    const v = states[cl][it.n] || '—';
+    const obs = document.getElementById(cl+'-obs-'+it.n) ? document.getElementById(cl+'-obs-'+it.n).value : '';
+    detalle.push(it.n+': '+it.d+' → '+v+(obs?' ('+obs+')':''));
+  }));
+
+  let cB=0,cM=0,cNA=0;
+  Object.values(states[cl]).forEach(v => { if(v==='B')cB++; else if(v==='M')cM++; else if(v==='NA')cNA++; });
+
+  const payload = cl === 'cl1' ? {
+    checklist: 'CS-3001 RH Frontal',
+    operador: document.getElementById('cl1-operador').value,
+    fecha: document.getElementById('cl1-fecha').value,
+    equipo: document.getElementById('cl1-ch').value,
+    horometro: document.getElementById('cl1-horometro').value,
+    pozo: document.getElementById('cl1-pozo').value,
+    faena: document.getElementById('cl1-faena').value,
+    buenos: cB, malos: cM, na: cNA,
+    supTerreno: document.getElementById('cl1-sup-terreno').value,
+    supMant: document.getElementById('cl1-sup-mant').value,
+    observaciones: document.getElementById('cl1-obs').value,
+    detalle: detalle.join(' | ')
+  } : {
+    checklist: 'Herramientas Preventivas DDH',
+    operador: document.getElementById('cl2-perforista').value,
+    fecha: document.getElementById('cl2-fecha').value,
+    equipo: document.getElementById('cl2-equipo').value,
+    faena: document.getElementById('cl2-proyecto').value,
+    turno: document.getElementById('cl2-turno').value,
+    buenos: cB, malos: cM, na: cNA,
+    supTerreno: document.getElementById('cl2-supervisor').value,
+    supMant: '',
+    observaciones: document.getElementById('cl2-obs').value,
+    detalle: detalle.join(' | ')
+  };
+
+  btn.disabled = true;
+  spinner.style.display = 'block';
+  msg.style.display = 'none';
+
+  try {
+    await fetch(SHEETS_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+    spinner.style.display = 'none';
+    msg.className = 'success-msg success-ok';
+    msg.textContent = '✅ Registro guardado correctamente en Google Sheets.';
+    msg.style.display = 'block';
+    btn.textContent = '✅ Registro enviado';
+  } catch(err) {
+    spinner.style.display = 'none';
+    msg.className = 'success-msg success-err';
+    msg.textContent = '❌ Error al enviar. Verifica tu conexión e intenta de nuevo.';
+    msg.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = '💾 Reintentar envío';
+  }
+}
+
+// ── INIT ───────────────────────────────────────────────
+renderCL('cl1', CL1_SECCIONES);
+renderCL('cl2', CL2_SECCIONES);
+</script>
+</body>
+</html>
