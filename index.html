@@ -1000,7 +1000,7 @@ async function enviarInspeccion() {
 
   mostrarLoading('Enviando inspección...');
   try {
-    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL.startsWith('https://script.google.com/')) {
+    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT') {
       const resp = await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         headers: {'Content-Type': 'text/plain;charset=utf-8'},
