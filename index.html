@@ -613,7 +613,7 @@ body {
 
 <script>
 // ================== CONFIGURACIÓN ==================
-const APPS_SCRIPT_URL = 'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT'; // Se reemplaza al desplegar
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzihWKg11kcs0Zg3cjdLQGwuXtLLNUAy4IzKrp_0-Nv8cK0kCK-RSwMML5teNGWqYkmKA/exec'; // Se reemplaza al desplegar
 
 // ================== ESTADO GLOBAL ==================
 let DATA = null; // datos cargados de plantillas.json
@@ -1000,7 +1000,7 @@ async function enviarInspeccion() {
 
   mostrarLoading('Enviando inspección...');
   try {
-    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT') {
+    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzihWKg11kcs0Zg3cjdLQGwuXtLLNUAy4IzKrp_0-Nv8cK0kCK-RSwMML5teNGWqYkmKA/exec') {
       const resp = await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         headers: {'Content-Type': 'text/plain;charset=utf-8'},
