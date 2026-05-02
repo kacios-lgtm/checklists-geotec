@@ -59,29 +59,42 @@ body {
   box-shadow: var(--sombra);
 }
 .app-header .back-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  padding: 4px 8px;
-  cursor: pointer;
-  border-radius: var(--radio-sm);
-  display: none;
-}
-.app-header .back-btn.visible { display: block; }
-.app-header .back-btn:active { background: rgba(255,255,255,0.15); }
-.app-header .home-btn {
-  background: none;
+  background: rgba(255,255,255,0.15);
   border: none;
   color: white;
   font-size: 22px;
-  padding: 4px 10px;
+  font-weight: 600;
+  padding: 0;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
-  border-radius: var(--radio-sm);
+  border-radius: 50%;
   display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
 }
-.app-header .home-btn.visible { display: block; }
-.app-header .home-btn:active { background: rgba(255,255,255,0.15); }
+.app-header .back-btn.visible { display: flex; }
+.app-header .back-btn:hover, .app-header .back-btn:active { background: rgba(255,255,255,0.3); }
+.app-header .home-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.app-header .home-btn.visible { display: flex; }
+.app-header .home-btn:hover, .app-header .home-btn:active { background: rgba(255,255,255,0.3); }
 .app-header .header-content { flex: 1; min-width: 0; }
 .app-header .header-eyebrow {
   font-size: 11px;
@@ -574,8 +587,8 @@ body {
 <body>
 
 <header class="app-header">
-  <button class="back-btn" id="btnBack" onclick="volver()">‹</button>
-  <button class="home-btn" id="btnHome" onclick="irAInicio()" title="Volver a inicio">⌂</button>
+  <button class="back-btn" id="btnBack" onclick="volver()" title="Atrás">←</button>
+  <button class="home-btn" id="btnHome" onclick="irAInicio()" title="Inicio">🏠</button>
   <div class="header-content">
     <div class="header-eyebrow">GEOTEC BOYLES BROS</div>
     <div class="header-title" id="headerTitle">Inspecciones</div>
