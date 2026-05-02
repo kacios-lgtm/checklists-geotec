@@ -309,11 +309,12 @@ body {
 .pregunta .texto { font-size: 14px; line-height: 1.4; flex: 1; }
 .pregunta .texto .obligatoria { color: var(--malo); margin-left: 2px; }
 
-/* Botones BMNA */
-.opciones-row { display: flex; gap: 6px; }
+/* Botones BMNA y opcionMultiple genérica */
+.opciones-row { display: flex; gap: 6px; flex-wrap: wrap; }
 .opcion-btn {
   flex: 1;
-  padding: 10px 0;
+  min-width: 60px;
+  padding: 10px 12px;
   border: 1px solid var(--borde);
   border-radius: var(--radio-sm);
   background: transparent;
@@ -325,13 +326,21 @@ body {
   transition: all 0.15s;
 }
 .opcion-btn:active { transform: scale(0.96); }
+/* Estado activa GENÉRICO (para cualquier opción) */
+.opcion-btn.activa {
+  background: var(--primario-claro);
+  color: var(--primario-oscuro);
+  border-color: var(--primario);
+  font-weight: 600;
+}
+/* Colores específicos según el valor (sobreescriben el genérico) */
 .opcion-btn.activa[data-val="Bueno"], .opcion-btn.activa[data-val="Si"], .opcion-btn.activa[data-val="Sí"] {
   background: var(--bueno-claro); color: #27500A; border-color: var(--bueno);
 }
 .opcion-btn.activa[data-val="Malo"], .opcion-btn.activa[data-val="No"] {
   background: var(--malo-claro); color: #791F1F; border-color: var(--malo);
 }
-.opcion-btn.activa[data-val="No Aplica"], .opcion-btn.activa[data-val="No Aplica"] {
+.opcion-btn.activa[data-val="No Aplica"] {
   background: var(--na-claro); color: #444441; border-color: var(--na);
 }
 .opcion-btn.activa[data-val="Pendiente"], .opcion-btn.activa[data-val="Regular"], .opcion-btn.activa[data-val="Regular/Pendiente"] {
