@@ -1000,7 +1000,7 @@ async function enviarInspeccion() {
 
   mostrarLoading('Enviando inspección...');
   try {
-    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzihWKg11kcs0Zg3cjdLQGwuXtLLNUAy4IzKrp_0-Nv8cK0kCK-RSwMML5teNGWqYkmKA/exec') {
+    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL.startsWith('https://script.google.com/')) {
       const resp = await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         headers: {'Content-Type': 'text/plain;charset=utf-8'},
