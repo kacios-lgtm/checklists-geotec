@@ -874,9 +874,43 @@ function escapeAttr(s) { return String(s).replace(/'/g, "\\'").replace(/"/g, '&q
 // ================== INTERACCIONES FORMULARIO ==================
 function seleccionarOpcion(btn, idPregunta) {
   const grupo = btn.closest('.opciones-row');
-  grupo.querySelectorAll('.opcion-btn').forEach(b => b.classList.remove('activa'));
+  // Limpiar todos los botones del grupo
+  grupo.querySelectorAll('.opcion-btn').forEach(b => {
+    b.classList.remove('activa');
+    b.style.background = '';
+    b.style.color = '';
+    b.style.borderColor = '';
+    b.style.fontWeight = '';
+  });
+  // Marcar el activo
   btn.classList.add('activa');
   const valor = btn.getAttribute('data-val');
+  
+  // Aplicar estilo inline según el valor (siempre se ve, sin depender de CSS)
+  if (valor === 'Bueno' || valor === 'Sí' || valor === 'Si') {
+    btn.style.background = '#EAF3DE';
+    btn.style.color = '#27500A';
+    btn.style.borderColor = '#639922';
+  } else if (valor === 'Malo' || valor === 'No') {
+    btn.style.background = '#FCEBEB';
+    btn.style.color = '#791F1F';
+    btn.style.borderColor = '#A32D2D';
+  } else if (valor === 'No Aplica') {
+    btn.style.background = '#F1EFE8';
+    btn.style.color = '#444441';
+    btn.style.borderColor = '#888780';
+  } else if (valor === 'Pendiente' || valor === 'Regular' || valor === 'Regular/Pendiente') {
+    btn.style.background = '#FAEEDA';
+    btn.style.color = '#633806';
+    btn.style.borderColor = '#BA7517';
+  } else {
+    // Genérico (A, B, y cualquier otro valor)
+    btn.style.background = '#E6F1FB';
+    btn.style.color = '#0C447C';
+    btn.style.borderColor = '#185FA5';
+  }
+  btn.style.fontWeight = '600';
+  
   respuestas[idPregunta] = valor;
 
   // Mostrar/ocultar plan de acción si es Malo o No
