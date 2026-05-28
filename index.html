@@ -672,6 +672,25 @@ let folioActual = '';
 let firmaCanvas = null, firmaCtx = null, firmaDibujando = false, firmaTieneContenido = false;
 let pantallaPrevia = 'inicio';
 let ultimaInspeccionEnviada = null; // Guardamos la última para poder descargar/compartir
+let mantCargadas = false; // Las plantillas MANT se cargan bajo demanda (archivo aparte)
+
+// Carga diferida de las plantillas de mantención (archivo grande, solo cuando se necesita)
+async function cargarMantSiHaceFalta() {
+  if (mantCargadas) return;
+  try {
+    const resp = await fetch('plantillas-mant.json');
+    const mant = await resp.json();
+    // Agregar las plantillas MANT a DATA, evitando duplicados
+    const codigosExistentes = new Set(DATA.plantillas.map(p => p.codigo));
+    (mant.plantillas || []).forEach(p => {
+      if (!codigosExistentes.has(p.codigo)) DATA.plantillas.push(p);
+    });
+    mantCargadas = true;
+  } catch (err) {
+    alert('No se pudieron cargar las pautas de mantención. Verifica tu conexión e intenta de nuevo.');
+    throw err;
+  }
+}
 
 // ================== CARGA INICIAL ==================
 async function cargarApp() {
@@ -692,11 +711,17 @@ async function cargarApp() {
   }
 }
 
-function inicializarApp() {
+async function inicializarApp() {
   const params = new URLSearchParams(window.location.search);
   const codCarpeta = params.get('carpeta');
   if (codCarpeta) {
     carpetaActual = DATA.carpetas.find(c => c.codigo === codCarpeta.toUpperCase());
+    // Si entran directo a la carpeta MANT por URL, cargar su archivo
+    if (carpetaActual && carpetaActual.codigo === 'MANT') {
+      mostrarLoading('Cargando pautas de mantención...');
+      try { await cargarMantSiHaceFalta(); } catch(_) {}
+      ocultarLoading();
+    }
   }
   renderInicio();
 }
@@ -742,12 +767,19 @@ function renderInicio() {
       <div class="section-title">Selecciona una carpeta</div>
       <div class="carpetas-grid">`;
     DATA.carpetas.forEach(c => {
-      const cuenta = DATA.plantillas.filter(p => p.carpeta === c.codigo).length;
+      let cuenta = DATA.plantillas.filter(p => p.carpeta === c.codigo).length;
+      // La carpeta MANT se carga aparte; si aún no se carga, mostrar su total conocido
+      let etiqueta;
+      if (c.codigo === 'MANT' && !mantCargadas) {
+        etiqueta = 'Pautas de mantención';
+      } else {
+        etiqueta = `${cuenta} checklists`;
+      }
       html += `
         <div class="carpeta-card" data-color="${c.color}" onclick="abrirCarpeta('${c.codigo}')">
           <div class="icon-box">${c.icono}</div>
           <div class="titulo">${c.nombre}</div>
-          <div class="meta">${cuenta} checklists</div>
+          <div class="meta">${etiqueta}</div>
         </div>`;
     });
     html += `</div>`;
@@ -755,8 +787,14 @@ function renderInicio() {
   }
 }
 
-function abrirCarpeta(cod) {
+async function abrirCarpeta(cod) {
   carpetaActual = DATA.carpetas.find(c => c.codigo === cod);
+  // Si es la carpeta de mantenciones, cargar su archivo bajo demanda
+  if (cod === 'MANT') {
+    mostrarLoading('Cargando pautas de mantención...');
+    try { await cargarMantSiHaceFalta(); } catch(_) { ocultarLoading(); return; }
+    ocultarLoading();
+  }
   // Actualizar URL sin recargar
   const url = new URL(window.location);
   url.searchParams.set('carpeta', cod);
