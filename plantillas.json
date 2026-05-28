@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "empresa": "Geotec Boyles Bros S.A.",
   "carpetas": [
     {
@@ -29,6 +29,13 @@
       "color": "purple",
       "icono": "EXT",
       "descripcion": "Entrega/devolución de área, Check list rampla"
+    },
+    {
+      "codigo": "MANT",
+      "nombre": "Mantenciones Preventivas",
+      "color": "red",
+      "icono": "MAN",
+      "descripcion": "Pautas de mantención preventiva programada (MPP) por equipo y por horometro"
     }
   ],
   "plantillas": [
@@ -48,12 +55,6 @@
         {
           "id": "supervisor_nombre",
           "texto": "Nombre supervisor",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
-          "id": "hse",
-          "texto": "Nombre HSE",
           "tipo": "texto",
           "obligatoria": true
         },
@@ -661,12 +662,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -721,6 +716,19 @@
         {
           "id": "i5",
           "texto": "Proteccion de atrapamiento (winche, cabezal, manipulador)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -1349,16 +1357,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -1402,12 +1410,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -1462,6 +1464,19 @@
         {
           "id": "i5",
           "texto": "Proteccion de atrapamiento (winche, cabezal, manipulador)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -2090,16 +2105,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -2143,12 +2158,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -2203,6 +2212,19 @@
         {
           "id": "i5",
           "texto": "Proteccion de atrapamiento (winche, cabezal, manipulador)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -2617,47 +2639,8 @@
           "seccion": "Cabezal rotacion"
         },
         {
-          "id": "i37",
-          "texto": "Verificacion visual prensa de barras tipo UDR",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Prensa de barras UDR"
-        },
-        {
-          "id": "i38",
-          "texto": "Lubricacion prensa hidraulica",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Prensa de barras UDR"
-        },
-        {
-          "id": "i39",
-          "texto": "Estado mordazas y porta mordazas",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Prensa de barras UDR"
-        },
-        {
           "id": "i40",
-          "texto": "Estado pasadores y seguros",
+          "texto": "Estado pasadores y seguros prensa inferior (CT-20 no cuenta con prensa tipo UDR)",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -2831,16 +2814,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -2884,12 +2867,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -2944,6 +2921,19 @@
         {
           "id": "i5",
           "texto": "Proteccion de atrapamiento (winche, cabezal, manipulador)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -3572,16 +3562,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -3625,12 +3615,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos de proxima mantencion",
           "tipo": "opcionMultiple",
@@ -3646,6 +3630,19 @@
         {
           "id": "i2",
           "texto": "Numero de identificacion cliente",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -4177,19 +4174,6 @@
           "seccion": "Bomba de lodo"
         },
         {
-          "id": "i43",
-          "texto": "Nivel aceite bomba lodo",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
           "id": "i44",
           "texto": "Mangueras succion y presion bomba lodo",
           "tipo": "opcionMultiple",
@@ -4231,19 +4215,6 @@
         {
           "id": "i47",
           "texto": "Verificacion visual cabezal rotacion",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion"
-        },
-        {
-          "id": "i48",
-          "texto": "Nivel aceite cabezal rotacion",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -4833,16 +4804,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -5485,12 +5456,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -5939,16 +5904,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -5980,19 +5945,14 @@
           "obligatoria": true
         },
         {
-          "id": "hse",
-          "texto": "Nombre HSE",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Mallas de seguridad instaladas y aseguradas",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6003,7 +5963,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6014,7 +5975,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6025,7 +5987,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6036,7 +5999,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6047,7 +6011,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6058,7 +6023,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6069,7 +6035,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6080,7 +6047,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6091,7 +6059,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6102,7 +6071,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6113,7 +6083,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6124,7 +6095,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6135,7 +6107,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6146,7 +6119,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6157,7 +6131,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6168,7 +6143,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6179,7 +6155,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6190,7 +6167,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6201,7 +6179,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6212,7 +6191,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda RC"
         },
@@ -6223,7 +6203,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6234,7 +6215,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6245,7 +6227,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6256,7 +6239,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6267,7 +6251,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6278,7 +6263,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6289,7 +6275,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6300,7 +6287,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6311,7 +6299,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6322,7 +6311,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6333,7 +6323,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6344,7 +6335,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6355,7 +6347,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6366,7 +6359,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6377,7 +6371,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6388,7 +6383,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6399,7 +6395,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -6410,7 +6407,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -6421,7 +6419,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -6432,7 +6431,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -6443,7 +6443,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -6454,7 +6455,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -6465,7 +6467,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Seguridad/Salud/MA"
         },
@@ -6476,7 +6479,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Seguridad/Salud/MA"
         },
@@ -6487,7 +6491,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Seguridad/Salud/MA"
         },
@@ -6545,12 +6550,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -6579,6 +6578,19 @@
         {
           "id": "i3",
           "texto": "Revision pernos sueltos",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -7253,19 +7265,6 @@
           "seccion": "Bomba de lodo"
         },
         {
-          "id": "i55",
-          "texto": "Nivel aceite bomba lodo",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
           "id": "i56",
           "texto": "Fugas lodo por culata",
           "tipo": "opcionMultiple",
@@ -7292,47 +7291,8 @@
           "seccion": "Bomba de lodo"
         },
         {
-          "id": "i58",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
           "id": "i59",
           "texto": "Inspeccion visual cabezal",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion"
-        },
-        {
-          "id": "i60",
-          "texto": "Nivel aceite cabezal rotacion",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion"
-        },
-        {
-          "id": "i61",
-          "texto": "Fugas aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -7450,19 +7410,6 @@
         {
           "id": "i70",
           "texto": "Inspeccion visual caja funk",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja reductora funk"
-        },
-        {
-          "id": "i71",
-          "texto": "Nivel aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -7734,19 +7681,6 @@
           "seccion": "Rod Handler"
         },
         {
-          "id": "i92",
-          "texto": "Fugas aceite hidraulico",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Rod Handler"
-        },
-        {
           "id": "i93",
           "texto": "Estado cadena mordazas",
           "tipo": "opcionMultiple",
@@ -7851,19 +7785,6 @@
           "seccion": "Cilindro llave corte"
         },
         {
-          "id": "i101",
-          "texto": "Fugas aceite hidraulico",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cilindro big tool"
-        },
-        {
           "id": "i102",
           "texto": "Lubricacion puntos engrase",
           "tipo": "opcionMultiple",
@@ -7888,19 +7809,6 @@
             "No Aplica"
           ],
           "seccion": "Cilindro big tool"
-        },
-        {
-          "id": "i104",
-          "texto": "Fugas aceite hidraulico",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cilindro valvula aire"
         },
         {
           "id": "i105",
@@ -8234,16 +8142,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -8287,12 +8195,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -8321,6 +8223,19 @@
         {
           "id": "i3",
           "texto": "Revision pernos sueltos",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -8475,19 +8390,6 @@
           "seccion": "Motor Diesel QSK-19"
         },
         {
-          "id": "i15",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Motor Diesel QSK-19"
-        },
-        {
           "id": "i16",
           "texto": "Nivel refrigerante",
           "tipo": "opcionMultiple",
@@ -8620,19 +8522,6 @@
         {
           "id": "i26",
           "texto": "Inspeccion visual cabezal",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion"
-        },
-        {
-          "id": "i27",
-          "texto": "Nivel aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -8800,19 +8689,6 @@
           "seccion": "Compresor aire"
         },
         {
-          "id": "i40",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Compresor aire"
-        },
-        {
           "id": "i41",
           "texto": "Filtro aire primario",
           "tipo": "opcionMultiple",
@@ -8943,19 +8819,6 @@
           "seccion": "Compresor aire"
         },
         {
-          "id": "i51",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Sistema hidraulico"
-        },
-        {
           "id": "i52",
           "texto": "Lineas hidraulicas defectuosas",
           "tipo": "opcionMultiple",
@@ -9023,19 +8886,6 @@
         {
           "id": "i57",
           "texto": "Presion tanque (5-7 PSIG)",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Sistema hidraulico"
-        },
-        {
-          "id": "i58",
-          "texto": "Fugas aceite hidraulico",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -9320,58 +9170,6 @@
           "seccion": "Huinche inspeccion"
         },
         {
-          "id": "i80",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche inspeccion"
-        },
-        {
-          "id": "i81",
-          "texto": "Estado proteccion",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche inspeccion"
-        },
-        {
-          "id": "i82",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja funk triple"
-        },
-        {
-          "id": "i83",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja funk triple"
-        },
-        {
           "id": "i84",
           "texto": "Estado respiradero",
           "tipo": "opcionMultiple",
@@ -9387,19 +9185,6 @@
         {
           "id": "i85",
           "texto": "Inspeccion visual bomba",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
-          "id": "i86",
-          "texto": "Nivel aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -9476,32 +9261,6 @@
           "seccion": "Bomba de lodo"
         },
         {
-          "id": "i92",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
-          "id": "i93",
-          "texto": "Fugas aceite hidraulico",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cilindros avance"
-        },
-        {
           "id": "i94",
           "texto": "Fugas hidraulicas",
           "tipo": "opcionMultiple",
@@ -9567,60 +9326,8 @@
           "seccion": "Cilindros panel control"
         },
         {
-          "id": "i99",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cilindro big tool"
-        },
-        {
-          "id": "i100",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cilindro brazo pluma"
-        },
-        {
-          "id": "i101",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cilindro valvula aire"
-        },
-        {
           "id": "i102",
           "texto": "Funcionamiento lubricador",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Lubricador martillo"
-        },
-        {
-          "id": "i103",
-          "texto": "Nivel aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -9762,19 +9469,6 @@
           "seccion": "Rod Handler"
         },
         {
-          "id": "i114",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Rod Handler"
-        },
-        {
           "id": "i115",
           "texto": "Estado cadena mordazas",
           "tipo": "opcionMultiple",
@@ -9892,15 +9586,48 @@
           "seccion": "Accesorios"
         },
         {
+          "id": "i_breakout",
+          "texto": "Revisión sistema break out",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Accesorios"
+        },
+        {
+          "id": "i_mordazas_sup",
+          "texto": "Chequeo mordazas superiores",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Accesorios"
+        },
+        {
+          "id": "i_mordazas_inf",
+          "texto": "Chequeo mordazas inferiores",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Accesorios"
+        },
+        {
           "id": "obs",
           "texto": "Observaciones / Pendientes / Criticos",
           "tipo": "textoLargo",
-          "obligatoria": false
-        },
-        {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
           "obligatoria": false
         },
         {
@@ -9908,6 +9635,12 @@
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -9951,10 +9684,17 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
         },
         {
           "id": "i1",
@@ -10050,19 +9790,6 @@
         {
           "id": "i8",
           "texto": "Fugas combustible riel y cañerias",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Motor diesel MTU-2000"
-        },
-        {
-          "id": "i9",
-          "texto": "Nivel aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -10204,19 +9931,6 @@
           "seccion": "Cabezal rotacion"
         },
         {
-          "id": "i20",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion"
-        },
-        {
           "id": "i21",
           "texto": "Lubricacion swivels HD",
           "tipo": "opcionMultiple",
@@ -10308,19 +10022,6 @@
           "seccion": "Compresor aire"
         },
         {
-          "id": "i28",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Compresor aire"
-        },
-        {
           "id": "i29",
           "texto": "Drenaje filtro coalescente",
           "tipo": "opcionMultiple",
@@ -10360,19 +10061,6 @@
           "seccion": "Compresor aire"
         },
         {
-          "id": "i32",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Sistema hidraulico"
-        },
-        {
           "id": "i33",
           "texto": "Lineas hidraulicas defectuosas",
           "tipo": "opcionMultiple",
@@ -10388,19 +10076,6 @@
         {
           "id": "i34",
           "texto": "Drenaje filtro coalescente",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Sistema hidraulico"
-        },
-        {
-          "id": "i35",
-          "texto": "Fugas aceite hidraulico",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -10477,32 +10152,6 @@
           "seccion": "Huinche principal"
         },
         {
-          "id": "i41",
-          "texto": "Estado proteccion",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche principal"
-        },
-        {
-          "id": "i42",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche inspeccion"
-        },
-        {
           "id": "i43",
           "texto": "Inspeccion visual huinche",
           "tipo": "opcionMultiple",
@@ -10529,73 +10178,8 @@
           "seccion": "Huinche wire line"
         },
         {
-          "id": "i45",
-          "texto": "Estado proteccion",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche wire line"
-        },
-        {
-          "id": "i46",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja Funk Cuadruple"
-        },
-        {
-          "id": "i47",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja Funk Cuadruple"
-        },
-        {
-          "id": "i48",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
           "id": "i49",
           "texto": "Valvula seguridad",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
-          "id": "i50",
-          "texto": "Fugas aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -10704,16 +10288,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -10757,12 +10341,6 @@
           "obligatoria": true
         },
         {
-          "id": "faena",
-          "texto": "Faena",
-          "tipo": "texto",
-          "obligatoria": true
-        },
-        {
           "id": "i1",
           "texto": "Adhesivos proxima mantencion",
           "tipo": "opcionMultiple",
@@ -10791,6 +10369,19 @@
         {
           "id": "i3",
           "texto": "Revision pernos sueltos",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Bueno",
+            "Pendiente",
+            "Malo",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i_camara",
+          "texto": "Estado de cámara de servicio operación",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -10921,19 +10512,6 @@
         {
           "id": "i13",
           "texto": "Verificacion visual motor",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Motor Diesel Cummins ISX15"
-        },
-        {
-          "id": "i14",
-          "texto": "Nivel aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -11140,58 +10718,6 @@
           "seccion": "Motor Diesel Cummins ISX15"
         },
         {
-          "id": "i30",
-          "texto": "Tubo respiradero carter",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Motor Diesel Cummins ISX15"
-        },
-        {
-          "id": "i31",
-          "texto": "Tuberias escape postratamiento",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Motor Diesel Cummins ISX15"
-        },
-        {
-          "id": "i32",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Enfriador radiador"
-        },
-        {
-          "id": "i33",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Sistema hidraulico"
-        },
-        {
           "id": "i34",
           "texto": "Lineas hidraulicas defectuosas",
           "tipo": "opcionMultiple",
@@ -11322,45 +10848,6 @@
           "seccion": "Sistema hidraulico"
         },
         {
-          "id": "i44",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche servicio"
-        },
-        {
-          "id": "i45",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche servicio"
-        },
-        {
-          "id": "i46",
-          "texto": "Estado proteccion",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche servicio"
-        },
-        {
           "id": "i47",
           "texto": "Cable acero, terminal y grillete",
           "tipo": "opcionMultiple",
@@ -11387,19 +10874,6 @@
           "seccion": "Huinche servicio"
         },
         {
-          "id": "i49",
-          "texto": "Conector cadena grado 80",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche servicio"
-        },
-        {
           "id": "i50",
           "texto": "Cable acero 5/8 x 66.44m",
           "tipo": "opcionMultiple",
@@ -11411,58 +10885,6 @@
             "No Aplica"
           ],
           "seccion": "Huinche servicio"
-        },
-        {
-          "id": "i51",
-          "texto": "Lubricacion bujes poleas",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche servicio"
-        },
-        {
-          "id": "i52",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche arenero"
-        },
-        {
-          "id": "i53",
-          "texto": "Lubricacion bujes poleas",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche arenero"
-        },
-        {
-          "id": "i54",
-          "texto": "Estado proteccion",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Huinche arenero"
         },
         {
           "id": "i55",
@@ -11595,32 +11017,6 @@
           "seccion": "Torre perforacion"
         },
         {
-          "id": "i65",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
-          "id": "i66",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
           "id": "i67",
           "texto": "Mangueras bomba",
           "tipo": "opcionMultiple",
@@ -11660,60 +11056,8 @@
           "seccion": "Bomba de lodo"
         },
         {
-          "id": "i70",
-          "texto": "Fugas aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Bomba de lodo"
-        },
-        {
-          "id": "i71",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion superior"
-        },
-        {
-          "id": "i72",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion superior"
-        },
-        {
           "id": "i73",
           "texto": "Mecanismo pivoteo cabezal",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion superior"
-        },
-        {
-          "id": "i74",
-          "texto": "Packing y retenes",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -11738,60 +11082,8 @@
           "seccion": "Cabezal rotacion superior"
         },
         {
-          "id": "i76",
-          "texto": "Lubricacion cojinetes usillo",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion superior"
-        },
-        {
-          "id": "i77",
-          "texto": "Lubricacion rotula tubo lavado",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion superior"
-        },
-        {
           "id": "i78",
           "texto": "Estado tubo interior",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion superior"
-        },
-        {
-          "id": "i79",
-          "texto": "Lubricacion rotula chicksan",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion superior"
-        },
-        {
-          "id": "i80",
-          "texto": "Lubricacion ejes conductores",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -11829,32 +11121,6 @@
           "seccion": "Cabezal rotacion superior"
         },
         {
-          "id": "i83",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion inferior"
-        },
-        {
-          "id": "i84",
-          "texto": "Nivel aceite caja cadena",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion inferior"
-        },
-        {
           "id": "i85",
           "texto": "Fugas presion aire sello superior",
           "tipo": "opcionMultiple",
@@ -11883,19 +11149,6 @@
         {
           "id": "i87",
           "texto": "Lubricacion rieles y guias",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Cabezal rotacion inferior"
-        },
-        {
-          "id": "i88",
-          "texto": "Lubricacion cojinetes",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -11944,32 +11197,6 @@
             "No Aplica"
           ],
           "seccion": "Cabezal rotacion inferior"
-        },
-        {
-          "id": "i92",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Brazo manipulador"
-        },
-        {
-          "id": "i93",
-          "texto": "Fugas aceite hidraulico",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Brazo manipulador"
         },
         {
           "id": "i94",
@@ -12026,19 +11253,6 @@
         {
           "id": "i98",
           "texto": "Funcionamiento lubricador",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Lubricador martillo"
-        },
-        {
-          "id": "i99",
-          "texto": "Nivel aceite",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -12167,47 +11381,8 @@
           "seccion": "Consola operacion"
         },
         {
-          "id": "i109",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Compresor aire perforacion"
-        },
-        {
-          "id": "i110",
-          "texto": "Nivel aceite",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Compresor aire perforacion"
-        },
-        {
           "id": "i111",
           "texto": "Indicador saturacion filtro aire",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Compresor aire perforacion"
-        },
-        {
-          "id": "i112",
-          "texto": "Drenaje condensacion acumulador",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -12234,19 +11409,6 @@
         {
           "id": "i114",
           "texto": "Proteccion aspa ventilador",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Compresor aire perforacion"
-        },
-        {
-          "id": "i115",
-          "texto": "Filtro aceite compresor",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -12310,32 +11472,6 @@
           "seccion": "Compresor aire perforacion"
         },
         {
-          "id": "i120",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja conductora bombas hidr."
-        },
-        {
-          "id": "i121",
-          "texto": "Nivel aceite caja triple DURST",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja conductora bombas hidr."
-        },
-        {
           "id": "i122",
           "texto": "Fugas aceite por retenes",
           "tipo": "opcionMultiple",
@@ -12347,32 +11483,6 @@
             "No Aplica"
           ],
           "seccion": "Caja conductora bombas hidr."
-        },
-        {
-          "id": "i123",
-          "texto": "Estado protecciones",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja conductora bombas hidr."
-        },
-        {
-          "id": "i124",
-          "texto": "Inspeccion visual",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja transferencia FABCO"
         },
         {
           "id": "i125",
@@ -12414,19 +11524,6 @@
           "seccion": "Caja transferencia FABCO"
         },
         {
-          "id": "i128",
-          "texto": "Estado protecciones",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Caja transferencia FABCO"
-        },
-        {
           "id": "i129",
           "texto": "Lubricacion top swivel",
           "tipo": "opcionMultiple",
@@ -12455,19 +11552,6 @@
         {
           "id": "i131",
           "texto": "Estado escaleras y pasarelas",
-          "tipo": "opcionMultiple",
-          "obligatoria": true,
-          "opciones": [
-            "Bueno",
-            "Pendiente",
-            "Malo",
-            "No Aplica"
-          ],
-          "seccion": "Accesorios"
-        },
-        {
-          "id": "i132",
-          "texto": "Enfriador caja cambios",
           "tipo": "opcionMultiple",
           "obligatoria": true,
           "opciones": [
@@ -12563,16 +11647,16 @@
           "obligatoria": false
         },
         {
-          "id": "foto_general",
-          "texto": "Foto general del equipo",
-          "tipo": "foto",
-          "obligatoria": false
-        },
-        {
           "id": "supervisor_terreno",
           "texto": "Supervisor de terreno (nombre)",
           "tipo": "texto",
           "obligatoria": true
+        },
+        {
+          "id": "foto_general",
+          "texto": "Foto general del equipo",
+          "tipo": "foto",
+          "obligatoria": false
         },
         {
           "id": "firma_supervisor",
@@ -14603,6 +13687,12 @@
           "obligatoria": true
         },
         {
+          "id": "obs",
+          "texto": "Observaciones",
+          "tipo": "textoLargo",
+          "obligatoria": false
+        },
+        {
           "id": "firma_op",
           "texto": "Firma operador",
           "tipo": "firma",
@@ -14612,12 +13702,6 @@
           "id": "firma_sup",
           "texto": "Firma supervisor",
           "tipo": "firma",
-          "obligatoria": false
-        },
-        {
-          "id": "obs",
-          "texto": "Observaciones",
-          "tipo": "textoLargo",
           "obligatoria": false
         }
       ],
@@ -15063,13 +14147,6 @@
           "seccion": "Charla 5 minutos"
         },
         {
-          "id": "firma_relator",
-          "texto": "Firma relator",
-          "tipo": "firma",
-          "obligatoria": false,
-          "seccion": "Charla 5 minutos"
-        },
-        {
           "id": "trabajadores",
           "texto": "Lista de trabajadores (Nombre, RUT, Firma) - hasta 10",
           "tipo": "textoLargo",
@@ -15132,15 +14209,22 @@
           "seccion": "Declaracion trabajador"
         },
         {
-          "id": "firma_supervisor",
-          "texto": "Firma supervisor",
-          "tipo": "firma",
-          "obligatoria": false
-        },
-        {
           "id": "foto_grupal",
           "texto": "Foto grupal de la charla",
           "tipo": "foto",
+          "obligatoria": false
+        },
+        {
+          "id": "firma_relator",
+          "texto": "Firma relator",
+          "tipo": "firma",
+          "obligatoria": false,
+          "seccion": "Charla 5 minutos"
+        },
+        {
+          "id": "firma_supervisor",
+          "texto": "Firma supervisor",
+          "tipo": "firma",
           "obligatoria": false
         }
       ],
@@ -15534,13 +14618,6 @@
           "seccion": "Inicio del trabajo"
         },
         {
-          "id": "dueño_firma",
-          "texto": "Firma dueño",
-          "tipo": "firma",
-          "obligatoria": true,
-          "seccion": "Inicio del trabajo"
-        },
-        {
           "id": "desc_trabajo",
           "texto": "Descripcion del trabajo a realizar",
           "tipo": "textoLargo",
@@ -15782,6 +14859,13 @@
           "obligatoria": true
         },
         {
+          "id": "personal_entrega_lista",
+          "texto": "Personal que entrega (Nombre, RUT, Empresa, Firma)",
+          "tipo": "textoLargo",
+          "obligatoria": true,
+          "seccion": "Devolucion"
+        },
+        {
           "id": "foto_area",
           "texto": "Foto del area al inicio",
           "tipo": "foto",
@@ -15794,11 +14878,11 @@
           "obligatoria": false
         },
         {
-          "id": "personal_entrega_lista",
-          "texto": "Personal que entrega (Nombre, RUT, Empresa, Firma)",
-          "tipo": "textoLargo",
+          "id": "dueño_firma",
+          "texto": "Firma dueño",
+          "tipo": "firma",
           "obligatoria": true,
-          "seccion": "Devolucion"
+          "seccion": "Inicio del trabajo"
         },
         {
           "id": "recepcion_dueño_firma",
