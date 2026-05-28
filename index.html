@@ -1081,7 +1081,7 @@ function setupFirma(canvas, idPregunta) {
   canvas.addEventListener('touchend', fin);
 }
 
-function limpiarFirma(idPregunta) {
+ limpiarFirma(idPregunta) {
   const canvas = document.getElementById(`canvas-${idPregunta}`);
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1089,7 +1089,7 @@ function limpiarFirma(idPregunta) {
 }
 
 // ================== ESTADÍSTICAS ==================
-function actualizarEstadisticas() {
+ actualizarEstadisticas() {
   let buenos = 0, malos = 0, na = 0, total = 0, respondidas = 0;
   plantillaActual.preguntas.forEach(p => {
     total++;
@@ -1111,98 +1111,275 @@ function actualizarEstadisticas() {
 }
 
 // ================== ENVÍO ==================
-async function enviarInspeccion() {
+// ================== ENVÍO ==================
+async  enviarInspeccion() {
+
   // Validar obligatorias
   const faltantes = plantillaActual.preguntas.filter(p => {
     if (!p.obligatoria) return false;
+
     const r = respuestas[p.id];
-    return r === undefined || r === '' || (Array.isArray(r) && r.length === 0);
+
+    return (
+      r === undefined ||
+      r === '' ||
+      (Array.isArray(r) && r.length === 0)
+    );
   });
+
   if (faltantes.length > 0) {
-    alert(`Faltan ${faltantes.length} pregunta(s) obligatoria(s) sin responder.`);
+
+    alert(
+      `Faltan ${faltantes.length} pregunta(s) obligatoria(s) sin responder.`
+    );
+
     return;
   }
 
-  // Calcular estado general
-  const malos = plantillaActual.preguntas.filter(p =>
-    p.tipo === 'opcionMultiple' && (respuestas[p.id] === 'Malo' || respuestas[p.id] === 'No')
-  ).length;
-  const estado = malos > 0 ? 'NoConforme' : 'Conforme';
+  // ============================================
+  // CALCULAR ESTADO
+  // ============================================
 
-  // Geolocalización (opcional)
+  const malos = plantillaActual.preguntas.filter(p =>
+    p.tipo === 'opcionMultiple' &&
+    (
+      respuestas[p.id] === 'Malo' ||
+      respuestas[p.id] === 'No'
+    )
+  ).length;
+
+  const estado =
+    malos > 0
+      ? 'NoConforme'
+      : 'Conforme';
+
+  // ============================================
+  // GEOLOCALIZACIÓN
+  // ============================================
+
   let ubicacion = '';
+
   try {
+
     const pos = await new Promise((res, rej) => {
-      navigator.geolocation.getCurrentPosition(res, rej, { timeout: 5000 });
+
+      navigator.geolocation.getCurrentPosition(
+        res,
+        rej,
+        { timeout: 5000 }
+      );
     });
-    ubicacion = `${pos.coords.latitude.toFixed(6)},${pos.coords.longitude.toFixed(6)}`;
+
+    ubicacion =
+      `${pos.coords.latitude.toFixed(6)},${pos.coords.longitude.toFixed(6)}`;
+
   } catch(_) {}
 
-  const payload = {
+  // ============================================
+  // GUARDAR COPIA LOCAL
+  // ============================================
+
+  ultimaInspeccionEnviada = {
     folio: folioActual,
-    plantillaCodigo: plantillaActual.codigo,
-    carpetaCodigo: plantillaActual.carpeta,
-    nombrePlantilla: plantillaActual.nombre,
-    fechaInspeccion: new Date().toISOString(),
-    estado: estado,
-    itemsCriticos: malos,
+    plantilla: plantillaActual,
+    respuestas: { ...respuestas },
+    fechaEnvio: new Date().toISOString(),
     ubicacion: ubicacion,
-    respuestas: respuestas,
-    userAgent: navigator.userAgent,
+    estado: estado,
   };
 
-  mostrarLoading('Enviando inspección...');
-  try {
-    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT') {
-      const resp = await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'text/plain;charset=utf-8'},
-        body: JSON.stringify(payload),
-      });
-      const j = await resp.json();
-      if (!j.ok) throw new Error(j.error || 'Error desconocido');
-    } else {
-      // Modo demo: solo guardamos en consola
-      console.log('Inspección (modo demo):', payload);
-      await new Promise(r => setTimeout(r, 1000));
-    }
-    document.getElementById('folioFinal').textContent = folioActual;
-    document.getElementById('modalExito').classList.add('visible');
+  // ============================================
+  // GENERAR PDF
+  // ============================================
 
-    // Guardar copia local en el dispositivo del operador
-    ultimaInspeccionEnviada = {
-      folio: folioActual,
-      plantilla: plantillaActual,
-      respuestas: { ...respuestas },
-      fechaEnvio: new Date().toISOString(),
-      ubicacion: ubicacion,
-      estado: estado,
-    };
-    
-    // Agregar al historial local (se mantienen las últimas 50)
+  const { jsPDF } = window.jspdf;
+
+  const doc = new jsPDF({
+    unit: 'mm',
+    format: 'a4'
+  });
+
+  const insp = ultimaInspeccionEnviada;
+
+  // ============================================
+  // GENERAR PDF USANDO TU FUNCIÓN EXISTENTE
+  // ============================================
+
+  generarContenidoPDF(doc, insp);
+
+  // ============================================
+  // CONVERTIR PDF A BASE64
+  // ============================================
+
+  const pdfBase64 =
+    doc.output('datauristring');
+
+  // ============================================
+  // DESCARGAR PDF LOCAL
+  // ============================================
+
+  doc.save(`Inspeccion_${insp.folio}.pdf`);
+
+  // ============================================
+  // PAYLOAD
+  // ============================================
+
+  const payload = {
+
+    folio: folioActual,
+
+    plantillaCodigo:
+      plantillaActual.codigo,
+
+    carpetaCodigo:
+      plantillaActual.carpeta,
+
+    nombrePlantilla:
+      plantillaActual.nombre,
+
+    fechaInspeccion:
+      new Date().toISOString(),
+
+    estado: estado,
+
+    itemsCriticos: malos,
+
+    ubicacion: ubicacion,
+
+    respuestas: respuestas,
+
+    userAgent: navigator.userAgent,
+
+    // ========================================
+    // NUEVO
+    // ========================================
+
+    pdfBase64: pdfBase64
+  };
+
+  // ============================================
+  // ENVIAR
+  // ============================================
+
+  mostrarLoading('Enviando inspección...');
+
+  try {
+
+    if (
+      APPS_SCRIPT_URL &&
+      APPS_SCRIPT_URL !==
+      'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT'
+    ) {
+
+      const resp = await fetch(
+        APPS_SCRIPT_URL,
+        {
+          method: 'POST',
+
+          headers: {
+            'Content-Type':
+              'text/plain;charset=utf-8'
+          },
+
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const j = await resp.json();
+
+      if (!j.ok) {
+
+        throw new Error(
+          j.error || 'Error desconocido'
+        );
+      }
+
+    } else {
+
+      console.log(
+        'Inspección (modo demo):',
+        payload
+      );
+
+      await new Promise(r =>
+        setTimeout(r, 1000)
+      );
+    }
+
+    // ========================================
+    // ÉXITO
+    // ========================================
+
+    document
+      .getElementById('folioFinal')
+      .textContent = folioActual;
+
+    document
+      .getElementById('modalExito')
+      .classList.add('visible');
+
+    // ========================================
+    // HISTORIAL LOCAL
+    // ========================================
+
     try {
-      let historial = JSON.parse(localStorage.getItem('historial_inspecciones') || '[]');
+
+      let historial = JSON.parse(
+        localStorage.getItem(
+          'historial_inspecciones'
+        ) || '[]'
+      );
+
       historial.unshift({
+
         folio: folioActual,
-        nombrePlantilla: plantillaActual.nombre,
-        carpeta: plantillaActual.carpeta,
-        plantillaCodigo: plantillaActual.codigo,
-        fecha: new Date().toISOString(),
+
+        nombrePlantilla:
+          plantillaActual.nombre,
+
+        carpeta:
+          plantillaActual.carpeta,
+
+        plantillaCodigo:
+          plantillaActual.codigo,
+
+        fecha:
+          new Date().toISOString(),
+
         estado: estado,
+
         respuestas: respuestas,
       });
-      historial = historial.slice(0, 50); // máximo 50
-      localStorage.setItem('historial_inspecciones', JSON.stringify(historial));
+
+      historial = historial.slice(0, 50);
+
+      localStorage.setItem(
+        'historial_inspecciones',
+        JSON.stringify(historial)
+      );
+
     } catch(_) {}
+
   } catch (err) {
-    alert('Error al enviar: ' + err.message + '\n\nLa inspección se guardó localmente. Vuelve a intentar más tarde.');
-    localStorage.setItem(`backup_${folioActual}`, JSON.stringify(payload));
+
+    alert(
+      'Error al enviar: ' +
+      err.message +
+      '\n\nLa inspección se guardó localmente.'
+    );
+
+    localStorage.setItem(
+      `backup_${folioActual}`,
+      JSON.stringify(payload)
+    );
+
   } finally {
+
     ocultarLoading();
   }
 }
 
-function guardarBorrador() {
+ guardarBorrador() {
   localStorage.setItem(`borrador_${plantillaActual.codigo}`, JSON.stringify({
     folio: folioActual, respuestas, fecha: new Date().toISOString()
   }));
@@ -1210,206 +1387,230 @@ function guardarBorrador() {
 }
 
 // ================== GENERAR PDF / COMPARTIR ==================
-function descargarCopiaPDF() {
-  if (!ultimaInspeccionEnviada) {
-    alert('No hay inspección para descargar.');
-    return;
-  }
-  
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-  const insp = ultimaInspeccionEnviada;
-  
+```javascript
+// ================== GENERAR PDF / COMPARTIR ==================
+
+function generarContenidoPDF(doc, insp) {
+
   // Configuración
   const margenIzq = 15;
   const margenSup = 15;
   const anchoUtil = 180;
+
   let y = margenSup;
-  
+
   // === HEADER ===
   doc.setFillColor(24, 95, 165);
   doc.rect(0, 0, 210, 25, 'F');
+
   doc.setTextColor(255, 255, 255);
+
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
+
   doc.text('GEOTEC BOYLES BROS', margenIzq, 11);
+
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
-  doc.text('Sistema de Inspecciones Digitales', margenIzq, 18);
-  
+
+  doc.text(
+    'Sistema de Inspecciones Digitales',
+    margenIzq,
+    18
+  );
+
   y = 35;
-  
+
   // === TÍTULO DEL CHECKLIST ===
   doc.setTextColor(31, 41, 55);
+
   doc.setFontSize(13);
   doc.setFont('helvetica', 'bold');
-  doc.text(insp.plantilla.nombre, margenIzq, y);
+
+  doc.text(
+    insp.plantilla.nombre,
+    margenIzq,
+    y
+  );
+
   y += 7;
-  
+
   // === DATOS GENERALES ===
-  doc.setFontSize(9);
+
+  doc.setDrawColor(209, 213, 219);
+
+  doc.roundedRect(
+    margenIzq,
+    y,
+    anchoUtil,
+    26,
+    2,
+    2
+  );
+
+  y += 6;
+
+  doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
-  doc.setTextColor(107, 114, 128);
-  doc.text(`Folio: ${insp.folio}`, margenIzq, y);
-  doc.text(`Fecha: ${new Date(insp.fechaEnvio).toLocaleString('es-CL')}`, margenIzq + 90, y);
-  y += 5;
-  doc.text(`Estado: ${insp.estado}`, margenIzq, y);
-  if (insp.ubicacion) {
-    doc.text(`Ubicación: ${insp.ubicacion}`, margenIzq + 90, y);
-  }
+
+  doc.text(
+    `Folio: ${insp.folio}`,
+    margenIzq + 3,
+    y
+  );
+
+  y += 6;
+
+  doc.text(
+    `Fecha: ${new Date(insp.fechaEnvio).toLocaleString()}`,
+    margenIzq + 3,
+    y
+  );
+
+  y += 6;
+
+  doc.text(
+    `Estado: ${insp.estado}`,
+    margenIzq + 3,
+    y
+  );
+
+  y += 10;
+
+  // === RESPUESTAS ===
+
+  doc.setFontSize(12);
+  doc.setFont('helvetica', 'bold');
+
+  doc.text(
+    'RESPUESTAS',
+    margenIzq,
+    y
+  );
+
   y += 8;
-  
-  // Línea separadora
-  doc.setDrawColor(229, 231, 235);
-  doc.line(margenIzq, y, margenIzq + anchoUtil, y);
-  y += 5;
-  
-  // === PREGUNTAS Y RESPUESTAS ===
-  doc.setTextColor(31, 41, 55);
-  let seccionActual = '';
-  let contadorPregunta = 0;
-  
-  insp.plantilla.preguntas.forEach((p) => {
-    // Saltar si tipo firma o foto, los ponemos al final
-    if (p.tipo === 'firma' || p.tipo === 'foto') return;
-    
-    contadorPregunta++;
-    const r = insp.respuestas[p.id];
-    const respuestaTxt = formatRespuestaPDF(r, p.tipo);
-    const planAccion = insp.respuestas[p.id + '_plan'];
-    
-    // Calcular espacio necesario
-    const lineasTexto = doc.splitTextToSize(p.texto, anchoUtil - 30);
-    const espacioNecesario = (lineasTexto.length * 4) + 5 + (planAccion ? 8 : 0);
-    
-    // Nueva página si no cabe
-    if (y + espacioNecesario > 280) {
-      doc.addPage();
-      y = margenSup;
+
+  insp.plantilla.preguntas.forEach((p, index) => {
+
+    const respuesta = insp.respuestas[p.id];
+
+    let texto = '';
+
+    if (Array.isArray(respuesta)) {
+
+      texto =
+        `${respuesta.length} foto(s) adjunta(s)`;
+
+    } else {
+
+      texto = String(respuesta || '');
     }
-    
-    // Sección
-    const sec = p.seccion || 'Datos generales';
-    if (sec !== seccionActual) {
-      seccionActual = sec;
-      y += 3;
-      doc.setFillColor(230, 241, 251);
-      doc.rect(margenIzq - 1, y - 4, anchoUtil + 2, 6, 'F');
-      doc.setFontSize(9);
-      doc.setFont('helvetica', 'bold');
-      doc.setTextColor(12, 68, 124);
-      doc.text(sec.toUpperCase(), margenIzq + 1, y);
-      y += 5;
-    }
-    
-    // Pregunta
-    doc.setFontSize(9);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(31, 41, 55);
-    doc.text(`${contadorPregunta}.`, margenIzq, y);
-    doc.text(lineasTexto, margenIzq + 6, y);
-    y += (lineasTexto.length * 4);
-    
-    // Respuesta (con color según valor)
+
+    doc.setFontSize(10);
+
     doc.setFont('helvetica', 'bold');
-    if (r === 'Bueno' || r === 'Sí' || r === 'Si') doc.setTextColor(99, 153, 34);
-    else if (r === 'Malo' || r === 'No') doc.setTextColor(163, 45, 45);
-    else if (r === 'No Aplica') doc.setTextColor(136, 135, 128);
-    else doc.setTextColor(31, 41, 55);
-    
-    doc.text(`→ ${respuestaTxt}`, margenIzq + 10, y);
-    y += 4;
-    
-    // Plan de acción si lo hay
-    if (planAccion) {
-      doc.setFillColor(252, 235, 235);
-      doc.rect(margenIzq + 8, y - 2, anchoUtil - 8, 6, 'F');
-      doc.setFontSize(8);
-      doc.setFont('helvetica', 'italic');
-      doc.setTextColor(121, 31, 31);
-      const lineasPlan = doc.splitTextToSize('Plan de acción: ' + planAccion, anchoUtil - 14);
-      doc.text(lineasPlan, margenIzq + 10, y + 2);
-      y += (lineasPlan.length * 4) + 3;
-    }
-    
-    y += 2;
-    
-    // Resetear color
-    doc.setTextColor(31, 41, 55);
-  });
-  
-  // === FIRMA Y FOTOS ===
-  insp.plantilla.preguntas.forEach((p) => {
-    if (p.tipo === 'firma') {
-      const firma = insp.respuestas[p.id];
-      if (firma) {
-        if (y + 50 > 280) { doc.addPage(); y = margenSup; }
-        doc.setFontSize(10);
-        doc.setFont('helvetica', 'bold');
-        doc.setTextColor(31, 41, 55);
-        doc.text(p.texto + ':', margenIzq, y);
-        y += 5;
-        try {
-          doc.addImage(firma, 'PNG', margenIzq, y, 80, 30);
-          y += 35;
-        } catch(e) { y += 5; }
-      }
-    }
-  });
-  
-  // === FOOTER ===
-  doc.setFontSize(7);
-  doc.setFont('helvetica', 'italic');
-  doc.setTextColor(150, 150, 150);
-  const totalPaginas = doc.internal.getNumberOfPages();
-  for (let i = 1; i <= totalPaginas; i++) {
-    doc.setPage(i);
+
+    const preguntaTexto =
+      `${index + 1}. ${p.texto}`;
+
+    const lineasPregunta =
+      doc.splitTextToSize(
+        preguntaTexto,
+        175
+      );
+
     doc.text(
-      `Generado: ${new Date().toLocaleString('es-CL')} · Página ${i} de ${totalPaginas} · ${insp.folio}`,
-      margenIzq, 290
+      lineasPregunta,
+      margenIzq,
+      y
+    );
+
+    y += (lineasPregunta.length * 5);
+
+    doc.setFont('helvetica', 'normal');
+
+    const lineasRespuesta =
+      doc.splitTextToSize(
+        `Respuesta: ${texto}`,
+        170
+      );
+
+    doc.text(
+      lineasRespuesta,
+      margenIzq + 5,
+      y
+    );
+
+    y +=
+      (lineasRespuesta.length * 5) + 6;
+
+    // Salto de página
+    if (y > 270) {
+
+      doc.addPage();
+
+      y = 20;
+    }
+  });
+
+  // === FOOTER ===
+
+  const totalPaginas =
+    doc.getNumberOfPages();
+
+  for (
+    let i = 1;
+    i <= totalPaginas;
+    i++
+  ) {
+
+    doc.setPage(i);
+
+    doc.setFontSize(8);
+
+    doc.setTextColor(120);
+
+    doc.text(
+      `Página ${i} de ${totalPaginas}`,
+      180,
+      290
     );
   }
-  
-  // Guardar
-  doc.save(`Inspeccion_${insp.folio}.pdf`);
 }
 
-function formatRespuestaPDF(r, tipo) {
-  if (r === undefined || r === null || r === '') return '(sin respuesta)';
-  if (Array.isArray(r)) return `[${r.length} foto(s) adjunta(s)]`;
-  if (typeof r === 'string' && r.startsWith('data:image/')) return '[firma capturada]';
-  return String(r);
-}
+// ============================================
+// DESCARGAR COPIA PDF
+// ============================================
 
-async function compartirCopia() {
+function descargarCopiaPDF() {
+
   if (!ultimaInspeccionEnviada) {
-    alert('No hay inspección para compartir.');
+
+    alert(
+      'No hay inspección para descargar.'
+    );
+
     return;
   }
-  const insp = ultimaInspeccionEnviada;
-  const texto = `Inspección Geotec\n` +
-                `Folio: ${insp.folio}\n` +
-                `Plantilla: ${insp.plantilla.nombre}\n` +
-                `Fecha: ${new Date(insp.fechaEnvio).toLocaleString('es-CL')}\n` +
-                `Estado: ${insp.estado}`;
-  
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: 'Inspección Geotec',
-        text: texto,
-      });
-    } catch(_) {}
-  } else {
-    // Fallback: copiar al portapapeles
-    try {
-      await navigator.clipboard.writeText(texto);
-      alert('Información copiada al portapapeles. Pégala donde quieras compartirla.');
-    } catch(_) {
-      alert('Tu navegador no permite compartir directamente. Usa el botón "Descargar copia (PDF)" y comparte ese archivo.');
-    }
-  }
+
+  const { jsPDF } = window.jspdf;
+
+  const doc = new jsPDF({
+    unit: 'mm',
+    format: 'a4'
+  });
+
+  generarContenidoPDF(
+    doc,
+    ultimaInspeccionEnviada
+  );
+
+  doc.save(
+    `Inspeccion_${ultimaInspeccionEnviada.folio}.pdf`
+  );
 }
+```
+
 
 // ================== NAVEGACIÓN ==================
 function cambiarPantalla(id) {
