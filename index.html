@@ -1112,9 +1112,8 @@ function setupFirma(canvas, idPregunta) {
 
 // ================== ENVÍO ==================
 // ================== ENVÍO ==================
-async  enviarInspeccion() {
-  alert('ENTRÓ A ENVIAR');
-}
+async function enviarInspeccion() {
+  
   // Validar obligatorias
   const faltantes = plantillaActual.preguntas.filter(p => {
     if (!p.obligatoria) return false;
@@ -1226,38 +1225,49 @@ async  enviarInspeccion() {
   // PAYLOAD
   // ============================================
 
-  const payload = {
+ // ============================================
+// GENERAR PDF
+// ============================================
 
-    folio: folioActual,
+ultimaInspeccionEnviada = {
+  folio: folioActual,
+  plantilla: plantillaActual,
+  respuestas: { ...respuestas },
+  fechaEnvio: new Date().toISOString(),
+  ubicacion: ubicacion,
+  estado: estado,
+};
 
-    plantillaCodigo:
-      plantillaActual.codigo,
+const { jsPDF } = window.jspdf;
 
-    carpetaCodigo:
-      plantillaActual.carpeta,
+const doc = new jsPDF({
+  unit: 'mm',
+  format: 'a4'
+});
 
-    nombrePlantilla:
-      plantillaActual.nombre,
+generarContenidoPDF(doc, ultimaInspeccionEnviada);
 
-    fechaInspeccion:
-      new Date().toISOString(),
+const pdfBase64 = doc.output('datauristring');
 
-    estado: estado,
+console.log('PDF generado OK');
 
-    itemsCriticos: malos,
+// ============================================
+// PAYLOAD
+// ============================================
 
-    ubicacion: ubicacion,
-
-    respuestas: respuestas,
-
-    userAgent: navigator.userAgent,
-
-    // ========================================
-    // NUEVO
-    // ========================================
-
-    pdfBase64: pdfBase64
-  };
+const payload = {
+  folio: folioActual,
+  plantillaCodigo: plantillaActual.codigo,
+  carpetaCodigo: plantillaActual.carpeta,
+  nombrePlantilla: plantillaActual.nombre,
+  fechaInspeccion: new Date().toISOString(),
+  estado: estado,
+  itemsCriticos: malos,
+  ubicacion: ubicacion,
+  respuestas: respuestas,
+  userAgent: navigator.userAgent,
+  pdfBase64: pdfBase64
+};
 
   // ============================================
   // ENVIAR
@@ -1381,15 +1391,13 @@ async  enviarInspeccion() {
   }
 }
 
- guardarBorrador() {
+  function guardarBorrador() {
   localStorage.setItem(`borrador_${plantillaActual.codigo}`, JSON.stringify({
     folio: folioActual, respuestas, fecha: new Date().toISOString()
   }));
   alert('Borrador guardado. Podrás continuarlo más tarde.');
 }
 
-// ================== GENERAR PDF / COMPARTIR ==================
-```javascript
 // ================== GENERAR PDF / COMPARTIR ==================
 
 function generarContenidoPDF(doc, insp) {
