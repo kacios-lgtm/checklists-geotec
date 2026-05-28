@@ -793,16 +793,29 @@ function renderFormulario() {
   const cont = document.getElementById('contenidoFormulario');
   let html = '';
 
-  // Agrupar preguntas por sección
+  // Separar preguntas: las de cierre (fotos y firmas) van SIEMPRE al final,
+  // sin importar dónde estén en el array ni qué sección tengan.
+  const preguntasCuerpo = [];
+  const preguntasCierre = [];
+  plantillaActual.preguntas.forEach((p, i) => {
+    const item = { ...p, idx: i };
+    if (p.tipo === 'foto' || p.tipo === 'firma') {
+      preguntasCierre.push(item);
+    } else {
+      preguntasCuerpo.push(item);
+    }
+  });
+
+  // Agrupar el CUERPO por sección, respetando el orden de aparición
   const grupos = {};
   const ordenSecciones = [];
-  plantillaActual.preguntas.forEach((p, i) => {
+  preguntasCuerpo.forEach(p => {
     const sec = p.seccion || 'Datos generales';
     if (!grupos[sec]) {
       grupos[sec] = [];
       ordenSecciones.push(sec);
     }
-    grupos[sec].push({ ...p, idx: i });
+    grupos[sec].push(p);
   });
 
   ordenSecciones.forEach(sec => {
@@ -811,6 +824,21 @@ function renderFormulario() {
       html += renderPregunta(p);
     });
   });
+
+  // Renderizar fotos y firmas al final, bajo una sección de cierre
+  if (preguntasCierre.length > 0) {
+    const fotos = preguntasCierre.filter(p => p.tipo === 'foto');
+    const firmas = preguntasCierre.filter(p => p.tipo === 'firma');
+    // Fotos primero (antes de las firmas)
+    if (fotos.length > 0) {
+      html += `<div class="seccion-titulo">Registro fotográfico</div>`;
+      fotos.forEach(p => { html += renderPregunta(p); });
+    }
+    if (firmas.length > 0) {
+      html += `<div class="seccion-titulo">Firmas</div>`;
+      firmas.forEach(p => { html += renderPregunta(p); });
+    }
+  }
 
   cont.innerHTML = html;
   setTimeout(activarFirmas, 100);
