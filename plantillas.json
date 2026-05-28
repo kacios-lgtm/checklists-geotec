@@ -1,5 +1,5 @@
 {
-  "version": "2.1",
+  "version": "2.3",
   "empresa": "Geotec Boyles Bros S.A.",
   "carpetas": [
     {
@@ -65,7 +65,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -76,7 +77,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -87,7 +89,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -98,7 +101,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -109,7 +113,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -120,7 +125,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -131,7 +137,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -142,7 +149,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -153,7 +161,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -164,7 +173,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -175,7 +185,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -186,7 +197,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -197,7 +209,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -208,7 +221,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -219,7 +233,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -230,7 +245,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -241,7 +257,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -252,7 +269,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -263,7 +281,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -274,7 +293,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -285,7 +305,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -296,7 +317,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Equipo Sonda DDH"
         },
@@ -307,7 +329,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -318,7 +341,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -329,7 +353,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -340,7 +365,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -351,7 +377,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -362,7 +389,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -373,7 +401,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -384,7 +413,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -395,7 +425,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -406,7 +437,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -417,7 +449,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -428,7 +461,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -439,7 +473,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -450,7 +485,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -461,7 +497,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -472,7 +509,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -483,7 +521,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -494,7 +533,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -505,7 +545,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -516,7 +557,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Plataforma de Sondaje"
         },
@@ -527,7 +569,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -538,7 +581,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -549,7 +593,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -560,7 +605,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -571,7 +617,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Caseta"
         },
@@ -582,7 +629,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Seguridad/Salud/MA"
         },
@@ -593,7 +641,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Seguridad/Salud/MA"
         },
@@ -604,7 +653,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ],
           "seccion": "Seguridad/Salud/MA"
         },
@@ -5194,7 +5244,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5204,7 +5255,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5214,7 +5266,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5224,7 +5277,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5234,7 +5288,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5244,7 +5299,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5254,7 +5310,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5264,7 +5321,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5274,7 +5332,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -5284,7 +5343,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13020,7 +13080,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13030,7 +13091,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13040,7 +13102,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13050,7 +13113,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13060,7 +13124,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13070,7 +13135,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13080,7 +13146,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -13090,7 +13157,8 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Malo"
+            "Malo",
+            "No Aplica"
           ]
         },
         {
@@ -15184,6 +15252,1625 @@
       ],
       "orden": 2,
       "abrev": "RAM"
+    },
+    {
+      "codigo": "MANT-CS3001-MPP01",
+      "nombre": "MPP1 CS-3001 - Pauta 250 hrs",
+      "descripcion": "Mantención preventiva CS-3001 con RH Frontal John Deere. Pauta MPP1 aplica a horometros 250, 750, 1250, 1750... (cada 250h fuera de pautas mayores). 49 ítems en 11 sistemas.",
+      "carpeta": "MANT",
+      "frecuencia": "Cada 250 hrs (MPP1)",
+      "preguntas": [
+        {
+          "id": "planificador",
+          "texto": "Planificador",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "mecanico",
+          "texto": "Mecánico",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "ch",
+          "texto": "CH (Código de Hora)",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "fecha",
+          "texto": "Fecha",
+          "tipo": "fecha",
+          "obligatoria": true
+        },
+        {
+          "id": "marca",
+          "texto": "Marca",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "modelo",
+          "texto": "Modelo",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "hrs_plan",
+          "texto": "Hrs. Plan",
+          "tipo": "numero",
+          "obligatoria": true
+        },
+        {
+          "id": "hrs_real",
+          "texto": "Hrs. Real",
+          "tipo": "numero",
+          "obligatoria": true
+        },
+        {
+          "id": "i1",
+          "texto": "[Realizar] Documentación previa intervención",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i2",
+          "texto": "[Revisar] Estado de batería y cables (Nivel de Electrolito, Carga y sulfatación)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i3",
+          "texto": "[Revisar] Estado de cable alimentación motor de partida",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i4",
+          "texto": "[Revisar] Estado de líneas eléctricas, arnés, corrugados y continuidad en terminales",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i5",
+          "texto": "[Realizar] Mantención interior tablero conexión de atriles y conectores",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i6",
+          "texto": "[Realizar] Mantención, limpieza en interior de tableros eléctricos principales",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i7",
+          "texto": "[Realizar] Prueba de funcionamiento bloqueos parciales (rotación, avance y brazo manipulador)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i8",
+          "texto": "[Revisar] Funcionamiento de paradas de emergencias consola y laterales",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i9",
+          "texto": "[Revisar] Funcionamiento de botón Reset sistema interlock",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i10",
+          "texto": "[Realizar] Mantención finales de carrera, brazo kelly, brazo manipulador, huinche principal",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i11",
+          "texto": "[Realizar] Mantención rotación cero (apertura, cierre rejilla, accionamiento válvula, mangueras)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i12",
+          "texto": "[Realizar] Toma de muestra de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i13",
+          "texto": "[Realizar] Cambio de aceite motor",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i14",
+          "texto": "[Realizar] Cambio de filtro de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i15",
+          "texto": "[Realizar] Desmontaje mangueras y tuberías admisión de aire, verificar contaminación por sílice",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i16",
+          "texto": "[Realizar] Cambio de filtro de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i17",
+          "texto": "[Realizar] Cambio de filtro Racor combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i18",
+          "texto": "[Revisar] Estado de mangueras, cañerías y abrazaderas o terminales de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i19",
+          "texto": "[Revisar] Estado de bomba de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i20",
+          "texto": "[Revisar] Estado de bomba de transferencia de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i21",
+          "texto": "[Revisar] Estado tapa de radiador",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i22",
+          "texto": "[Revisar] Estado de mangueras, cañerías y abrazaderas de refrigerante",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i23",
+          "texto": "[Revisar] Estado de correa de alternador (tensión y/o desgaste)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i24",
+          "texto": "[Realizar] Toma de muestra de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema hidráulico"
+        },
+        {
+          "id": "i25",
+          "texto": "[Revisar] Estado de líneas de alta presión (flexibles, mallas de seguridad, grilletes)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema hidráulico"
+        },
+        {
+          "id": "i26",
+          "texto": "[Revisar] Nivel de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i27",
+          "texto": "[Realizar] Limpieza de respiradero",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i28",
+          "texto": "[Realizar] Lubricación de rodamiento",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i29",
+          "texto": "[Revisar] Estado de mordazas y pernos amarre cable de acero a tambor",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i30",
+          "texto": "[Realizar] Lubricación de cadena de enrrollador",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche wire line"
+        },
+        {
+          "id": "i31",
+          "texto": "[Revisar] Estado de pernos soporte huinche wireline",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche wire line"
+        },
+        {
+          "id": "i32",
+          "texto": "[Realizar] Lubricación de ejes pivote torre",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Torre perforación"
+        },
+        {
+          "id": "i33",
+          "texto": "[Realizar] Cambio de aceite de bomba de lodos",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i34",
+          "texto": "[Revisar] Estado de válvula de alivio",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i35",
+          "texto": "[Realizar] Limpieza de tapón magnético del carter",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i36",
+          "texto": "[Realizar] Cambio de canastillos, bolas y sellos (mantenedor debe llevar culata armada)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i37",
+          "texto": "[Realizar] Cambio de aceite de cabezal de rotación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabeza de rotación"
+        },
+        {
+          "id": "i38",
+          "texto": "[Realizar] Cambio de filtro de lubricación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabeza de rotación"
+        },
+        {
+          "id": "i39",
+          "texto": "[Realizar] Limpieza de filtro respiradero",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabeza de rotación"
+        },
+        {
+          "id": "i40",
+          "texto": "[Realizar] Revisión y limpieza de filtro de succión",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabeza de rotación"
+        },
+        {
+          "id": "i41",
+          "texto": "[Revisar] Presión de aceite lubricación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabeza de rotación"
+        },
+        {
+          "id": "i42",
+          "texto": "[Revisar] Estado de rodillos deslizamiento cabezal de rotación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Carro cabezal rotación"
+        },
+        {
+          "id": "i43",
+          "texto": "[Revisar] Estado de conjunto de prensa",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Prensa de barras tipo UDR"
+        },
+        {
+          "id": "i44",
+          "texto": "[Revisar] Estado de tensor y cilindro",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Prensa de barras tipo UDR"
+        },
+        {
+          "id": "i45",
+          "texto": "[Realizar] Lubricación de cilindro pivote de panel control",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Consola operación"
+        },
+        {
+          "id": "i46",
+          "texto": "[Aplicar] Pauta de mantención Rod Sloop",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i47",
+          "texto": "[Aplicar] Pauta de mantención mesa saca testigo",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i48",
+          "texto": "[Aplicar] Pauta de mantención planta de lodo",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i49",
+          "texto": "[Aplicar] Pauta de check list diario / Prueba funcionamiento equipo",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "obs_pendientes",
+          "texto": "Pendientes, Críticos y/o Correctivos (indicar N° de ítem y observación)",
+          "tipo": "textoLargo",
+          "obligatoria": false
+        },
+        {
+          "id": "plan_accion",
+          "texto": "Plan de acción (responsable, fecha)",
+          "tipo": "textoLargo",
+          "obligatoria": false
+        },
+        {
+          "id": "folio",
+          "texto": "Folio CI",
+          "tipo": "texto",
+          "obligatoria": false
+        },
+        {
+          "id": "foto_equipo",
+          "texto": "Foto general del equipo intervenido",
+          "tipo": "foto",
+          "obligatoria": false
+        },
+        {
+          "id": "firma_mecanico",
+          "texto": "Firma mecánico",
+          "tipo": "firma",
+          "obligatoria": true
+        },
+        {
+          "id": "firma_lider",
+          "texto": "Firma Líder de Mantención",
+          "tipo": "firma",
+          "obligatoria": true
+        },
+        {
+          "id": "firma_supervisor_ops",
+          "texto": "Firma Supervisor de Operaciones (recibí conforme)",
+          "tipo": "firma",
+          "obligatoria": true
+        }
+      ],
+      "orden": 1,
+      "abrev": "M01"
+    },
+    {
+      "codigo": "MANT-CS3001-MPP02",
+      "nombre": "MPP2 CS-3001 - Pauta 500 hrs",
+      "descripcion": "Mantención preventiva CS-3001 con RH Frontal John Deere. Pauta MPP2 aplica a horometros 500, 1500, 2500, 3500... (cada 1000h fuera de pautas mayores). 60 ítems en 11 sistemas.",
+      "carpeta": "MANT",
+      "frecuencia": "Cada 500 hrs / cada 1000 (MPP2)",
+      "preguntas": [
+        {
+          "id": "planificador",
+          "texto": "Planificador",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "mecanico",
+          "texto": "Mecánico",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "ch",
+          "texto": "CH (Código de Hora)",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "fecha",
+          "texto": "Fecha",
+          "tipo": "fecha",
+          "obligatoria": true
+        },
+        {
+          "id": "marca",
+          "texto": "Marca",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "modelo",
+          "texto": "Modelo",
+          "tipo": "texto",
+          "obligatoria": true
+        },
+        {
+          "id": "hrs_plan",
+          "texto": "Hrs. Plan",
+          "tipo": "numero",
+          "obligatoria": true
+        },
+        {
+          "id": "hrs_real",
+          "texto": "Hrs. Real",
+          "tipo": "numero",
+          "obligatoria": true
+        },
+        {
+          "id": "i1",
+          "texto": "[Realizar] Documentación previa intervención",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i2",
+          "texto": "[Revisar] Estado de batería y cables (Nivel de Electrolito, Carga y sulfatación)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i3",
+          "texto": "[Revisar] Estado de cable alimentación motor de partida",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i4",
+          "texto": "[Revisar] Estado de líneas eléctricas, arnés, corrugados y continuidad en terminales",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i5",
+          "texto": "[Realizar] Mantención interior tablero conexión de atriles y conectores",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i6",
+          "texto": "[Realizar] Mantención, limpieza en interior de tableros eléctricos principales",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i7",
+          "texto": "[Realizar] Prueba de funcionamiento bloqueos parciales (rotación, avance y brazo manipulador)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i8",
+          "texto": "[Revisar] Funcionamiento de paradas de emergencias consola y laterales",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i9",
+          "texto": "[Revisar] Funcionamiento de botón Reset sistema interlock",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i10",
+          "texto": "[Realizar] Mantención finales de carrera, brazo kelly, brazo manipulador, huinche principal",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i11",
+          "texto": "[Realizar] Mantención rotación cero (apertura, cierre rejilla, accionamiento válvula, mangueras)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema eléctrico"
+        },
+        {
+          "id": "i12",
+          "texto": "[Realizar] Toma de muestra de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i13",
+          "texto": "[Realizar] Cambio de aceite motor",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i14",
+          "texto": "[Realizar] Cambio de filtro de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i15",
+          "texto": "[Realizar] Desmontaje mangueras y tuberías admisión de aire, verificar contaminación por sílice",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i16",
+          "texto": "[Realizar] Cambio de filtro de aire primario",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i17",
+          "texto": "[Realizar] Cambio de filtro de aire secundario (si el motor cuenta con este elemento)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i18",
+          "texto": "[Realizar] Cambio de filtro de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i19",
+          "texto": "[Realizar] Cambio de filtro Racor combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i20",
+          "texto": "[Revisar] Estado de mangueras, cañerías y abrazaderas o terminales de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i21",
+          "texto": "[Revisar] Estado de bomba de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i22",
+          "texto": "[Revisar] Estado de bomba de transferencia de combustible",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i23",
+          "texto": "[Revisar] Estado tapa de radiador",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i24",
+          "texto": "[Revisar] Estado de mangueras, cañerías y abrazaderas de refrigerante",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i25",
+          "texto": "[Revisar] Sistema de enfriamiento de refrigerante (Delta de temperatura)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i26",
+          "texto": "[Revisar] Estado de correa de alternador (tensión y/o desgaste)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i27",
+          "texto": "[Revisar] Estado de tensor de correas",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i28",
+          "texto": "[Revisar] Estado de turbo (pérdidas aceite, inspección visual, álabes, turbina, compresor)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i29",
+          "texto": "[Realizar] Limpieza de tubo respiradero carter",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i30",
+          "texto": "[Revisar] Estado de soportes del motor",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Motor Diésel John Deere"
+        },
+        {
+          "id": "i31",
+          "texto": "[Realizar] Toma de muestra de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema hidráulico"
+        },
+        {
+          "id": "i32",
+          "texto": "[Revisar] Estado de líneas de alta presión (flexibles, mallas de seguridad, grilletes)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema hidráulico"
+        },
+        {
+          "id": "i33",
+          "texto": "[Realizar] Limpieza exterior de enfriador hidráulico",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Sistema hidráulico"
+        },
+        {
+          "id": "i34",
+          "texto": "[Realizar] Cambio de aceite del huinche principal",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i35",
+          "texto": "[Revisar] Nivel de aceite",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i36",
+          "texto": "[Realizar] Limpieza de respiradero",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i37",
+          "texto": "[Realizar] Lubricación de rodamiento",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i38",
+          "texto": "[Revisar] Estado de mordazas y pernos amarre cable de acero a tambor",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i39",
+          "texto": "[Realizar] Ajuste y estado pernos soporte huinche",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche principal"
+        },
+        {
+          "id": "i40",
+          "texto": "[Realizar] Lubricación de cadena de enrrollador",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche wire line"
+        },
+        {
+          "id": "i41",
+          "texto": "[Revisar] Estado de pernos soporte huinche wireline",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Huinche wire line"
+        },
+        {
+          "id": "i42",
+          "texto": "[Realizar] Lubricación de ejes pivote torre",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Torre perforación"
+        },
+        {
+          "id": "i43",
+          "texto": "[Realizar] Cambio de aceite de bomba de lodos",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i44",
+          "texto": "[Realizar] Limpieza de tapón magnético del carter",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i45",
+          "texto": "[Revisar] Estado de válvula de alivio",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i46",
+          "texto": "[Realizar] Cambio de canastillos, bolas y sellos (mantenedor debe llevar culata armada)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i47",
+          "texto": "[Realizar] Cambio de sopapas (mantenedor debe llevar sopapas armadas con porta sopapas)",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Bomba de lodo"
+        },
+        {
+          "id": "i48",
+          "texto": "[Realizar] Cambio de aceite de cabezal de rotación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabezal rotación"
+        },
+        {
+          "id": "i49",
+          "texto": "[Realizar] Cambio de filtro de lubricación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabezal rotación"
+        },
+        {
+          "id": "i50",
+          "texto": "[Realizar] Limpieza de filtro respiradero",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabezal rotación"
+        },
+        {
+          "id": "i51",
+          "texto": "[Realizar] Revisión y limpieza de filtro de succión",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabezal rotación"
+        },
+        {
+          "id": "i52",
+          "texto": "[Revisar] Presión de aceite lubricación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabezal rotación"
+        },
+        {
+          "id": "i53",
+          "texto": "[Realizar] Tensado de cadena",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Cabezal rotación"
+        },
+        {
+          "id": "i54",
+          "texto": "[Revisar] Estado de rodillos deslizamiento cabezal de rotación",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Carro cabezal rotación"
+        },
+        {
+          "id": "i55",
+          "texto": "[Revisar] Estado de conjunto de prensa",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Prensa de barras tipo UDR"
+        },
+        {
+          "id": "i56",
+          "texto": "[Revisar] Estado de tensor y cilindro",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Prensa de barras tipo UDR"
+        },
+        {
+          "id": "i57",
+          "texto": "[Realizar] Lubricación de cilindro pivote de panel control",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Consola operación"
+        },
+        {
+          "id": "i58",
+          "texto": "[Aplicar] Pauta de mantención Rod Sloop",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i59",
+          "texto": "[Aplicar] Pauta de mantención mesa saca testigo",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "i60",
+          "texto": "[Aplicar] Pauta de mantención planta de lodo",
+          "tipo": "opcionMultiple",
+          "obligatoria": true,
+          "opciones": [
+            "Realizado",
+            "Pendiente",
+            "Crítico",
+            "No Aplica"
+          ],
+          "seccion": "Equipo general"
+        },
+        {
+          "id": "obs_pendientes",
+          "texto": "Pendientes, Críticos y/o Correctivos (indicar N° de ítem y observación)",
+          "tipo": "textoLargo",
+          "obligatoria": false
+        },
+        {
+          "id": "plan_accion",
+          "texto": "Plan de acción (responsable, fecha)",
+          "tipo": "textoLargo",
+          "obligatoria": false
+        },
+        {
+          "id": "folio",
+          "texto": "Folio CI",
+          "tipo": "texto",
+          "obligatoria": false
+        },
+        {
+          "id": "foto_equipo",
+          "texto": "Foto general del equipo intervenido",
+          "tipo": "foto",
+          "obligatoria": false
+        },
+        {
+          "id": "firma_mecanico",
+          "texto": "Firma mecánico",
+          "tipo": "firma",
+          "obligatoria": true
+        },
+        {
+          "id": "firma_lider",
+          "texto": "Firma Líder de Mantención",
+          "tipo": "firma",
+          "obligatoria": true
+        },
+        {
+          "id": "firma_supervisor_ops",
+          "texto": "Firma Supervisor de Operaciones (recibí conforme)",
+          "tipo": "firma",
+          "obligatoria": true
+        }
+      ],
+      "orden": 2,
+      "abrev": "M02"
     }
   ]
 }
