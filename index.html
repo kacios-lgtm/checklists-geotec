@@ -1188,39 +1188,6 @@ async function enviarInspeccion() {
   };
 
   // ============================================
-  // GENERAR PDF
-  // ============================================
-
-  const { jsPDF } = window.jspdf;
-
-  const doc = new jsPDF({
-    unit: 'mm',
-    format: 'a4'
-  });
-
-  const insp = ultimaInspeccionEnviada;
-
-  // ============================================
-  // GENERAR PDF USANDO TU FUNCIÓN EXISTENTE
-  // ============================================
-
-  generarContenidoPDF(doc, insp);
-
-  // ============================================
-  // CONVERTIR PDF A BASE64
-  // ============================================
-
-  const pdfBase64 =
-    doc.output('datauristring');
-  console.log('PDF BASE64:', pdfBase64?.substring(0,100));
-
-  // ============================================
-  // DESCARGAR PDF LOCAL
-  // ============================================
-
-  doc.save(`Inspeccion_${insp.folio}.pdf`);
-
-  // ============================================
   // PAYLOAD
   // ============================================
 
