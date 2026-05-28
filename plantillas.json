@@ -1,5 +1,5 @@
 {
-  "version": "2.3",
+  "version": "2.4",
   "empresa": "Geotec Boyles Bros S.A.",
   "carpetas": [
     {
@@ -718,7 +718,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -731,7 +730,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -744,7 +742,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -757,7 +754,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -770,7 +766,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -783,7 +778,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -796,7 +790,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -809,7 +802,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -822,7 +814,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -835,7 +826,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -848,7 +838,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -861,7 +850,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -874,7 +862,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -887,7 +874,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -900,7 +886,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -913,7 +898,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -926,7 +910,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -939,7 +922,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -952,7 +934,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -965,7 +946,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -978,7 +958,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -991,7 +970,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1004,7 +982,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1017,7 +994,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1030,7 +1006,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1043,7 +1018,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1056,7 +1030,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1069,7 +1042,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1082,7 +1054,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1095,7 +1066,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1108,7 +1078,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1121,7 +1090,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1134,7 +1102,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1147,7 +1114,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1160,7 +1126,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1173,7 +1138,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1186,7 +1150,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1199,7 +1162,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1212,7 +1174,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1225,7 +1186,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1238,7 +1198,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1251,7 +1210,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1264,7 +1222,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1277,7 +1234,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1290,7 +1246,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1303,7 +1258,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1316,7 +1270,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1329,7 +1282,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1342,7 +1294,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1355,7 +1306,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1368,7 +1318,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1381,7 +1330,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1394,7 +1342,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1466,7 +1413,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1479,7 +1425,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1492,7 +1437,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1505,7 +1449,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1518,7 +1461,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1531,7 +1473,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1544,7 +1485,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1557,7 +1497,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1570,7 +1509,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1583,7 +1521,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1596,7 +1533,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1609,7 +1545,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1622,7 +1557,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1635,7 +1569,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1648,7 +1581,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1661,7 +1593,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1674,7 +1605,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1687,7 +1617,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1700,7 +1629,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1713,7 +1641,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1726,7 +1653,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1739,7 +1665,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1752,7 +1677,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1765,7 +1689,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1778,7 +1701,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1791,7 +1713,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1804,7 +1725,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1817,7 +1737,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1830,7 +1749,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1843,7 +1761,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1856,7 +1773,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1869,7 +1785,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1882,7 +1797,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1895,7 +1809,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1908,7 +1821,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1921,7 +1833,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1934,7 +1845,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1947,7 +1857,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1960,7 +1869,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1973,7 +1881,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1986,7 +1893,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -1999,7 +1905,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2012,7 +1917,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2025,7 +1929,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2038,7 +1941,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2051,7 +1953,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2064,7 +1965,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2077,7 +1977,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2090,7 +1989,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2103,7 +2001,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2116,7 +2013,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2129,7 +2025,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2142,7 +2037,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2214,7 +2108,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2227,7 +2120,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2240,7 +2132,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2253,7 +2144,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2266,7 +2156,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2279,7 +2168,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2292,7 +2180,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2305,7 +2192,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2318,7 +2204,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2331,7 +2216,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2344,7 +2228,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2357,7 +2240,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2370,7 +2252,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2383,7 +2264,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2396,7 +2276,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2409,7 +2288,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2422,7 +2300,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2435,7 +2312,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2448,7 +2324,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2461,7 +2336,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2474,7 +2348,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2487,7 +2360,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2500,7 +2372,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2513,7 +2384,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2526,7 +2396,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2539,7 +2408,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2552,7 +2420,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2565,7 +2432,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2578,7 +2444,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2591,7 +2456,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2604,7 +2468,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2617,7 +2480,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2630,7 +2492,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2643,7 +2504,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2656,7 +2516,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2669,7 +2528,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2682,7 +2540,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2695,7 +2552,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2708,7 +2564,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2721,7 +2576,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2734,7 +2588,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2747,7 +2600,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2760,7 +2612,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2773,7 +2624,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2786,7 +2636,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2799,7 +2648,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2812,7 +2660,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2825,7 +2672,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2838,7 +2684,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2851,7 +2696,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2923,7 +2767,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2936,7 +2779,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2949,7 +2791,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2962,7 +2803,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2975,7 +2815,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -2988,7 +2827,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3001,7 +2839,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3014,7 +2851,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3027,7 +2863,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3040,7 +2875,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3053,7 +2887,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3066,7 +2899,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3079,7 +2911,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3092,7 +2923,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3105,7 +2935,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3118,7 +2947,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3131,7 +2959,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3144,7 +2971,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3157,7 +2983,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3170,7 +2995,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3183,7 +3007,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3196,7 +3019,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3209,7 +3031,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3222,7 +3043,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3235,7 +3055,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3248,7 +3067,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3261,7 +3079,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3274,7 +3091,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3287,7 +3103,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3300,7 +3115,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3313,7 +3127,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3326,7 +3139,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3339,7 +3151,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3352,7 +3163,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3365,7 +3175,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3378,7 +3187,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3391,7 +3199,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3404,7 +3211,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3417,7 +3223,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3430,7 +3235,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3443,7 +3247,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3456,7 +3259,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3469,7 +3271,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3482,7 +3283,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3495,7 +3295,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3508,7 +3307,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3521,7 +3319,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3534,7 +3331,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3547,7 +3343,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3560,7 +3355,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3573,7 +3367,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3586,7 +3379,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3599,7 +3391,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3671,7 +3462,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3684,7 +3474,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3697,7 +3486,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3710,7 +3498,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3723,7 +3510,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3736,7 +3522,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3749,7 +3534,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3762,7 +3546,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3775,7 +3558,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3788,7 +3570,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3801,7 +3582,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3814,7 +3594,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3827,7 +3606,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3840,7 +3618,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3853,7 +3630,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3866,7 +3642,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3879,7 +3654,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3892,7 +3666,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3905,7 +3678,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3918,7 +3690,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3931,7 +3702,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3944,7 +3714,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3957,7 +3726,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3970,7 +3738,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3983,7 +3750,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -3996,7 +3762,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4009,7 +3774,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4022,7 +3786,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4035,7 +3798,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4048,7 +3810,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4061,7 +3822,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4074,7 +3834,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4087,7 +3846,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4100,7 +3858,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4113,7 +3870,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4126,7 +3882,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4139,7 +3894,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4152,7 +3906,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4165,7 +3918,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4178,7 +3930,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4191,7 +3942,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4204,7 +3954,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4217,7 +3966,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4230,7 +3978,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4243,7 +3990,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4256,7 +4002,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4269,7 +4014,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4282,7 +4026,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4295,7 +4038,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4308,7 +4050,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4321,7 +4062,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4334,7 +4074,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4347,7 +4086,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4360,7 +4098,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4373,7 +4110,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4386,7 +4122,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4399,7 +4134,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4412,7 +4146,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4425,7 +4158,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4438,7 +4170,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4451,7 +4182,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4464,7 +4194,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4477,7 +4206,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4490,7 +4218,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4503,7 +4230,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4516,7 +4242,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4529,7 +4254,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4542,7 +4266,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4555,7 +4278,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4568,7 +4290,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4581,7 +4302,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4594,7 +4314,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4607,7 +4326,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4620,7 +4338,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4633,7 +4350,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4646,7 +4362,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4659,7 +4374,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4672,7 +4386,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4685,7 +4398,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4698,7 +4410,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4711,7 +4422,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4724,7 +4434,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4737,7 +4446,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4750,7 +4458,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4763,7 +4470,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4776,7 +4482,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4789,7 +4494,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4802,7 +4506,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4815,7 +4518,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4828,7 +4530,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -4841,7 +4542,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5522,7 +5222,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5535,7 +5234,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5548,7 +5246,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5561,7 +5258,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5574,7 +5270,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5587,7 +5282,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5600,7 +5294,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5613,7 +5306,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5626,7 +5318,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5639,7 +5330,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5652,7 +5342,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5665,7 +5354,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5678,7 +5366,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5691,7 +5378,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5704,7 +5390,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5717,7 +5402,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5730,7 +5414,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5743,7 +5426,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5756,7 +5438,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5769,7 +5450,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5782,7 +5462,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5795,7 +5474,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5808,7 +5486,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5821,7 +5498,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5834,7 +5510,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5847,7 +5522,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5860,7 +5534,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5873,7 +5546,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5886,7 +5558,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5899,7 +5570,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5912,7 +5582,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5925,7 +5594,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5938,7 +5606,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -5951,7 +5618,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6616,7 +6282,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6629,7 +6294,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6642,7 +6306,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6655,7 +6318,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6668,7 +6330,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6681,7 +6342,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6694,7 +6354,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6707,7 +6366,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6720,7 +6378,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6733,7 +6390,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6746,7 +6402,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6759,7 +6414,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6772,7 +6426,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6785,7 +6438,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6798,7 +6450,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6811,7 +6462,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6824,7 +6474,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6837,7 +6486,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6850,7 +6498,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6863,7 +6510,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6876,7 +6522,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6889,7 +6534,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6902,7 +6546,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6915,7 +6558,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6928,7 +6570,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6941,7 +6582,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6954,7 +6594,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6967,7 +6606,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6980,7 +6618,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -6993,7 +6630,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7006,7 +6642,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7019,7 +6654,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7032,7 +6666,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7045,7 +6678,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7058,7 +6690,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7071,7 +6702,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7084,7 +6714,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7097,7 +6726,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7110,7 +6738,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7123,7 +6750,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7136,7 +6762,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7149,7 +6774,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7162,7 +6786,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7175,7 +6798,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7188,7 +6810,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7201,7 +6822,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7214,7 +6834,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7227,7 +6846,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7240,7 +6858,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7253,7 +6870,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7266,7 +6882,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7279,7 +6894,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7292,7 +6906,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7305,7 +6918,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7318,7 +6930,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7331,7 +6942,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7344,7 +6954,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7357,7 +6966,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7370,7 +6978,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7383,7 +6990,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7396,7 +7002,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7409,7 +7014,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7422,7 +7026,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7435,7 +7038,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7448,7 +7050,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7461,7 +7062,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7474,7 +7074,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7487,7 +7086,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7500,7 +7098,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7513,7 +7110,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7526,7 +7122,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7539,7 +7134,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7552,7 +7146,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7565,7 +7158,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7578,7 +7170,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7591,7 +7182,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7604,7 +7194,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7617,7 +7206,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7630,7 +7218,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7643,7 +7230,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7656,7 +7242,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7669,7 +7254,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7682,7 +7266,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7695,7 +7278,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7708,7 +7290,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7721,7 +7302,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7734,7 +7314,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7747,7 +7326,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7760,7 +7338,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7773,7 +7350,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7786,7 +7362,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7799,7 +7374,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7812,7 +7386,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7825,7 +7398,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7838,7 +7410,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7851,7 +7422,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7864,7 +7434,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7877,7 +7446,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7890,7 +7458,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7903,7 +7470,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7916,7 +7482,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7929,7 +7494,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7942,7 +7506,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7955,7 +7518,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7968,7 +7530,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7981,7 +7542,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -7994,7 +7554,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8007,7 +7566,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8020,7 +7578,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8033,7 +7590,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8046,7 +7602,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8059,7 +7614,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8072,7 +7626,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8085,7 +7638,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8098,7 +7650,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8111,7 +7662,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8124,7 +7674,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8137,7 +7686,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8150,7 +7698,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8163,7 +7710,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8176,7 +7722,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8189,7 +7734,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8261,7 +7805,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8274,7 +7817,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8287,7 +7829,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8300,7 +7841,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8313,7 +7853,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8326,7 +7865,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8339,7 +7877,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8352,7 +7889,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8365,7 +7901,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8378,7 +7913,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8391,7 +7925,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8404,7 +7937,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8417,7 +7949,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8430,7 +7961,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8443,7 +7973,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8456,7 +7985,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8469,7 +7997,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8482,7 +8009,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8495,7 +8021,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8508,7 +8033,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8521,7 +8045,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8534,7 +8057,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8547,7 +8069,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8560,7 +8081,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8573,7 +8093,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8586,7 +8105,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8599,7 +8117,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8612,7 +8129,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8625,7 +8141,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8638,7 +8153,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8651,7 +8165,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8664,7 +8177,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8677,7 +8189,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8690,7 +8201,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8703,7 +8213,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8716,7 +8225,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8729,7 +8237,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8742,7 +8249,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8755,7 +8261,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8768,7 +8273,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8781,7 +8285,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8794,7 +8297,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8807,7 +8309,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8820,7 +8321,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8833,7 +8333,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8846,7 +8345,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8859,7 +8357,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8872,7 +8369,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8885,7 +8381,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8898,7 +8393,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8911,7 +8405,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8924,7 +8417,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8937,7 +8429,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8950,7 +8441,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8963,7 +8453,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8976,7 +8465,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -8989,7 +8477,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9002,7 +8489,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9015,7 +8501,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9028,7 +8513,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9041,7 +8525,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9054,7 +8537,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9067,7 +8549,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9080,7 +8561,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9093,7 +8573,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9106,7 +8585,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9119,7 +8597,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9132,7 +8609,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9145,7 +8621,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9158,7 +8633,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9171,7 +8645,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9184,7 +8657,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9197,7 +8669,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9210,7 +8681,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9223,7 +8693,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9236,7 +8705,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9249,7 +8717,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9262,7 +8729,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9275,7 +8741,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9288,7 +8753,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9301,7 +8765,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9314,7 +8777,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9327,7 +8789,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9340,7 +8801,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9353,7 +8813,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9366,7 +8825,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9379,7 +8837,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9392,7 +8849,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9405,7 +8861,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9418,7 +8873,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9431,7 +8885,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9444,7 +8897,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9457,7 +8909,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9470,7 +8921,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9483,7 +8933,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9496,7 +8945,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9509,7 +8957,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9522,7 +8969,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9535,7 +8981,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9548,7 +8993,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9561,7 +9005,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9574,7 +9017,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9587,7 +9029,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9600,7 +9041,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9613,7 +9053,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9626,7 +9065,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9639,7 +9077,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9652,7 +9089,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9665,7 +9101,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9678,7 +9113,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9750,7 +9184,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9763,7 +9196,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9776,7 +9208,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9789,7 +9220,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9802,7 +9232,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9815,7 +9244,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9828,7 +9256,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9841,7 +9268,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9854,7 +9280,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9867,7 +9292,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9880,7 +9304,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9893,7 +9316,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9906,7 +9328,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9919,7 +9340,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9932,7 +9352,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9945,7 +9364,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9958,7 +9376,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9971,7 +9388,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9984,7 +9400,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -9997,7 +9412,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10010,7 +9424,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10023,7 +9436,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10036,7 +9448,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10049,7 +9460,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10062,7 +9472,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10075,7 +9484,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10088,7 +9496,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10101,7 +9508,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10114,7 +9520,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10127,7 +9532,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10140,7 +9544,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10153,7 +9556,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10166,7 +9568,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10179,7 +9580,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10192,7 +9592,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10205,7 +9604,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10218,7 +9616,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10231,7 +9628,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10244,7 +9640,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10257,7 +9652,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10270,7 +9664,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10283,7 +9676,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10296,7 +9688,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10309,7 +9700,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10322,7 +9712,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10335,7 +9724,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10407,7 +9795,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10420,7 +9807,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10433,7 +9819,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10446,7 +9831,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10459,7 +9843,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10472,7 +9855,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10485,7 +9867,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10498,7 +9879,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10511,7 +9891,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10524,7 +9903,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10537,7 +9915,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10550,7 +9927,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10563,7 +9939,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10576,7 +9951,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10589,7 +9963,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10602,7 +9975,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10615,7 +9987,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10628,7 +9999,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10641,7 +10011,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10654,7 +10023,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10667,7 +10035,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10680,7 +10047,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10693,7 +10059,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10706,7 +10071,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10719,7 +10083,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10732,7 +10095,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10745,7 +10107,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10758,7 +10119,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10771,7 +10131,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10784,7 +10143,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10797,7 +10155,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10810,7 +10167,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10823,7 +10179,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10836,7 +10191,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10849,7 +10203,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10862,7 +10215,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10875,7 +10227,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10888,7 +10239,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10901,7 +10251,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10914,7 +10263,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10927,7 +10275,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10940,7 +10287,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10953,7 +10299,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10966,7 +10311,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10979,7 +10323,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -10992,7 +10335,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11005,7 +10347,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11018,7 +10359,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11031,7 +10371,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11044,7 +10383,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11057,7 +10395,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11070,7 +10407,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11083,7 +10419,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11096,7 +10431,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11109,7 +10443,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11122,7 +10455,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11135,7 +10467,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11148,7 +10479,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11161,7 +10491,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11174,7 +10503,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11187,7 +10515,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11200,7 +10527,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11213,7 +10539,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11226,7 +10551,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11239,7 +10563,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11252,7 +10575,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11265,7 +10587,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11278,7 +10599,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11291,7 +10611,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11304,7 +10623,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11317,7 +10635,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11330,7 +10647,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11343,7 +10659,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11356,7 +10671,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11369,7 +10683,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11382,7 +10695,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11395,7 +10707,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11408,7 +10719,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11421,7 +10731,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11434,7 +10743,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11447,7 +10755,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11460,7 +10767,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11473,7 +10779,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11486,7 +10791,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11499,7 +10803,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11512,7 +10815,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11525,7 +10827,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11538,7 +10839,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11551,7 +10851,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11564,7 +10863,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11577,7 +10875,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11590,7 +10887,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11603,7 +10899,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11616,7 +10911,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11629,7 +10923,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11642,7 +10935,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11655,7 +10947,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11668,7 +10959,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11681,7 +10971,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -11694,7 +10983,6 @@
           "obligatoria": true,
           "opciones": [
             "Bueno",
-            "Pendiente",
             "Malo",
             "No Aplica"
           ],
@@ -15315,7 +14603,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15328,7 +14615,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15341,7 +14627,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15354,7 +14639,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15367,7 +14651,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15380,7 +14663,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15393,7 +14675,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15406,7 +14687,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15419,7 +14699,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15432,7 +14711,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15445,7 +14723,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15458,7 +14735,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15471,7 +14747,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15484,7 +14759,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15497,7 +14771,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15510,7 +14783,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15523,7 +14795,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15536,7 +14807,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15549,7 +14819,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15562,7 +14831,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15575,7 +14843,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15588,7 +14855,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15601,7 +14867,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15614,7 +14879,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15627,7 +14891,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15640,7 +14903,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15653,7 +14915,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15666,7 +14927,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15679,7 +14939,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15692,7 +14951,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15705,7 +14963,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15718,7 +14975,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15731,7 +14987,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15744,7 +14999,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15757,7 +15011,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15770,7 +15023,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15783,7 +15035,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15796,7 +15047,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15809,7 +15059,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15822,7 +15071,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15835,7 +15083,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15848,7 +15095,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15861,7 +15107,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15874,7 +15119,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15887,7 +15131,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15900,7 +15143,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15913,7 +15155,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15926,7 +15167,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -15939,7 +15179,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16053,7 +15292,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16066,7 +15304,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16079,7 +15316,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16092,7 +15328,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16105,7 +15340,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16118,7 +15352,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16131,7 +15364,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16144,7 +15376,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16157,7 +15388,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16170,7 +15400,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16183,7 +15412,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16196,7 +15424,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16209,7 +15436,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16222,7 +15448,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16235,7 +15460,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16248,7 +15472,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16261,7 +15484,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16274,7 +15496,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16287,7 +15508,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16300,7 +15520,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16313,7 +15532,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16326,7 +15544,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16339,7 +15556,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16352,7 +15568,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16365,7 +15580,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16378,7 +15592,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16391,7 +15604,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16404,7 +15616,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16417,7 +15628,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16430,7 +15640,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16443,7 +15652,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16456,7 +15664,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16469,7 +15676,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16482,7 +15688,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16495,7 +15700,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16508,7 +15712,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16521,7 +15724,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16534,7 +15736,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16547,7 +15748,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16560,7 +15760,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16573,7 +15772,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16586,7 +15784,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16599,7 +15796,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16612,7 +15808,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16625,7 +15820,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16638,7 +15832,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16651,7 +15844,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16664,7 +15856,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16677,7 +15868,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16690,7 +15880,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16703,7 +15892,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16716,7 +15904,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16729,7 +15916,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16742,7 +15928,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16755,7 +15940,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16768,7 +15952,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16781,7 +15964,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16794,7 +15976,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16807,7 +15988,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
@@ -16820,7 +16000,6 @@
           "obligatoria": true,
           "opciones": [
             "Realizado",
-            "Pendiente",
             "Crítico",
             "No Aplica"
           ],
