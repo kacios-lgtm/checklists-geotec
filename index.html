@@ -1112,72 +1112,34 @@ function setupFirma(canvas, idPregunta) {
 
 // ================== ENVÍO ==================
 async function enviarInspeccion() {
-  
+
   // Validar obligatorias
   const faltantes = plantillaActual.preguntas.filter(p => {
     if (!p.obligatoria) return false;
-
     const r = respuestas[p.id];
-
-    return (
-      r === undefined ||
-      r === '' ||
-      (Array.isArray(r) && r.length === 0)
-    );
+    return (r === undefined || r === '' || (Array.isArray(r) && r.length === 0));
   });
-
   if (faltantes.length > 0) {
-
-    alert(
-      `Faltan ${faltantes.length} pregunta(s) obligatoria(s) sin responder.`
-    );
-
+    alert(`Faltan ${faltantes.length} pregunta(s) obligatoria(s) sin responder.`);
     return;
   }
 
-  // ============================================
-  // CALCULAR ESTADO
-  // ============================================
-
+  // Calcular estado general
   const malos = plantillaActual.preguntas.filter(p =>
-    p.tipo === 'opcionMultiple' &&
-    (
-      respuestas[p.id] === 'Malo' ||
-      respuestas[p.id] === 'No'
-    )
+    p.tipo === 'opcionMultiple' && (respuestas[p.id] === 'Malo' || respuestas[p.id] === 'No')
   ).length;
+  const estado = malos > 0 ? 'NoConforme' : 'Conforme';
 
-  const estado =
-    malos > 0
-      ? 'NoConforme'
-      : 'Conforme';
-
-  // ============================================
-  // GEOLOCALIZACIÓN
-  // ============================================
-
+  // Geolocalización (opcional)
   let ubicacion = '';
-
   try {
-
     const pos = await new Promise((res, rej) => {
-
-      navigator.geolocation.getCurrentPosition(
-        res,
-        rej,
-        { timeout: 5000 }
-      );
+      navigator.geolocation.getCurrentPosition(res, rej, { timeout: 5000 });
     });
-
-    ubicacion =
-      `${pos.coords.latitude.toFixed(6)},${pos.coords.longitude.toFixed(6)}`;
-
+    ubicacion = `${pos.coords.latitude.toFixed(6)},${pos.coords.longitude.toFixed(6)}`;
   } catch(_) {}
 
-  // ============================================
-  // GUARDAR COPIA LOCAL
-  // ============================================
-
+  // Guardar copia local de la inspección (la usan descargar PDF, compartir, historial)
   ultimaInspeccionEnviada = {
     folio: folioActual,
     plantilla: plantillaActual,
@@ -1187,172 +1149,72 @@ async function enviarInspeccion() {
     estado: estado,
   };
 
-  // ============================================
-  // PAYLOAD
-  // ============================================
+  // Generar PDF base64 para enviar a Drive (en try aparte: si falla, igual se envía sin PDF)
+  let pdfBase64 = '';
+  try {
+    const { jsPDF } = window.jspdf;
+    const docPDF = new jsPDF({ unit: 'mm', format: 'a4' });
+    generarContenidoPDF(docPDF, ultimaInspeccionEnviada);
+    pdfBase64 = docPDF.output('datauristring');
+  } catch (e) {
+    console.error('Error generando PDF (se enviará sin PDF):', e);
+  }
 
- // ============================================
-// GENERAR PDF
-// ============================================
-
-ultimaInspeccionEnviada = {
-  folio: folioActual,
-  plantilla: plantillaActual,
-  respuestas: { ...respuestas },
-  fechaEnvio: new Date().toISOString(),
-  ubicacion: ubicacion,
-  estado: estado,
-};
-
-const { jsPDF } = window.jspdf;
-
-const doc = new jsPDF({
-  unit: 'mm',
-  format: 'a4'
-});
-
-generarContenidoPDF(doc, ultimaInspeccionEnviada);
-
-const pdfBase64 = doc.output('datauristring');
-
-console.log('PDF generado OK');
-
-// ============================================
-// PAYLOAD
-// ============================================
-
-const payload = {
-  folio: folioActual,
-  plantillaCodigo: plantillaActual.codigo,
-  carpetaCodigo: plantillaActual.carpeta,
-  nombrePlantilla: plantillaActual.nombre,
-  fechaInspeccion: new Date().toISOString(),
-  estado: estado,
-  itemsCriticos: malos,
-  ubicacion: ubicacion,
-  respuestas: respuestas,
-  userAgent: navigator.userAgent,
-  pdfBase64: pdfBase64
-};
-
-  // ============================================
-  // ENVIAR
-  // ============================================
+  // Construir payload (declarado fuera del try para que el catch lo pueda usar)
+  const payload = {
+    folio: folioActual,
+    plantillaCodigo: plantillaActual.codigo,
+    carpetaCodigo: plantillaActual.carpeta,
+    nombrePlantilla: plantillaActual.nombre,
+    fechaInspeccion: new Date().toISOString(),
+    estado: estado,
+    itemsCriticos: malos,
+    ubicacion: ubicacion,
+    respuestas: respuestas,
+    userAgent: navigator.userAgent,
+    pdfBase64: pdfBase64,
+  };
 
   mostrarLoading('Enviando inspección...');
-
   try {
-
-    if (
-      APPS_SCRIPT_URL &&
-      APPS_SCRIPT_URL !==
-      'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT'
-    ) {
-
-      const resp = await fetch(
-        APPS_SCRIPT_URL,
-        {
-          method: 'POST',
-
-          headers: {
-            'Content-Type':
-              'text/plain;charset=utf-8'
-          },
-
-          body: JSON.stringify(payload),
-        }
-      );
-
+    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT') {
+      const resp = await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'text/plain;charset=utf-8'},
+        body: JSON.stringify(payload),
+      });
       const j = await resp.json();
-
-      if (!j.ok) {
-
-        throw new Error(
-          j.error || 'Error desconocido'
-        );
-      }
-
+      if (!j.ok) throw new Error(j.error || 'Error desconocido');
     } else {
-
-      console.log(
-        'Inspección (modo demo):',
-        payload
-      );
-
-      await new Promise(r =>
-        setTimeout(r, 1000)
-      );
+      console.log('Inspección (modo demo):', payload);
+      await new Promise(r => setTimeout(r, 1000));
     }
 
-    // ========================================
-    // ÉXITO
-    // ========================================
+    document.getElementById('folioFinal').textContent = folioActual;
+    document.getElementById('modalExito').classList.add('visible');
 
-    document
-      .getElementById('folioFinal')
-      .textContent = folioActual;
-
-    document
-      .getElementById('modalExito')
-      .classList.add('visible');
-
-    // ========================================
-    // HISTORIAL LOCAL
-    // ========================================
-
+    // Historial local (últimas 50)
     try {
-
-      let historial = JSON.parse(
-        localStorage.getItem(
-          'historial_inspecciones'
-        ) || '[]'
-      );
-
+      let historial = JSON.parse(localStorage.getItem('historial_inspecciones') || '[]');
       historial.unshift({
-
         folio: folioActual,
-
-        nombrePlantilla:
-          plantillaActual.nombre,
-
-        carpeta:
-          plantillaActual.carpeta,
-
-        plantillaCodigo:
-          plantillaActual.codigo,
-
-        fecha:
-          new Date().toISOString(),
-
+        nombrePlantilla: plantillaActual.nombre,
+        carpeta: plantillaActual.carpeta,
+        plantillaCodigo: plantillaActual.codigo,
+        fecha: new Date().toISOString(),
         estado: estado,
-
         respuestas: respuestas,
       });
-
       historial = historial.slice(0, 50);
-
-      localStorage.setItem(
-        'historial_inspecciones',
-        JSON.stringify(historial)
-      );
-
+      localStorage.setItem('historial_inspecciones', JSON.stringify(historial));
     } catch(_) {}
 
   } catch (err) {
-
-    alert(
-      'Error al enviar: ' +
-      err.message +
-      '\n\nLa inspección se guardó localmente.'
-    );
-
-    localStorage.setItem(
-      `backup_${folioActual}`,
-      JSON.stringify(payload)
-    );
-
+    alert('Error al enviar: ' + err.message + '\n\nLa inspección se guardó localmente. Vuelve a intentar más tarde.');
+    // Guardar backup sin el PDF (pesa mucho en localStorage)
+    const backup = { ...payload, pdfBase64: '' };
+    try { localStorage.setItem(`backup_${folioActual}`, JSON.stringify(backup)); } catch(_) {}
   } finally {
-
     ocultarLoading();
   }
 }
