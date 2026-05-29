@@ -1,5 +1,5 @@
 {
-  "version": "2.7",
+  "version": "3.0",
   "empresa": "Geotec Boyles Bros S.A.",
   "carpetas": [
     {
@@ -14541,5 +14541,9 @@
       "orden": 2,
       "abrev": "RAM"
     }
+  ],
+  "supervisores": [
+    "Supervisor 1",
+    "Supervisor 2"
   ]
 }
