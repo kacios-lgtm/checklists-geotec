@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#185FA5">
+<title>Inspecciones · Geotec Boyles Bros</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+:root {
+  --primario: #185FA5;
+  --primario-claro: #E6F1FB;
+  --primario-oscuro: #0C447C;
+  --acento: #BA7517;
+  --acento-claro: #FAEEDA;
+  --bueno: #639922;
+  --bueno-claro: #EAF3DE;
+  --malo: #A32D2D;
+  --malo-claro: #FCEBEB;
+  --na: #888780;
+  --na-claro: #F1EFE8;
+  --texto: #1F2937;
+  --texto-suave: #6B7280;
+  --texto-tenue: #9CA3AF;
+  --borde: #E5E7EB;
+  --fondo: #F9FAFB;
+  --fondo-blanco: #FFFFFF;
+  --sombra: 0 1px 3px rgba(0,0,0,0.08);
+  --sombra-md: 0 4px 12px rgba(0,0,0,0.08);
+  --radio: 12px;
+  --radio-sm: 8px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+  font-size: 15px;
+  min-height: 100vh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* === HEADER === */
+.app-header {
+  background: var(--primario);
+  color: white;
+  padding: 1rem 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--sombra);
+}
+.app-header .back-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.app-header .back-btn.visible { display: flex; }
+.app-header .back-btn:hover, .app-header .back-btn:active { background: rgba(255,255,255,0.3); }
+.app-header .home-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.app-header .home-btn.visible { display: flex; }
+.app-header .home-btn:hover, .app-header .home-btn:active { background: rgba(255,255,255,0.3); }
+.app-header .header-content { flex: 1; min-width: 0; }
+.app-header .header-eyebrow {
+  font-size: 11px;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.app-header .header-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1rem 5rem;
+}
+
+/* === PANTALLA INICIO === */
+.carpeta-actual {
+  background: var(--fondo-blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.carpeta-actual .label {
+  font-size: 11px;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.carpeta-actual .nombre {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--texto);
+}
+.carpeta-actual .desc {
+  font-size: 13px;
+  color: var(--texto-suave);
+  margin-top: 4px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 4px 12px;
+}
+
+/* === GRID DE CARPETAS (cuando no hay parámetro) === */
+.carpetas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+.carpeta-card {
+  background: var(--fondo-blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.carpeta-card:active { transform: scale(0.97); box-shadow: var(--sombra-md); }
+.carpeta-card .icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+.carpeta-card[data-color="blue"] .icon-box { background: #E6F1FB; color: #0C447C; }
+.carpeta-card[data-color="amber"] .icon-box { background: #FAEEDA; color: #854F0B; }
+.carpeta-card[data-color="green"] .icon-box { background: #EAF3DE; color: #27500A; }
+.carpeta-card[data-color="purple"] .icon-box { background: #EEEDFE; color: #3C3489; }
+.carpeta-card .titulo { font-weight: 600; font-size: 15px; }
+.carpeta-card .meta { font-size: 12px; color: var(--texto-suave); }
+
+/* === LISTA DE CHECKLISTS === */
+.checklist-lista { display: flex; flex-direction: column; gap: 10px; }
+.checklist-item {
+  background: var(--fondo-blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.1s, border-color 0.2s;
+}
+.checklist-item:active { transform: scale(0.98); border-color: var(--primario); }
+.checklist-item .abrev {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radio-sm);
+  background: var(--primario-claro);
+  color: var(--primario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.checklist-item .info { flex: 1; min-width: 0; }
+.checklist-item .info .nombre { font-weight: 500; font-size: 14px; line-height: 1.3; }
+.checklist-item .info .meta { font-size: 12px; color: var(--texto-suave); margin-top: 4px; }
+.checklist-item .chevron { color: var(--primario); font-size: 20px; opacity: 0.5; flex-shrink: 0; }
+
+/* === BARRA DE PROGRESO === */
+.progress-bar {
+  position: sticky;
+  top: 64px;
+  background: var(--fondo-blanco);
+  border-bottom: 1px solid var(--borde);
+  padding: 10px 1rem;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.progress-bar .folio { font-size: 11px; color: var(--texto-suave); font-family: monospace; }
+.progress-bar .progress-track {
+  flex: 1;
+  height: 6px;
+  background: var(--borde);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-bar .progress-fill {
+  height: 100%;
+  background: var(--primario);
+  width: 0%;
+  transition: width 0.3s;
+  border-radius: 3px;
+}
+.progress-bar .count {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texto);
+  min-width: 56px;
+  text-align: right;
+}
+
+/* === STATS === */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.stat-card {
+  background: var(--fondo-blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 10px 12px;
+  text-align: center;
+}
+.stat-card .num { font-size: 20px; font-weight: 700; }
+.stat-card .label { font-size: 10px; color: var(--texto-suave); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+.stat-card.bueno .num { color: var(--bueno); }
+.stat-card.malo .num { color: var(--malo); }
+.stat-card.na .num { color: var(--na); }
+
+/* === SECCIONES DEL FORMULARIO === */
+.seccion-titulo {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primario);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 1.5rem 4px 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--primario-claro);
+}
+.seccion-titulo:first-child { margin-top: 0.5rem; }
+
+/* === PREGUNTAS === */
+.pregunta {
+  background: var(--fondo-blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+.pregunta .num-y-texto { display: flex; gap: 8px; margin-bottom: 10px; }
+.pregunta .num {
+  font-size: 12px;
+  color: var(--texto-tenue);
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 24px;
+}
+.pregunta .texto { font-size: 14px; line-height: 1.4; flex: 1; }
+.pregunta .texto .obligatoria { color: var(--malo); margin-left: 2px; }
+
+/* Botones BMNA y opcionMultiple genérica */
+.opciones-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.opcion-btn {
+  flex: 1;
+  min-width: 60px;
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--texto-suave);
+  transition: all 0.15s;
+}
+.opcion-btn:active { transform: scale(0.96); }
+/* Estado activa GENÉRICO (para cualquier opción) */
+.opcion-btn.activa {
+  background: var(--primario-claro);
+  color: var(--primario-oscuro);
+  border-color: var(--primario);
+  font-weight: 600;
+}
+/* Colores específicos según el valor (sobreescriben el genérico) */
+.opcion-btn.activa[data-val="Bueno"], .opcion-btn.activa[data-val="Si"], .opcion-btn.activa[data-val="Sí"] {
+  background: var(--bueno-claro); color: #27500A; border-color: var(--bueno);
+}
+.opcion-btn.activa[data-val="Malo"], .opcion-btn.activa[data-val="No"] {
+  background: var(--malo-claro); color: #791F1F; border-color: var(--malo);
+}
+.opcion-btn.activa[data-val="No Aplica"] {
+  background: var(--na-claro); color: #444441; border-color: var(--na);
+}
+.opcion-btn.activa[data-val="Pendiente"], .opcion-btn.activa[data-val="Regular"], .opcion-btn.activa[data-val="Regular/Pendiente"] {
+  background: var(--acento-claro); color: #633806; border-color: var(--acento);
+}
+
+/* Plan de acción cuando es Malo */
+.plan-accion {
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--malo-claro);
+  border-radius: var(--radio-sm);
+  border-left: 3px solid var(--malo);
+  display: none;
+}
+.plan-accion.visible { display: block; }
+.plan-accion label { font-size: 11px; color: #791F1F; font-weight: 600; display: block; margin-bottom: 4px; }
+.plan-accion textarea {
+  width: 100%;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 50px;
+}
+
+/* Inputs estándar */
+.input-text, .input-num, .input-fecha, .input-textarea {
+  width: 100%;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--fondo-blanco);
+  color: var(--texto);
+}
+.input-text:focus, .input-num:focus, .input-fecha:focus, .input-textarea:focus {
+  outline: none;
+  border-color: var(--primario);
+  box-shadow: 0 0 0 3px var(--primario-claro);
+}
+.input-textarea { resize: vertical; min-height: 70px; }
+
+/* Foto */
+.foto-zone {
+  border: 2px dashed var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  background: var(--fondo);
+  transition: all 0.2s;
+}
+.foto-zone:active { background: var(--primario-claro); border-color: var(--primario); }
+.foto-zone .icon { font-size: 24px; margin-bottom: 4px; }
+.foto-zone .label { font-size: 12px; color: var(--texto-suave); }
+.foto-preview {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.foto-preview img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.foto-preview .foto-rm {
+  position: absolute; top: 4px; right: 4px;
+  background: rgba(0,0,0,0.6); color: white;
+  border: none; border-radius: 50%;
+  width: 22px; height: 22px;
+  cursor: pointer; font-size: 14px;
+}
+.foto-preview .foto-wrap { position: relative; }
+
+/* Firma */
+.firma-zone {
+  background: var(--fondo-blanco);
+  border: 2px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 8px;
+}
+.firma-zone canvas {
+  width: 100%;
+  height: 140px;
+  background: white;
+  border-radius: 6px;
+  cursor: crosshair;
+  touch-action: none;
+}
+.firma-zone .firma-controles {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.firma-zone button {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--borde);
+  background: var(--fondo);
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Información del operador (panel arriba del formulario) */
+.info-operador {
+  background: var(--fondo-blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.info-operador .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.info-operador .row:last-child { margin-bottom: 0; }
+.info-operador label {
+  font-size: 11px;
+  color: var(--texto-suave);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* === FOOTER ACCIONES === */
+.footer-acciones {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--fondo-blanco);
+  border-top: 1px solid var(--borde);
+  padding: 12px 1rem calc(12px + env(safe-area-inset-bottom));
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--radio-sm);
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: var(--primario); color: white; }
+.btn-secondary { background: var(--fondo); color: var(--texto); border: 1px solid var(--borde); }
+.btn-success { background: var(--bueno); color: white; }
+
+/* === MODALES === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+.modal-overlay.visible { display: flex; }
+.modal {
+  background: white;
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+.modal .icon-circle {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: var(--bueno-claro);
+  color: var(--bueno);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 1rem;
+}
+.modal h2 { font-size: 18px; margin-bottom: 8px; }
+.modal p { font-size: 14px; color: var(--texto-suave); margin-bottom: 1rem; }
+.modal .folio-final {
+  background: var(--fondo);
+  border-radius: var(--radio-sm);
+  padding: 8px;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.modal-actions { display: flex; flex-direction: column; gap: 8px; }
+.btn-modal { width: 100%; flex: none; }
+
+/* Loading */
+.loading {
+  position: fixed; inset: 0;
+  background: rgba(255,255,255,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  flex-direction: column;
+  gap: 12px;
+}
+.loading.visible { display: flex; }
+.spinner {
+  width: 40px; height: 40px;
+  border: 3px solid var(--borde);
+  border-top-color: var(--primario);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--texto-suave);
+}
+.empty-state .icon { font-size: 48px; margin-bottom: 12px; opacity: 0.4; }
+
+/* Pantallas */
+.pantalla { display: none; }
+.pantalla.activa { display: block; }
+
+/* Responsive desktop */
+@media (min-width: 720px) {
+  .carpetas-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Animaciones suaves */
+.fade-in { animation: fadeIn 0.25s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <button class="back-btn" id="btnBack" onclick="volver()" title="Atrás">←</button>
+  <button class="home-btn" id="btnHome" onclick="irAInicio()" title="Inicio">🏠</button>
+  <div class="header-content">
+    <div class="header-eyebrow">GEOTEC BOYLES BROS</div>
+    <div class="header-title" id="headerTitle">Inspecciones</div>
+  </div>
+</header>
+
+<!-- PANTALLA 1: INICIO (lista de checklists de la carpeta o grid de carpetas) -->
+<div class="pantalla activa" id="scrInicio">
+  <div class="contenedor">
+    <div id="contenidoInicio"></div>
+  </div>
+</div>
+
+<!-- PANTALLA 2: FORMULARIO -->
+<div class="pantalla" id="scrFormulario">
+  <div class="progress-bar">
+    <div class="folio" id="folioDisplay">—</div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="count" id="progressCount">0/0</div>
+  </div>
+  <div class="contenedor">
+    <div class="stats-row">
+      <div class="stat-card bueno"><div class="num" id="statBueno">0</div><div class="label">Buenos</div></div>
+      <div class="stat-card malo"><div class="num" id="statMalo">0</div><div class="label">Malos</div></div>
+      <div class="stat-card na"><div class="num" id="statNA">0</div><div class="label">N/A</div></div>
+    </div>
+    <div id="contenidoFormulario"></div>
+  </div>
+  <div class="footer-acciones">
+    <button class="btn btn-secondary" onclick="guardarBorrador()">Guardar borrador</button>
+    <button class="btn btn-primary" onclick="enviarInspeccion()" id="btnEnviar">Enviar</button>
+  </div>
+</div>
+
+<!-- PANTALLA 3: SELECTOR DE ROL (operador / supervisores) -->
+<div class="pantalla" id="scrRol">
+  <div class="contenedor">
+    <div class="section-title" style="margin-top:1.5rem">¿Cómo vas a usar la app?</div>
+    <div id="contenidoRol"></div>
+  </div>
+</div>
+
+<!-- PANTALLA 4: PENDIENTES POR VALIDAR (supervisor) -->
+<div class="pantalla" id="scrPendientes">
+  <div class="contenedor">
+    <div class="carpeta-actual" id="bannerSupervisor">
+      <div class="label">Validando como</div>
+      <div class="nombre" id="nombreSupervisor">—</div>
+      <div class="desc">Formularios esperando tu aprobación</div>
+    </div>
+    <div id="contenidoPendientes"></div>
+  </div>
+</div>
+
+<!-- PANTALLA 5: REVISAR FORMULARIO (supervisor) -->
+<div class="pantalla" id="scrRevisar">
+  <div class="contenedor">
+    <div id="contenidoRevisar"></div>
+  </div>
+  <div class="footer-acciones" id="footerRevisar" style="display:flex">
+    <button class="btn btn-secondary" onclick="decidirValidacion('Rechazado')">Rechazar</button>
+    <button class="btn btn-success" onclick="decidirValidacion('Aprobado')">Aprobar y firmar</button>
+  </div>
+</div>
+
+<!-- Modal éxito -->
+<div class="modal-overlay" id="modalExito">
+  <div class="modal">
+    <div class="icon-circle">✓</div>
+    <h2>Inspección enviada</h2>
+    <p>Se guardó correctamente y se notificó al supervisor.</p>
+    <div class="folio-final" id="folioFinal">—</div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary btn-modal" onclick="descargarCopiaPDF()">
+        📄 Descargar copia (PDF)
+      </button>
+      <button class="btn btn-secondary btn-modal" onclick="compartirCopia()" id="btnCompartir">
+        📤 Compartir
+      </button>
+      <button class="btn btn-primary btn-modal" onclick="volverInicio()">
+        Nueva inspección
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal validación exitosa -->
+<div class="modal-overlay" id="modalValidado">
+  <div class="modal">
+    <div class="icon-circle">✓</div>
+    <h2 id="modalValidadoTitulo">Formulario validado</h2>
+    <p id="modalValidadoMsg">Se registró la validación correctamente.</p>
+    <div class="folio-final" id="folioValidadoFinal">—</div>
+    <div class="modal-actions">
+      <button class="btn btn-primary btn-modal" onclick="cerrarModalValidado()">
+        Continuar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Loading -->
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <div id="loadingText">Cargando...</div>
+</div>
+
+<script>
+// ================== CONFIGURACIÓN ==================
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzihWKg11kcs0Zg3cjdLQGwuXtLLNUAy4IzKrp_0-Nv8cK0kCK-RSwMML5teNGWqYkmKA/exec';
+
+// ================== ESTADO GLOBAL ==================
+let DATA = null; // datos cargados de plantillas.json
+let carpetaActual = null;
+let plantillaActual = null;
+let respuestas = {};
+let folioActual = '';
+let firmaCanvas = null, firmaCtx = null, firmaDibujando = false, firmaTieneContenido = false;
+let pantallaPrevia = 'inicio';
+let ultimaInspeccionEnviada = null; // Guardamos la última para poder descargar/compartir
+let mantCargadas = false; // Las plantillas MANT se cargan bajo demanda (archivo aparte)
+
+// Rol y validación (supervisor)
+let rolActual = null;            // 'operador' o nombre del supervisor
+let formularioRevisar = null;    // Detalle del formulario en revisión
+let firmaSupervisorData = '';    // base64 de la firma del supervisor (canvas)
+
+// Carga diferida de las plantillas de mantención (archivo grande, solo cuando se necesita)
+async function cargarMantSiHaceFalta() {
+  if (mantCargadas) return;
+  try {
+    const resp = await fetch('plantillas-mant.json');
+    const mant = await resp.json();
+    // Agregar las plantillas MANT a DATA, evitando duplicados
+    const codigosExistentes = new Set(DATA.plantillas.map(p => p.codigo));
+    (mant.plantillas || []).forEach(p => {
+      if (!codigosExistentes.has(p.codigo)) DATA.plantillas.push(p);
+    });
+    mantCargadas = true;
+  } catch (err) {
+    alert('No se pudieron cargar las pautas de mantención. Verifica tu conexión e intenta de nuevo.');
+    throw err;
+  }
+}
+
+// ================== CARGA INICIAL ==================
+async function cargarApp() {
+  mostrarLoading('Cargando plantillas...');
+  try {
+    const resp = await fetch('plantillas.json');
+    DATA = await resp.json();
+    inicializarApp();
+  } catch (err) {
+    document.getElementById('contenidoInicio').innerHTML = `
+      <div class="empty-state">
+        <div class="icon">⚠</div>
+        <p>No se pudo cargar plantillas.json</p>
+        <p style="font-size:12px">Verifica que el archivo esté en la misma carpeta.</p>
+      </div>`;
+  } finally {
+    ocultarLoading();
+  }
+}
+
+async function inicializarApp() {
+  const params = new URLSearchParams(window.location.search);
+  const codCarpeta = params.get('carpeta');
+
+  // SIEMPRE preguntar el rol al entrar (no persistir entre sesiones)
+  if (!rolActual && !codCarpeta) {
+    renderSelectorRol();
+    return;
+  }
+
+  // Si entró sin rol pero con carpeta en URL, asumimos operador
+  if (!rolActual) rolActual = 'operador';
+
+  // Si es supervisor, mostrar pantalla de pendientes
+  if (rolActual !== 'operador') {
+    await renderPendientes();
+    return;
+  }
+
+  // Modo operador
+  if (codCarpeta) {
+    carpetaActual = DATA.carpetas.find(c => c.codigo === codCarpeta.toUpperCase());
+    if (carpetaActual && carpetaActual.codigo === 'MANT') {
+      mostrarLoading('Cargando pautas de mantención...');
+      try { await cargarMantSiHaceFalta(); } catch(_) {}
+      ocultarLoading();
+    }
+  }
+  renderInicio();
+}
+
+// ================== PANTALLA SELECTOR DE ROL ==================
+function renderSelectorRol() {
+  cambiarPantalla('scrRol');
+  document.getElementById('btnBack').classList.remove('visible');
+  document.getElementById('btnHome').classList.remove('visible');
+  document.getElementById('headerTitle').textContent = 'Elige cómo entrar';
+
+  const supervisores = DATA.supervisores || [];
+  let html = `
+    <div class="checklist-lista">
+      <div class="checklist-item" onclick="seleccionarRol('operador')">
+        <div class="abrev" style="background:#E6F1FB;color:#0C447C">OP</div>
+        <div class="info">
+          <div class="nombre">Operador</div>
+          <div class="meta">Llenar formularios e inspecciones</div>
+        </div>
+        <div class="chevron">›</div>
+      </div>`;
+
+  if (supervisores.length === 0) {
+    html += `<div class="empty-state" style="padding:1.5rem"><div class="icon">⚠</div>
+      <p>No hay supervisores configurados.</p>
+      <p style="font-size:12px">Edita el archivo plantillas.json y agrega nombres en el bloque "supervisores".</p></div>`;
+  } else {
+    supervisores.forEach(nom => {
+      const inicial = nom.split(' ').map(s => s[0]).slice(0,2).join('').toUpperCase();
+      html += `
+        <div class="checklist-item" onclick="seleccionarRol('${escapeAttr(nom)}')">
+          <div class="abrev" style="background:#FAEEDA;color:#633806">${inicial}</div>
+          <div class="info">
+            <div class="nombre">${escapeHtml(nom)}</div>
+            <div class="meta">Supervisor · validar formularios</div>
+          </div>
+          <div class="chevron">›</div>
+        </div>`;
+    });
+  }
+  html += `</div>`;
+  document.getElementById('contenidoRol').innerHTML = html;
+}
+
+async function seleccionarRol(rol) {
+  rolActual = rol;
+  if (rol === 'operador') {
+    cambiarPantalla('scrInicio');
+    renderInicio();
+  } else {
+    await renderPendientes();
+  }
+}
+
+function cambiarRol() {
+  if (!confirm('¿Cambiar de rol? Se perderá cualquier formulario sin enviar.')) return;
+  rolActual = null;
+  carpetaActual = null;
+  plantillaActual = null;
+  respuestas = {};
+  formularioRevisar = null;
+  renderSelectorRol();
+}
+
+// ================== PANTALLA INICIO ==================
+function renderInicio() {
+  document.getElementById('btnBack').classList.remove('visible');
+  const cont = document.getElementById('contenidoInicio');
+  if (carpetaActual) {
+    // Mostrar boton home (volver al grid de carpetas)
+    document.getElementById('btnHome').classList.add('visible');
+    // Mostrar checklists de la carpeta
+    const plantillas = DATA.plantillas
+      .filter(p => p.carpeta === carpetaActual.codigo)
+      .sort((a, b) => a.orden - b.orden);
+    document.getElementById('headerTitle').textContent = carpetaActual.nombre;
+    let html = `
+      <div class="carpeta-actual">
+        <div class="label">Carpeta abierta</div>
+        <div class="nombre">${carpetaActual.nombre}</div>
+        <div class="desc">${carpetaActual.descripcion}</div>
+      </div>
+      <div class="section-title">${plantillas.length} checklist${plantillas.length !== 1 ? 's' : ''} disponible${plantillas.length !== 1 ? 's' : ''}</div>
+      <div class="checklist-lista">`;
+    plantillas.forEach(p => {
+      html += `
+        <div class="checklist-item" onclick="abrirPlantilla('${p.codigo}')">
+          <div class="abrev">${p.abrev}</div>
+          <div class="info">
+            <div class="nombre">${p.nombre}</div>
+            <div class="meta">${p.preguntas.length} ítems · ${p.frecuencia}</div>
+          </div>
+          <div class="chevron">›</div>
+        </div>`;
+    });
+    html += `</div>`;
+    cont.innerHTML = html;
+  } else {
+    // Mostrar grid de carpetas (no se pasó parámetro)
+    document.getElementById('headerTitle').textContent = 'Inspecciones';
+    document.getElementById('btnHome').classList.remove('visible');
+    let html = `
+      <div class="section-title">Selecciona una carpeta</div>
+      <div class="carpetas-grid">`;
+    DATA.carpetas.forEach(c => {
+      let cuenta = DATA.plantillas.filter(p => p.carpeta === c.codigo).length;
+      // La carpeta MANT se carga aparte; si aún no se carga, mostrar su total conocido
+      let etiqueta;
+      if (c.codigo === 'MANT' && !mantCargadas) {
+        etiqueta = 'Pautas de mantención';
+      } else {
+        etiqueta = `${cuenta} checklists`;
+      }
+      html += `
+        <div class="carpeta-card" data-color="${c.color}" onclick="abrirCarpeta('${c.codigo}')">
+          <div class="icon-box">${c.icono}</div>
+          <div class="titulo">${c.nombre}</div>
+          <div class="meta">${etiqueta}</div>
+        </div>`;
+    });
+    html += `</div>`;
+    cont.innerHTML = html;
+  }
+}
+
+async function abrirCarpeta(cod) {
+  carpetaActual = DATA.carpetas.find(c => c.codigo === cod);
+  // Si es la carpeta de mantenciones, cargar su archivo bajo demanda
+  if (cod === 'MANT') {
+    mostrarLoading('Cargando pautas de mantención...');
+    try { await cargarMantSiHaceFalta(); } catch(_) { ocultarLoading(); return; }
+    ocultarLoading();
+  }
+  // Actualizar URL sin recargar
+  const url = new URL(window.location);
+  url.searchParams.set('carpeta', cod);
+  history.pushState({}, '', url);
+  renderInicio();
+}
+
+function abrirPlantilla(cod) {
+  plantillaActual = DATA.plantillas.find(p => p.codigo === cod);
+  if (!plantillaActual) return;
+  generarFolio();
+  respuestas = {};
+  cambiarPantalla('scrFormulario');
+  pantallaPrevia = 'inicio';
+  renderFormulario();
+}
+
+// ================== PANTALLA FORMULARIO ==================
+function generarFolio() {
+  const fecha = new Date();
+  const año = fecha.getFullYear();
+  const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+  const dia = String(fecha.getDate()).padStart(2, '0');
+  const hora = String(fecha.getHours()).padStart(2, '0') + String(fecha.getMinutes()).padStart(2, '0');
+  folioActual = `${plantillaActual.codigo}-${año}${mes}${dia}-${hora}`;
+}
+
+function renderFormulario() {
+  document.getElementById('btnBack').classList.add('visible');
+  document.getElementById('btnHome').classList.add('visible');
+  document.getElementById('headerTitle').textContent = plantillaActual.nombre;
+  document.getElementById('folioDisplay').textContent = folioActual;
+
+  const cont = document.getElementById('contenidoFormulario');
+  let html = '';
+
+  // Separar preguntas: las de cierre (fotos y firmas) van SIEMPRE al final,
+  // sin importar dónde estén en el array ni qué sección tengan.
+  const preguntasCuerpo = [];
+  const preguntasCierre = [];
+  plantillaActual.preguntas.forEach((p, i) => {
+    const item = { ...p, idx: i };
+    if (p.tipo === 'foto' || p.tipo === 'firma') {
+      preguntasCierre.push(item);
+    } else {
+      preguntasCuerpo.push(item);
+    }
+  });
+
+  // Agrupar el CUERPO por sección, respetando el orden de aparición
+  const grupos = {};
+  const ordenSecciones = [];
+  preguntasCuerpo.forEach(p => {
+    const sec = p.seccion || 'Datos generales';
+    if (!grupos[sec]) {
+      grupos[sec] = [];
+      ordenSecciones.push(sec);
+    }
+    grupos[sec].push(p);
+  });
+
+  ordenSecciones.forEach(sec => {
+    html += `<div class="seccion-titulo">${sec}</div>`;
+    grupos[sec].forEach(p => {
+      html += renderPregunta(p);
+    });
+  });
+
+  // Renderizar fotos y firmas al final, bajo una sección de cierre
+  if (preguntasCierre.length > 0) {
+    const fotos = preguntasCierre.filter(p => p.tipo === 'foto');
+    const firmas = preguntasCierre.filter(p => p.tipo === 'firma');
+    // Fotos primero (antes de las firmas)
+    if (fotos.length > 0) {
+      html += `<div class="seccion-titulo">Registro fotográfico</div>`;
+      fotos.forEach(p => { html += renderPregunta(p); });
+    }
+    if (firmas.length > 0) {
+      html += `<div class="seccion-titulo">Firmas</div>`;
+      firmas.forEach(p => { html += renderPregunta(p); });
+    }
+  }
+
+  cont.innerHTML = html;
+  setTimeout(activarFirmas, 100);
+  actualizarEstadisticas();
+}
+
+function renderPregunta(p) {
+  const oblig = p.obligatoria ? '<span class="obligatoria">*</span>' : '';
+  let inner = '';
+
+  if (p.tipo === 'opcionMultiple') {
+    inner = `<div class="opciones-row">
+      ${p.opciones.map(op => `<button class="opcion-btn" data-val="${escapeAttr(op)}" onclick="seleccionarOpcion(this, '${p.id}')">${op}</button>`).join('')}
+    </div>`;
+    if (p.opciones.includes('Malo') || p.opciones.includes('No')) {
+      inner += `<div class="plan-accion" id="plan-${p.id}">
+        <label>Plan de acción</label>
+        <textarea oninput="guardarPlanAccion('${p.id}', this.value)" placeholder="Describir la acción a tomar..."></textarea>
+      </div>`;
+    }
+  } else if (p.tipo === 'texto') {
+    inner = `<input type="text" class="input-text" oninput="guardarRespuesta('${p.id}', this.value)" placeholder="Escribir...">`;
+  } else if (p.tipo === 'textoLargo') {
+    inner = `<textarea class="input-textarea" oninput="guardarRespuesta('${p.id}', this.value)" placeholder="Escribir..."></textarea>`;
+  } else if (p.tipo === 'numero') {
+    inner = `<input type="number" inputmode="decimal" class="input-num" oninput="guardarRespuesta('${p.id}', this.value)" placeholder="0">`;
+  } else if (p.tipo === 'fecha') {
+    const hoy = new Date().toISOString().split('T')[0];
+    inner = `<input type="date" class="input-fecha" value="${hoy}" onchange="guardarRespuesta('${p.id}', this.value)">`;
+    respuestas[p.id] = hoy;
+  } else if (p.tipo === 'foto') {
+    inner = `
+      <label class="foto-zone" for="foto-${p.id}">
+        <div class="icon">📷</div>
+        <div class="label">Tomar foto o seleccionar</div>
+      </label>
+      <input type="file" id="foto-${p.id}" accept="image/*" capture="environment" multiple style="display:none" onchange="agregarFoto('${p.id}', this.files)">
+      <div class="foto-preview" id="preview-${p.id}"></div>`;
+  } else if (p.tipo === 'firma') {
+    inner = `
+      <div class="firma-zone">
+        <canvas data-firma="${p.id}" id="canvas-${p.id}"></canvas>
+        <div class="firma-controles">
+          <button onclick="limpiarFirma('${p.id}')">Limpiar</button>
+        </div>
+      </div>`;
+  } else if (p.tipo === 'selectorSupervisor') {
+    const supervisores = (DATA && DATA.supervisores) || [];
+    if (supervisores.length === 0) {
+      inner = `<div style="color:var(--malo);font-size:13px;padding:8px;background:var(--malo-claro);border-radius:6px">
+        ⚠ No hay supervisores configurados en plantillas.json. Pide al administrador que los agregue.
+      </div>`;
+    } else {
+      inner = `<select class="input-text" onchange="guardarRespuesta('${p.id}', this.value)" style="appearance:auto">
+        <option value="">— Selecciona un supervisor —</option>
+        ${supervisores.map(s => `<option value="${escapeAttr(s)}">${escapeHtml(s)}</option>`).join('')}
+      </select>`;
+    }
+  }
+
+  return `<div class="pregunta" data-pregunta-id="${p.id}">
+    <div class="num-y-texto">
+      <div class="num">${p.idx + 1}</div>
+      <div class="texto">${escapeHtml(p.texto)}${oblig}</div>
+    </div>
+    ${inner}
+  </div>`;
+}
+
+function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function escapeAttr(s) { return String(s).replace(/'/g, "\\'").replace(/"/g, '&quot;'); }
+
+// ================== INTERACCIONES FORMULARIO ==================
+function seleccionarOpcion(btn, idPregunta) {
+  const grupo = btn.closest('.opciones-row');
+  // Limpiar todos los botones del grupo
+  grupo.querySelectorAll('.opcion-btn').forEach(b => {
+    b.classList.remove('activa');
+    b.style.background = '';
+    b.style.color = '';
+    b.style.borderColor = '';
+    b.style.fontWeight = '';
+  });
+  // Marcar el activo
+  btn.classList.add('activa');
+  const valor = btn.getAttribute('data-val');
+  
+  // Aplicar estilo inline según el valor (siempre se ve, sin depender de CSS)
+  if (valor === 'Bueno' || valor === 'Sí' || valor === 'Si') {
+    btn.style.background = '#EAF3DE';
+    btn.style.color = '#27500A';
+    btn.style.borderColor = '#639922';
+  } else if (valor === 'Malo' || valor === 'No') {
+    btn.style.background = '#FCEBEB';
+    btn.style.color = '#791F1F';
+    btn.style.borderColor = '#A32D2D';
+  } else if (valor === 'No Aplica') {
+    btn.style.background = '#F1EFE8';
+    btn.style.color = '#444441';
+    btn.style.borderColor = '#888780';
+  } else if (valor === 'Pendiente' || valor === 'Regular' || valor === 'Regular/Pendiente') {
+    btn.style.background = '#FAEEDA';
+    btn.style.color = '#633806';
+    btn.style.borderColor = '#BA7517';
+  } else {
+    // Genérico (A, B, y cualquier otro valor)
+    btn.style.background = '#E6F1FB';
+    btn.style.color = '#0C447C';
+    btn.style.borderColor = '#185FA5';
+  }
+  btn.style.fontWeight = '600';
+  
+  respuestas[idPregunta] = valor;
+
+  // Mostrar/ocultar plan de acción si es Malo o No
+  const plan = document.getElementById(`plan-${idPregunta}`);
+  if (plan) {
+    if (valor === 'Malo' || valor === 'No') plan.classList.add('visible');
+    else plan.classList.remove('visible');
+  }
+
+  actualizarEstadisticas();
+}
+
+function guardarRespuesta(id, valor) {
+  respuestas[id] = valor;
+  actualizarEstadisticas();
+}
+
+function guardarPlanAccion(id, texto) {
+  respuestas[`${id}_plan`] = texto;
+}
+
+function agregarFoto(id, files) {
+  if (!respuestas[id]) respuestas[id] = [];
+  const preview = document.getElementById(`preview-${id}`);
+  Array.from(files).forEach(file => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const dataUrl = e.target.result;
+      respuestas[id].push(dataUrl);
+      const wrap = document.createElement('div');
+      wrap.className = 'foto-wrap';
+      wrap.innerHTML = `<img src="${dataUrl}"><button class="foto-rm" onclick="removerFoto('${id}', this, '${dataUrl.substring(0,50)}')">×</button>`;
+      preview.appendChild(wrap);
+    };
+    reader.readAsDataURL(file);
+  });
+  actualizarEstadisticas();
+}
+
+function removerFoto(id, btn, prefijo) {
+  if (respuestas[id]) {
+    respuestas[id] = respuestas[id].filter(d => !d.startsWith(prefijo));
+  }
+  btn.parentElement.remove();
+}
+
+// ================== FIRMA ==================
+function activarFirmas() {
+  document.querySelectorAll('canvas[data-firma]').forEach(canvas => {
+    const id = canvas.getAttribute('data-firma');
+    setupFirma(canvas, id);
+  });
+}
+
+function setupFirma(canvas, idPregunta) {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = 140;
+  const ctx = canvas.getContext('2d');
+  ctx.lineWidth = 2;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = '#1F2937';
+
+  let dibujando = false;
+  let tiene = false;
+
+  function obtenerCoords(e) {
+    const r = canvas.getBoundingClientRect();
+    if (e.touches) {
+      return { x: e.touches[0].clientX - r.left, y: e.touches[0].clientY - r.top };
+    }
+    return { x: e.clientX - r.left, y: e.clientY - r.top };
+  }
+  function inicio(e) {
+    e.preventDefault();
+    dibujando = true;
+    const c = obtenerCoords(e);
+    ctx.beginPath();
+    ctx.moveTo(c.x, c.y);
+  }
+  function mover(e) {
+    if (!dibujando) return;
+    e.preventDefault();
+    const c = obtenerCoords(e);
+    ctx.lineTo(c.x, c.y);
+    ctx.stroke();
+    tiene = true;
+  }
+  function fin() {
+    if (dibujando && tiene) {
+      respuestas[idPregunta] = canvas.toDataURL('image/png');
+    }
+    dibujando = false;
+  }
+
+  canvas.addEventListener('mousedown', inicio);
+  canvas.addEventListener('mousemove', mover);
+  canvas.addEventListener('mouseup', fin);
+  canvas.addEventListener('mouseleave', fin);
+  canvas.addEventListener('touchstart', inicio);
+  canvas.addEventListener('touchmove', mover);
+  canvas.addEventListener('touchend', fin);
+}
+
+ function limpiarFirma(idPregunta) {
+  const canvas = document.getElementById(`canvas-${idPregunta}`);
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  delete respuestas[idPregunta];
+}
+
+// ================== ESTADÍSTICAS ==================
+ function actualizarEstadisticas() {
+  let buenos = 0, malos = 0, na = 0, total = 0, respondidas = 0;
+  plantillaActual.preguntas.forEach(p => {
+    total++;
+    const r = respuestas[p.id];
+    if (r !== undefined && r !== '' && !(Array.isArray(r) && r.length === 0)) {
+      respondidas++;
+      if (p.tipo === 'opcionMultiple') {
+        if (r === 'Bueno' || r === 'Sí' || r === 'Si') buenos++;
+        else if (r === 'Malo' || r === 'No') malos++;
+        else if (r === 'No Aplica') na++;
+      }
+    }
+  });
+  document.getElementById('statBueno').textContent = buenos;
+  document.getElementById('statMalo').textContent = malos;
+  document.getElementById('statNA').textContent = na;
+  document.getElementById('progressCount').textContent = `${respondidas}/${total}`;
+  document.getElementById('progressFill').style.width = `${(respondidas / total) * 100}%`;
+}
+
+// ================== ENVÍO ==================
+async function enviarInspeccion() {
+
+  // Validar obligatorias
+  const faltantes = plantillaActual.preguntas.filter(p => {
+    if (!p.obligatoria) return false;
+    const r = respuestas[p.id];
+    return (r === undefined || r === '' || (Array.isArray(r) && r.length === 0));
+  });
+  if (faltantes.length > 0) {
+    alert(`Faltan ${faltantes.length} pregunta(s) obligatoria(s) sin responder.`);
+    return;
+  }
+
+  // Calcular estado general
+  const malos = plantillaActual.preguntas.filter(p =>
+    p.tipo === 'opcionMultiple' && (respuestas[p.id] === 'Malo' || respuestas[p.id] === 'No')
+  ).length;
+  const estado = malos > 0 ? 'NoConforme' : 'Conforme';
+
+  // Geolocalización (opcional)
+  let ubicacion = '';
+  try {
+    const pos = await new Promise((res, rej) => {
+      navigator.geolocation.getCurrentPosition(res, rej, { timeout: 5000 });
+    });
+    ubicacion = `${pos.coords.latitude.toFixed(6)},${pos.coords.longitude.toFixed(6)}`;
+  } catch(_) {}
+
+  // Guardar copia local de la inspección (la usan descargar PDF, compartir, historial)
+  ultimaInspeccionEnviada = {
+    folio: folioActual,
+    plantilla: plantillaActual,
+    respuestas: { ...respuestas },
+    fechaEnvio: new Date().toISOString(),
+    ubicacion: ubicacion,
+    estado: estado,
+  };
+
+  // Generar PDF base64 para enviar a Drive (en try aparte: si falla, igual se envía sin PDF)
+  let pdfBase64 = '';
+  try {
+    const { jsPDF } = window.jspdf;
+    const docPDF = new jsPDF({ unit: 'mm', format: 'a4' });
+    generarContenidoPDF(docPDF, ultimaInspeccionEnviada);
+    pdfBase64 = docPDF.output('datauristring');
+  } catch (e) {
+    console.error('Error generando PDF (se enviará sin PDF):', e);
+  }
+
+  // Construir payload (declarado fuera del try para que el catch lo pueda usar)
+  const payload = {
+    folio: folioActual,
+    plantillaCodigo: plantillaActual.codigo,
+    carpetaCodigo: plantillaActual.carpeta,
+    nombrePlantilla: plantillaActual.nombre,
+    fechaInspeccion: new Date().toISOString(),
+    estado: estado,
+    itemsCriticos: malos,
+    ubicacion: ubicacion,
+    respuestas: respuestas,
+    userAgent: navigator.userAgent,
+    pdfBase64: pdfBase64,
+  };
+
+  mostrarLoading('Enviando inspección...');
+  try {
+    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'PEGAR_AQUI_LA_URL_DEL_APPS_SCRIPT') {
+      const resp = await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'text/plain;charset=utf-8'},
+        body: JSON.stringify(payload),
+      });
+      const j = await resp.json();
+      if (!j.ok) throw new Error(j.error || 'Error desconocido');
+    } else {
+      console.log('Inspección (modo demo):', payload);
+      await new Promise(r => setTimeout(r, 1000));
+    }
+
+    document.getElementById('folioFinal').textContent = folioActual;
+    document.getElementById('modalExito').classList.add('visible');
+
+    // Historial local (últimas 50)
+    try {
+      let historial = JSON.parse(localStorage.getItem('historial_inspecciones') || '[]');
+      historial.unshift({
+        folio: folioActual,
+        nombrePlantilla: plantillaActual.nombre,
+        carpeta: plantillaActual.carpeta,
+        plantillaCodigo: plantillaActual.codigo,
+        fecha: new Date().toISOString(),
+        estado: estado,
+        respuestas: respuestas,
+      });
+      historial = historial.slice(0, 50);
+      localStorage.setItem('historial_inspecciones', JSON.stringify(historial));
+    } catch(_) {}
+
+  } catch (err) {
+    alert('Error al enviar: ' + err.message + '\n\nLa inspección se guardó localmente. Vuelve a intentar más tarde.');
+    // Guardar backup sin el PDF (pesa mucho en localStorage)
+    const backup = { ...payload, pdfBase64: '' };
+    try { localStorage.setItem(`backup_${folioActual}`, JSON.stringify(backup)); } catch(_) {}
+  } finally {
+    ocultarLoading();
+  }
+}
+
+  function guardarBorrador() {
+  localStorage.setItem(`borrador_${plantillaActual.codigo}`, JSON.stringify({
+    folio: folioActual, respuestas, fecha: new Date().toISOString()
+  }));
+  alert('Borrador guardado. Podrás continuarlo más tarde.');
+}
+
+// ================== GENERAR PDF / COMPARTIR ==================
+
+function generarContenidoPDF(doc, insp) {
+
+  // Configuración
+  const margenIzq = 15;
+  const margenSup = 15;
+  const anchoUtil = 180;
+
+  let y = margenSup;
+
+  // === HEADER ===
+  doc.setFillColor(24, 95, 165);
+  doc.rect(0, 0, 210, 25, 'F');
+
+  doc.setTextColor(255, 255, 255);
+
+  doc.setFontSize(16);
+  doc.setFont('helvetica', 'bold');
+
+  doc.text('GEOTEC BOYLES BROS', margenIzq, 11);
+
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'normal');
+
+  doc.text(
+    'Sistema de Inspecciones Digitales',
+    margenIzq,
+    18
+  );
+
+  y = 35;
+
+  // === TÍTULO DEL CHECKLIST ===
+  doc.setTextColor(31, 41, 55);
+
+  doc.setFontSize(13);
+  doc.setFont('helvetica', 'bold');
+
+  doc.text(
+    insp.plantilla.nombre,
+    margenIzq,
+    y
+  );
+
+  y += 7;
+
+  // === DATOS GENERALES ===
+
+  doc.setDrawColor(209, 213, 219);
+
+  doc.roundedRect(
+    margenIzq,
+    y,
+    anchoUtil,
+    26,
+    2,
+    2
+  );
+
+  y += 6;
+
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'normal');
+
+  doc.text(
+    `Folio: ${insp.folio}`,
+    margenIzq + 3,
+    y
+  );
+
+  y += 6;
+
+  doc.text(
+    `Fecha: ${new Date(insp.fechaEnvio).toLocaleString()}`,
+    margenIzq + 3,
+    y
+  );
+
+  y += 6;
+
+  doc.text(
+    `Estado: ${insp.estado}`,
+    margenIzq + 3,
+    y
+  );
+
+  y += 10;
+
+  // === RESPUESTAS ===
+
+  doc.setFontSize(12);
+  doc.setFont('helvetica', 'bold');
+
+  doc.text(
+    'RESPUESTAS',
+    margenIzq,
+    y
+  );
+
+  y += 8;
+
+  insp.plantilla.preguntas.forEach((p, index) => {
+
+    const respuesta = insp.respuestas[p.id];
+
+    let texto = '';
+
+    if (Array.isArray(respuesta)) {
+
+      texto =
+        `${respuesta.length} foto(s) adjunta(s)`;
+
+    } else {
+
+      texto = String(respuesta || '');
+    }
+
+    doc.setFontSize(10);
+
+    doc.setFont('helvetica', 'bold');
+
+    const preguntaTexto =
+      `${index + 1}. ${p.texto}`;
+
+    const lineasPregunta =
+      doc.splitTextToSize(
+        preguntaTexto,
+        175
+      );
+
+    doc.text(
+      lineasPregunta,
+      margenIzq,
+      y
+    );
+
+    y += (lineasPregunta.length * 5);
+
+    doc.setFont('helvetica', 'normal');
+
+    const lineasRespuesta =
+      doc.splitTextToSize(
+        `Respuesta: ${texto}`,
+        170
+      );
+
+    doc.text(
+      lineasRespuesta,
+      margenIzq + 5,
+      y
+    );
+
+    y +=
+      (lineasRespuesta.length * 5) + 6;
+
+    // Salto de página
+    if (y > 270) {
+
+      doc.addPage();
+
+      y = 20;
+    }
+  });
+
+  // === FOOTER ===
+
+  const totalPaginas =
+    doc.getNumberOfPages();
+
+  for (
+    let i = 1;
+    i <= totalPaginas;
+    i++
+  ) {
+
+    doc.setPage(i);
+
+    doc.setFontSize(8);
+
+    doc.setTextColor(120);
+
+    doc.text(
+      `Página ${i} de ${totalPaginas}`,
+      180,
+      290
+    );
+  }
+}
+
+// ============================================
+// DESCARGAR COPIA PDF
+// ============================================
+
+function descargarCopiaPDF() {
+
+  if (!ultimaInspeccionEnviada) {
+
+    alert(
+      'No hay inspección para descargar.'
+    );
+
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+
+  const doc = new jsPDF({
+    unit: 'mm',
+    format: 'a4'
+  });
+
+  generarContenidoPDF(
+    doc,
+    ultimaInspeccionEnviada
+  );
+
+  doc.save(
+    `Inspeccion_${ultimaInspeccionEnviada.folio}.pdf`
+  );
+}
+
+// ================== NAVEGACIÓN ==================
+function cambiarPantalla(id) {
+  document.querySelectorAll('.pantalla').forEach(p => p.classList.remove('activa'));
+  document.getElementById(id).classList.add('activa');
+  window.scrollTo(0, 0);
+}
+
+function volver() {
+  // Si el supervisor está revisando, vuelve a pendientes
+  if (rolActual && rolActual !== 'operador' && formularioRevisar) {
+    formularioRevisar = null;
+    firmaSupervisorData = '';
+    renderPendientes();
+    return;
+  }
+  cambiarPantalla('scrInicio');
+  document.getElementById('btnBack').classList.remove('visible');
+  document.getElementById('headerTitle').textContent = carpetaActual ? carpetaActual.nombre : 'Inspecciones';
+}
+
+function irAInicio() {
+  // Si hay un formulario abierto y tiene respuestas, confirmar
+  if (plantillaActual && Object.keys(respuestas).length > 0) {
+    if (!confirm('¿Salir del formulario? Las respuestas no enviadas se perderán.')) {
+      return;
+    }
+  }
+
+  // Supervisor: home = pantalla de pendientes
+  if (rolActual && rolActual !== 'operador') {
+    formularioRevisar = null;
+    firmaSupervisorData = '';
+    renderPendientes();
+    return;
+  }
+
+  // Operador: volver al grid de carpetas
+  carpetaActual = null;
+  plantillaActual = null;
+  respuestas = {};
+  const url = new URL(window.location);
+  url.searchParams.delete('carpeta');
+  history.pushState({}, '', url);
+  cambiarPantalla('scrInicio');
+  document.getElementById('btnBack').classList.remove('visible');
+  document.getElementById('btnHome').classList.remove('visible');
+  renderInicio();
+}
+
+function volverInicio() {
+  document.getElementById('modalExito').classList.remove('visible');
+  respuestas = {};
+  plantillaActual = null;
+  volver();
+}
+
+// ================== UTILIDADES ==================
+function mostrarLoading(texto) {
+  document.getElementById('loadingText').textContent = texto || 'Cargando...';
+  document.getElementById('loading').classList.add('visible');
+}
+function ocultarLoading() {
+  document.getElementById('loading').classList.remove('visible');
+}
+
+// ================== PANTALLA PENDIENTES (SUPERVISOR) ==================
+async function renderPendientes() {
+  cambiarPantalla('scrPendientes');
+  document.getElementById('btnBack').classList.remove('visible');
+  document.getElementById('btnHome').classList.add('visible');
+  document.getElementById('headerTitle').textContent = 'Pendientes por validar';
+  document.getElementById('nombreSupervisor').textContent = rolActual;
+
+  // Agregar enlace para cambiar de rol
+  let bannerExtra = `<div style="margin-top:10px"><button class="btn btn-secondary" style="padding:6px 12px;font-size:12px" onclick="cambiarRol()">Cambiar de rol</button></div>`;
+  if (!document.getElementById('btnCambiarRol')) {
+    const banner = document.getElementById('bannerSupervisor');
+    const div = document.createElement('div');
+    div.id = 'btnCambiarRol';
+    div.innerHTML = bannerExtra;
+    banner.appendChild(div);
+  }
+
+  const cont = document.getElementById('contenidoPendientes');
+  cont.innerHTML = `<div class="empty-state"><div class="spinner" style="margin:0 auto 12px;width:28px;height:28px"></div><p>Cargando pendientes...</p></div>`;
+
+  try {
+    const resp = await fetch(APPS_SCRIPT_URL + '?accion=pendientes&supervisor=' + encodeURIComponent(rolActual));
+    const j = await resp.json();
+    if (!j.ok) throw new Error(j.error || 'Error consultando pendientes');
+
+    const lista = j.pendientes || [];
+    if (lista.length === 0) {
+      cont.innerHTML = `<div class="empty-state"><div class="icon">✓</div>
+        <p>No hay formularios pendientes de validación.</p>
+        <p style="font-size:12px">Todos los envíos están al día.</p></div>`;
+      return;
+    }
+
+    let html = `<div class="section-title">${lista.length} formulario${lista.length !== 1 ? 's' : ''} pendiente${lista.length !== 1 ? 's' : ''}</div>
+      <div class="checklist-lista">`;
+    lista.forEach(p => {
+      const fecha = p.fechaInspeccion ? new Date(p.fechaInspeccion).toLocaleString('es-CL') : '';
+      const colorEstado = (p.estado === 'NoConforme') ? '#A32D2D' : '#639922';
+      html += `
+        <div class="checklist-item" onclick="abrirParaRevisar('${escapeAttr(p.folio)}')">
+          <div class="abrev" style="background:#FAEEDA;color:#633806">${p.carpetaCodigo || '—'}</div>
+          <div class="info">
+            <div class="nombre">${escapeHtml(p.nombrePlantilla || p.folio)}</div>
+            <div class="meta">${fecha} · <span style="color:${colorEstado};font-weight:600">${p.estado || '—'}</span>${p.itemsCriticos ? ' · ' + p.itemsCriticos + ' ítems críticos' : ''}</div>
+          </div>
+          <div class="chevron">›</div>
+        </div>`;
+    });
+    html += `</div>`;
+    cont.innerHTML = html;
+  } catch (err) {
+    cont.innerHTML = `<div class="empty-state"><div class="icon">⚠</div>
+      <p>No se pudieron cargar los pendientes.</p>
+      <p style="font-size:12px">${escapeHtml(err.message)}</p>
+      <button class="btn btn-secondary" style="margin-top:1rem" onclick="renderPendientes()">Reintentar</button></div>`;
+  }
+}
+
+// ================== PANTALLA REVISAR (SUPERVISOR) ==================
+async function abrirParaRevisar(folio) {
+  mostrarLoading('Cargando formulario...');
+  try {
+    const resp = await fetch(APPS_SCRIPT_URL + '?accion=detalle&folio=' + encodeURIComponent(folio));
+    const j = await resp.json();
+    if (!j.ok) throw new Error(j.error || 'Error obteniendo detalle');
+    formularioRevisar = j.detalle;
+
+    // Buscar la plantilla original
+    let plantilla = DATA.plantillas.find(p => p.codigo === formularioRevisar.plantillaCodigo);
+    if (!plantilla) {
+      // Puede ser MANT que aún no se ha cargado
+      if (formularioRevisar.plantillaCodigo && formularioRevisar.plantillaCodigo.startsWith('MANT-')) {
+        await cargarMantSiHaceFalta();
+        plantilla = DATA.plantillas.find(p => p.codigo === formularioRevisar.plantillaCodigo);
+      }
+    }
+    formularioRevisar.plantilla = plantilla;
+    renderRevisar();
+  } catch (err) {
+    alert('Error: ' + err.message);
+  } finally {
+    ocultarLoading();
+  }
+}
+
+function renderRevisar() {
+  cambiarPantalla('scrRevisar');
+  document.getElementById('btnBack').classList.add('visible');
+  document.getElementById('btnHome').classList.add('visible');
+  document.getElementById('headerTitle').textContent = 'Revisar: ' + (formularioRevisar.nombrePlantilla || formularioRevisar.folio);
+
+  const f = formularioRevisar;
+  const fecha = f.fechaInspeccion ? new Date(f.fechaInspeccion).toLocaleString('es-CL') : '—';
+  let html = `
+    <div class="carpeta-actual">
+      <div class="label">Folio</div>
+      <div class="nombre">${escapeHtml(f.folio)}</div>
+      <div class="desc">Inspección del ${fecha}</div>
+    </div>`;
+
+  // PDF original como link prominente
+  if (f.urlPDF && String(f.urlPDF).indexOf('http') === 0) {
+    html += `<div class="checklist-item" onclick="window.open('${escapeAttr(f.urlPDF)}','_blank')">
+      <div class="abrev" style="background:#FCEBEB;color:#791F1F">PDF</div>
+      <div class="info">
+        <div class="nombre">Ver PDF completo del formulario</div>
+        <div class="meta">Se abre en otra pestaña</div>
+      </div>
+      <div class="chevron">›</div>
+    </div><div style="height:1rem"></div>`;
+  }
+
+  // Render respuestas en modo lectura
+  if (f.plantilla) {
+    html += renderRespuestasLectura(f.plantilla, f.respuestas || {});
+  } else {
+    html += `<div class="empty-state"><p>No se encontró la plantilla original.</p>
+      <p style="font-size:12px">Igualmente puedes validar revisando el PDF de arriba.</p></div>`;
+  }
+
+  // Comentario y firma
+  html += `
+    <div class="section-title" style="margin-top:1.5rem">Comentario del supervisor (opcional)</div>
+    <div class="pregunta">
+      <textarea class="input-textarea" id="comentarioSupervisor" placeholder="Observaciones, instrucciones o motivo del rechazo..."></textarea>
+    </div>
+    <div class="section-title">Firma del supervisor</div>
+    <div class="pregunta">
+      <div class="firma-zone">
+        <canvas id="canvasSupervisor"></canvas>
+        <div class="firma-controles">
+          <button onclick="limpiarFirmaSupervisor()">Limpiar</button>
+        </div>
+      </div>
+    </div>
+    <div style="height:80px"></div>`;
+
+  document.getElementById('contenidoRevisar').innerHTML = html;
+  setTimeout(activarFirmaSupervisor, 100);
+}
+
+function renderRespuestasLectura(plantilla, respuestas) {
+  // Agrupar igual que en el render normal: cuerpo por sección + cierre (fotos/firmas)
+  const cuerpo = [];
+  const cierre = [];
+  plantilla.preguntas.forEach((p, i) => {
+    const item = { ...p, idx: i };
+    if (p.tipo === 'foto' || p.tipo === 'firma') cierre.push(item);
+    else cuerpo.push(item);
+  });
+
+  const grupos = {};
+  const orden = [];
+  cuerpo.forEach(p => {
+    const sec = p.seccion || 'Datos generales';
+    if (!grupos[sec]) { grupos[sec] = []; orden.push(sec); }
+    grupos[sec].push(p);
+  });
+
+  let html = '';
+  orden.forEach(sec => {
+    html += `<div class="seccion-titulo">${sec}</div>`;
+    grupos[sec].forEach(p => { html += renderItemLectura(p, respuestas); });
+  });
+
+  const fotos = cierre.filter(p => p.tipo === 'foto');
+  const firmas = cierre.filter(p => p.tipo === 'firma');
+  if (fotos.length > 0) {
+    html += `<div class="seccion-titulo">Registro fotográfico</div>`;
+    fotos.forEach(p => { html += renderItemLectura(p, respuestas); });
+  }
+  if (firmas.length > 0) {
+    html += `<div class="seccion-titulo">Firmas del operador</div>`;
+    firmas.forEach(p => { html += renderItemLectura(p, respuestas); });
+  }
+  return html;
+}
+
+function renderItemLectura(p, respuestas) {
+  const r = respuestas[p.id];
+  let valor = '(sin respuesta)';
+  let color = 'var(--texto-suave)';
+
+  if (r !== undefined && r !== '' && r !== null) {
+    if (p.tipo === 'opcionMultiple') {
+      valor = String(r);
+      if (r === 'Bueno' || r === 'Si' || r === 'Sí' || r === 'Realizado') color = '#27500A';
+      else if (r === 'Malo' || r === 'No' || r === 'Crítico') color = '#791F1F';
+      else if (r === 'No Aplica') color = '#444441';
+      else if (r === 'Pendiente' || r === 'Regular') color = '#633806';
+      else color = 'var(--primario-oscuro)';
+    } else if (p.tipo === 'foto' || p.tipo === 'firma') {
+      // r puede ser url(s) separadas por |
+      const urls = String(r).split('|').filter(u => u.indexOf('http') === 0);
+      if (urls.length > 0) {
+        valor = urls.map(u => `<a href="${escapeAttr(u)}" target="_blank" style="color:var(--primario)">Ver imagen</a>`).join(' · ');
+      } else {
+        valor = String(r);
+      }
+    } else {
+      valor = String(r);
+    }
+  }
+
+  // Plan de acción si lo hay
+  const plan = respuestas[p.id + '_plan'];
+  const planHtml = plan ? `<div style="margin-top:8px;padding:8px;background:#FCEBEB;border-radius:6px;font-size:13px;color:#791F1F"><b>Plan de acción:</b> ${escapeHtml(plan)}</div>` : '';
+
+  return `<div class="pregunta">
+    <div class="num-y-texto">
+      <div class="num">${(p.idx ?? 0) + 1}</div>
+      <div class="texto">${escapeHtml(p.texto)}</div>
+    </div>
+    <div style="color:${color};font-weight:600;font-size:14px">${valor}</div>
+    ${planHtml}
+  </div>`;
+}
+
+function activarFirmaSupervisor() {
+  const canvas = document.getElementById('canvasSupervisor');
+  if (!canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = 140;
+  const ctx = canvas.getContext('2d');
+  ctx.lineWidth = 2;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = '#1F2937';
+  let dibujando = false, tiene = false;
+
+  function coords(e) {
+    const r = canvas.getBoundingClientRect();
+    if (e.touches) return { x: e.touches[0].clientX - r.left, y: e.touches[0].clientY - r.top };
+    return { x: e.clientX - r.left, y: e.clientY - r.top };
+  }
+  canvas.addEventListener('mousedown', e => { e.preventDefault(); dibujando = true; const c = coords(e); ctx.beginPath(); ctx.moveTo(c.x, c.y); });
+  canvas.addEventListener('mousemove', e => { if (!dibujando) return; e.preventDefault(); const c = coords(e); ctx.lineTo(c.x, c.y); ctx.stroke(); tiene = true; });
+  const fin = () => { if (dibujando && tiene) firmaSupervisorData = canvas.toDataURL('image/png'); dibujando = false; };
+  canvas.addEventListener('mouseup', fin);
+  canvas.addEventListener('mouseleave', fin);
+  canvas.addEventListener('touchstart', e => { e.preventDefault(); dibujando = true; const c = coords(e); ctx.beginPath(); ctx.moveTo(c.x, c.y); });
+  canvas.addEventListener('touchmove', e => { if (!dibujando) return; e.preventDefault(); const c = coords(e); ctx.lineTo(c.x, c.y); ctx.stroke(); tiene = true; });
+  canvas.addEventListener('touchend', fin);
+}
+
+function limpiarFirmaSupervisor() {
+  const canvas = document.getElementById('canvasSupervisor');
+  if (canvas) canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+  firmaSupervisorData = '';
+}
+
+async function decidirValidacion(decision) {
+  if (!firmaSupervisorData) {
+    alert('Falta la firma del supervisor.');
+    return;
+  }
+  const comentario = (document.getElementById('comentarioSupervisor') || {}).value || '';
+
+  if (decision === 'Rechazado' && !comentario.trim()) {
+    alert('Para rechazar, agrega un comentario explicando el motivo.');
+    return;
+  }
+  if (!confirm(`¿Confirmas ${decision === 'Aprobado' ? 'APROBAR' : 'RECHAZAR'} este formulario?`)) return;
+
+  // Generar PDF validado: tomar el contenido + agregar página final con firma del supervisor
+  let pdfValidadoBase64 = '';
+  try {
+    pdfValidadoBase64 = generarPDFValidado(decision, comentario);
+  } catch (e) {
+    console.error('Error generando PDF validado:', e);
+  }
+
+  const payload = {
+    accion: 'validar',
+    folio: formularioRevisar.folio,
+    validadoPor: rolActual,
+    decision: decision,
+    comentario: comentario,
+    firmaSupervisor: firmaSupervisorData,
+    pdfValidadoBase64: pdfValidadoBase64,
+  };
+
+  mostrarLoading('Registrando validación...');
+  try {
+    const resp = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+    });
+    const j = await resp.json();
+    if (!j.ok) throw new Error(j.error || 'Error desconocido');
+
+    document.getElementById('folioValidadoFinal').textContent = formularioRevisar.folio;
+    document.getElementById('modalValidadoTitulo').textContent = decision === 'Aprobado' ? 'Formulario aprobado' : 'Formulario rechazado';
+    document.getElementById('modalValidadoMsg').textContent = decision === 'Aprobado'
+      ? 'Se generó el PDF validado con tu firma.'
+      : 'Quedó registrado el rechazo y el comentario.';
+    document.getElementById('modalValidado').classList.add('visible');
+  } catch (err) {
+    alert('Error al guardar la validación: ' + err.message);
+  } finally {
+    ocultarLoading();
+  }
+}
+
+function cerrarModalValidado() {
+  document.getElementById('modalValidado').classList.remove('visible');
+  formularioRevisar = null;
+  firmaSupervisorData = '';
+  renderPendientes();
+}
+
+// Genera un PDF "validado" basado en el original + página final con firma supervisor
+function generarPDFValidado(decision, comentario) {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+  const f = formularioRevisar;
+
+  // Reutilizar generarContenidoPDF si tenemos los datos suficientes
+  if (f.plantilla) {
+    const insp = {
+      folio: f.folio,
+      plantilla: f.plantilla,
+      respuestas: f.respuestas || {},
+      fechaEnvio: f.fechaInspeccion,
+      ubicacion: '',
+      estado: '',
+    };
+    try { generarContenidoPDF(doc, insp); } catch(e) { console.error(e); }
+  } else {
+    // Sin plantilla, solo cabecera mínima
+    doc.setFontSize(14);
+    doc.text('Formulario ' + f.folio, 15, 20);
+  }
+
+  // Página final: validación
+  doc.addPage();
+  doc.setFillColor(24, 95, 165);
+  doc.rect(0, 0, 210, 25, 'F');
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(16);
+  doc.setFont('helvetica', 'bold');
+  doc.text('VALIDACIÓN DE SUPERVISOR', 15, 12);
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'normal');
+  doc.text('Geotec Boyles Bros', 15, 19);
+
+  let y = 40;
+  doc.setTextColor(31, 41, 55);
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Folio:', 15, y);
+  doc.setFont('helvetica', 'normal');
+  doc.text(f.folio, 35, y);
+  y += 7;
+
+  doc.setFont('helvetica', 'bold');
+  doc.text('Decisión:', 15, y);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(decision === 'Aprobado' ? 99 : 163, decision === 'Aprobado' ? 153 : 45, decision === 'Aprobado' ? 34 : 45);
+  doc.text(decision.toUpperCase(), 40, y);
+  y += 7;
+
+  doc.setTextColor(31, 41, 55);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Validado por:', 15, y);
+  doc.setFont('helvetica', 'normal');
+  doc.text(rolActual, 45, y);
+  y += 7;
+
+  doc.setFont('helvetica', 'bold');
+  doc.text('Fecha:', 15, y);
+  doc.setFont('helvetica', 'normal');
+  doc.text(new Date().toLocaleString('es-CL'), 35, y);
+  y += 10;
+
+  if (comentario) {
+    doc.setFont('helvetica', 'bold');
+    doc.text('Comentario del supervisor:', 15, y);
+    y += 6;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    const lineas = doc.splitTextToSize(comentario, 180);
+    doc.text(lineas, 15, y);
+    y += (lineas.length * 5) + 8;
+  }
+
+  // Firma supervisor
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Firma del supervisor:', 15, y);
+  y += 5;
+  if (firmaSupervisorData) {
+    try { doc.addImage(firmaSupervisorData, 'PNG', 15, y, 80, 30); } catch(e) {}
+  }
+
+  return doc.output('datauristring');
+}
+
+
+document.addEventListener('DOMContentLoaded', cargarApp);
+</script>
+</body>
+</html>
