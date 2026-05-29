@@ -632,6 +632,37 @@ body {
   </div>
 </div>
 
+<!-- PANTALLA 3: SELECTOR DE ROL (operador / supervisores) -->
+<div class="pantalla" id="scrRol">
+  <div class="contenedor">
+    <div class="section-title" style="margin-top:1.5rem">¿Cómo vas a usar la app?</div>
+    <div id="contenidoRol"></div>
+  </div>
+</div>
+
+<!-- PANTALLA 4: PENDIENTES POR VALIDAR (supervisor) -->
+<div class="pantalla" id="scrPendientes">
+  <div class="contenedor">
+    <div class="carpeta-actual" id="bannerSupervisor">
+      <div class="label">Validando como</div>
+      <div class="nombre" id="nombreSupervisor">—</div>
+      <div class="desc">Formularios esperando tu aprobación</div>
+    </div>
+    <div id="contenidoPendientes"></div>
+  </div>
+</div>
+
+<!-- PANTALLA 5: REVISAR FORMULARIO (supervisor) -->
+<div class="pantalla" id="scrRevisar">
+  <div class="contenedor">
+    <div id="contenidoRevisar"></div>
+  </div>
+  <div class="footer-acciones" id="footerRevisar" style="display:flex">
+    <button class="btn btn-secondary" onclick="decidirValidacion('Rechazado')">Rechazar</button>
+    <button class="btn btn-success" onclick="decidirValidacion('Aprobado')">Aprobar y firmar</button>
+  </div>
+</div>
+
 <!-- Modal éxito -->
 <div class="modal-overlay" id="modalExito">
   <div class="modal">
@@ -648,6 +679,21 @@ body {
       </button>
       <button class="btn btn-primary btn-modal" onclick="volverInicio()">
         Nueva inspección
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal validación exitosa -->
+<div class="modal-overlay" id="modalValidado">
+  <div class="modal">
+    <div class="icon-circle">✓</div>
+    <h2 id="modalValidadoTitulo">Formulario validado</h2>
+    <p id="modalValidadoMsg">Se registró la validación correctamente.</p>
+    <div class="folio-final" id="folioValidadoFinal">—</div>
+    <div class="modal-actions">
+      <button class="btn btn-primary btn-modal" onclick="cerrarModalValidado()">
+        Continuar
       </button>
     </div>
   </div>
@@ -673,6 +719,11 @@ let firmaCanvas = null, firmaCtx = null, firmaDibujando = false, firmaTieneConte
 let pantallaPrevia = 'inicio';
 let ultimaInspeccionEnviada = null; // Guardamos la última para poder descargar/compartir
 let mantCargadas = false; // Las plantillas MANT se cargan bajo demanda (archivo aparte)
+
+// Rol y validación (supervisor)
+let rolActual = null;            // 'operador' o nombre del supervisor
+let formularioRevisar = null;    // Detalle del formulario en revisión
+let firmaSupervisorData = '';    // base64 de la firma del supervisor (canvas)
 
 // Carga diferida de las plantillas de mantención (archivo grande, solo cuando se necesita)
 async function cargarMantSiHaceFalta() {
@@ -714,9 +765,30 @@ async function cargarApp() {
 async function inicializarApp() {
   const params = new URLSearchParams(window.location.search);
   const codCarpeta = params.get('carpeta');
+
+  // Recuperar rol guardado (persiste entre sesiones)
+  if (!rolActual) {
+    rolActual = localStorage.getItem('rol_actual') || null;
+  }
+
+  // Si no hay rol y no llegó por URL específica, mostrar selector
+  if (!rolActual && !codCarpeta) {
+    renderSelectorRol();
+    return;
+  }
+
+  // Si entró sin rol pero con carpeta en URL, asumimos operador
+  if (!rolActual) rolActual = 'operador';
+
+  // Si es supervisor, mostrar pantalla de pendientes
+  if (rolActual !== 'operador') {
+    await renderPendientes();
+    return;
+  }
+
+  // Modo operador
   if (codCarpeta) {
     carpetaActual = DATA.carpetas.find(c => c.codigo === codCarpeta.toUpperCase());
-    // Si entran directo a la carpeta MANT por URL, cargar su archivo
     if (carpetaActual && carpetaActual.codigo === 'MANT') {
       mostrarLoading('Cargando pautas de mantención...');
       try { await cargarMantSiHaceFalta(); } catch(_) {}
@@ -724,6 +796,69 @@ async function inicializarApp() {
     }
   }
   renderInicio();
+}
+
+// ================== PANTALLA SELECTOR DE ROL ==================
+function renderSelectorRol() {
+  cambiarPantalla('scrRol');
+  document.getElementById('btnBack').classList.remove('visible');
+  document.getElementById('btnHome').classList.remove('visible');
+  document.getElementById('headerTitle').textContent = 'Elige cómo entrar';
+
+  const supervisores = DATA.supervisores || [];
+  let html = `
+    <div class="checklist-lista">
+      <div class="checklist-item" onclick="seleccionarRol('operador')">
+        <div class="abrev" style="background:#E6F1FB;color:#0C447C">OP</div>
+        <div class="info">
+          <div class="nombre">Operador</div>
+          <div class="meta">Llenar formularios e inspecciones</div>
+        </div>
+        <div class="chevron">›</div>
+      </div>`;
+
+  if (supervisores.length === 0) {
+    html += `<div class="empty-state" style="padding:1.5rem"><div class="icon">⚠</div>
+      <p>No hay supervisores configurados.</p>
+      <p style="font-size:12px">Edita el archivo plantillas.json y agrega nombres en el bloque "supervisores".</p></div>`;
+  } else {
+    supervisores.forEach(nom => {
+      const inicial = nom.split(' ').map(s => s[0]).slice(0,2).join('').toUpperCase();
+      html += `
+        <div class="checklist-item" onclick="seleccionarRol('${escapeAttr(nom)}')">
+          <div class="abrev" style="background:#FAEEDA;color:#633806">${inicial}</div>
+          <div class="info">
+            <div class="nombre">${escapeHtml(nom)}</div>
+            <div class="meta">Supervisor · validar formularios</div>
+          </div>
+          <div class="chevron">›</div>
+        </div>`;
+    });
+  }
+  html += `</div>`;
+  document.getElementById('contenidoRol').innerHTML = html;
+}
+
+async function seleccionarRol(rol) {
+  rolActual = rol;
+  localStorage.setItem('rol_actual', rol);
+  if (rol === 'operador') {
+    cambiarPantalla('scrInicio');
+    renderInicio();
+  } else {
+    await renderPendientes();
+  }
+}
+
+function cambiarRol() {
+  if (!confirm('¿Cambiar de rol? Se perderá cualquier formulario sin enviar.')) return;
+  rolActual = null;
+  localStorage.removeItem('rol_actual');
+  carpetaActual = null;
+  plantillaActual = null;
+  respuestas = {};
+  formularioRevisar = null;
+  renderSelectorRol();
 }
 
 // ================== PANTALLA INICIO ==================
@@ -1456,6 +1591,13 @@ function cambiarPantalla(id) {
 }
 
 function volver() {
+  // Si el supervisor está revisando, vuelve a pendientes
+  if (rolActual && rolActual !== 'operador' && formularioRevisar) {
+    formularioRevisar = null;
+    firmaSupervisorData = '';
+    renderPendientes();
+    return;
+  }
   cambiarPantalla('scrInicio');
   document.getElementById('btnBack').classList.remove('visible');
   document.getElementById('headerTitle').textContent = carpetaActual ? carpetaActual.nombre : 'Inspecciones';
@@ -1468,11 +1610,19 @@ function irAInicio() {
       return;
     }
   }
-  // Volver al grid de las 4 carpetas
+
+  // Supervisor: home = pantalla de pendientes
+  if (rolActual && rolActual !== 'operador') {
+    formularioRevisar = null;
+    firmaSupervisorData = '';
+    renderPendientes();
+    return;
+  }
+
+  // Operador: volver al grid de carpetas
   carpetaActual = null;
   plantillaActual = null;
   respuestas = {};
-  // Limpiar URL del parámetro carpeta
   const url = new URL(window.location);
   url.searchParams.delete('carpeta');
   history.pushState({}, '', url);
@@ -1498,7 +1648,407 @@ function ocultarLoading() {
   document.getElementById('loading').classList.remove('visible');
 }
 
-window.addEventListener('popstate', () => inicializarApp());
+// ================== PANTALLA PENDIENTES (SUPERVISOR) ==================
+async function renderPendientes() {
+  cambiarPantalla('scrPendientes');
+  document.getElementById('btnBack').classList.remove('visible');
+  document.getElementById('btnHome').classList.add('visible');
+  document.getElementById('headerTitle').textContent = 'Pendientes por validar';
+  document.getElementById('nombreSupervisor').textContent = rolActual;
+
+  // Agregar enlace para cambiar de rol
+  let bannerExtra = `<div style="margin-top:10px"><button class="btn btn-secondary" style="padding:6px 12px;font-size:12px" onclick="cambiarRol()">Cambiar de rol</button></div>`;
+  if (!document.getElementById('btnCambiarRol')) {
+    const banner = document.getElementById('bannerSupervisor');
+    const div = document.createElement('div');
+    div.id = 'btnCambiarRol';
+    div.innerHTML = bannerExtra;
+    banner.appendChild(div);
+  }
+
+  const cont = document.getElementById('contenidoPendientes');
+  cont.innerHTML = `<div class="empty-state"><div class="spinner" style="margin:0 auto 12px;width:28px;height:28px"></div><p>Cargando pendientes...</p></div>`;
+
+  try {
+    const resp = await fetch(APPS_SCRIPT_URL + '?accion=pendientes');
+    const j = await resp.json();
+    if (!j.ok) throw new Error(j.error || 'Error consultando pendientes');
+
+    const lista = j.pendientes || [];
+    if (lista.length === 0) {
+      cont.innerHTML = `<div class="empty-state"><div class="icon">✓</div>
+        <p>No hay formularios pendientes de validación.</p>
+        <p style="font-size:12px">Todos los envíos están al día.</p></div>`;
+      return;
+    }
+
+    let html = `<div class="section-title">${lista.length} formulario${lista.length !== 1 ? 's' : ''} pendiente${lista.length !== 1 ? 's' : ''}</div>
+      <div class="checklist-lista">`;
+    lista.forEach(p => {
+      const fecha = p.fechaInspeccion ? new Date(p.fechaInspeccion).toLocaleString('es-CL') : '';
+      const colorEstado = (p.estado === 'NoConforme') ? '#A32D2D' : '#639922';
+      html += `
+        <div class="checklist-item" onclick="abrirParaRevisar('${escapeAttr(p.folio)}')">
+          <div class="abrev" style="background:#FAEEDA;color:#633806">${p.carpetaCodigo || '—'}</div>
+          <div class="info">
+            <div class="nombre">${escapeHtml(p.nombrePlantilla || p.folio)}</div>
+            <div class="meta">${fecha} · <span style="color:${colorEstado};font-weight:600">${p.estado || '—'}</span>${p.itemsCriticos ? ' · ' + p.itemsCriticos + ' ítems críticos' : ''}</div>
+          </div>
+          <div class="chevron">›</div>
+        </div>`;
+    });
+    html += `</div>`;
+    cont.innerHTML = html;
+  } catch (err) {
+    cont.innerHTML = `<div class="empty-state"><div class="icon">⚠</div>
+      <p>No se pudieron cargar los pendientes.</p>
+      <p style="font-size:12px">${escapeHtml(err.message)}</p>
+      <button class="btn btn-secondary" style="margin-top:1rem" onclick="renderPendientes()">Reintentar</button></div>`;
+  }
+}
+
+// ================== PANTALLA REVISAR (SUPERVISOR) ==================
+async function abrirParaRevisar(folio) {
+  mostrarLoading('Cargando formulario...');
+  try {
+    const resp = await fetch(APPS_SCRIPT_URL + '?accion=detalle&folio=' + encodeURIComponent(folio));
+    const j = await resp.json();
+    if (!j.ok) throw new Error(j.error || 'Error obteniendo detalle');
+    formularioRevisar = j.detalle;
+
+    // Buscar la plantilla original
+    let plantilla = DATA.plantillas.find(p => p.codigo === formularioRevisar.plantillaCodigo);
+    if (!plantilla) {
+      // Puede ser MANT que aún no se ha cargado
+      if (formularioRevisar.plantillaCodigo && formularioRevisar.plantillaCodigo.startsWith('MANT-')) {
+        await cargarMantSiHaceFalta();
+        plantilla = DATA.plantillas.find(p => p.codigo === formularioRevisar.plantillaCodigo);
+      }
+    }
+    formularioRevisar.plantilla = plantilla;
+    renderRevisar();
+  } catch (err) {
+    alert('Error: ' + err.message);
+  } finally {
+    ocultarLoading();
+  }
+}
+
+function renderRevisar() {
+  cambiarPantalla('scrRevisar');
+  document.getElementById('btnBack').classList.add('visible');
+  document.getElementById('btnHome').classList.add('visible');
+  document.getElementById('headerTitle').textContent = 'Revisar: ' + (formularioRevisar.nombrePlantilla || formularioRevisar.folio);
+
+  const f = formularioRevisar;
+  const fecha = f.fechaInspeccion ? new Date(f.fechaInspeccion).toLocaleString('es-CL') : '—';
+  let html = `
+    <div class="carpeta-actual">
+      <div class="label">Folio</div>
+      <div class="nombre">${escapeHtml(f.folio)}</div>
+      <div class="desc">Inspección del ${fecha}</div>
+    </div>`;
+
+  // PDF original como link prominente
+  if (f.urlPDF && String(f.urlPDF).indexOf('http') === 0) {
+    html += `<div class="checklist-item" onclick="window.open('${escapeAttr(f.urlPDF)}','_blank')">
+      <div class="abrev" style="background:#FCEBEB;color:#791F1F">PDF</div>
+      <div class="info">
+        <div class="nombre">Ver PDF completo del formulario</div>
+        <div class="meta">Se abre en otra pestaña</div>
+      </div>
+      <div class="chevron">›</div>
+    </div><div style="height:1rem"></div>`;
+  }
+
+  // Render respuestas en modo lectura
+  if (f.plantilla) {
+    html += renderRespuestasLectura(f.plantilla, f.respuestas || {});
+  } else {
+    html += `<div class="empty-state"><p>No se encontró la plantilla original.</p>
+      <p style="font-size:12px">Igualmente puedes validar revisando el PDF de arriba.</p></div>`;
+  }
+
+  // Comentario y firma
+  html += `
+    <div class="section-title" style="margin-top:1.5rem">Comentario del supervisor (opcional)</div>
+    <div class="pregunta">
+      <textarea class="input-textarea" id="comentarioSupervisor" placeholder="Observaciones, instrucciones o motivo del rechazo..."></textarea>
+    </div>
+    <div class="section-title">Firma del supervisor</div>
+    <div class="pregunta">
+      <div class="firma-zone">
+        <canvas id="canvasSupervisor"></canvas>
+        <div class="firma-controles">
+          <button onclick="limpiarFirmaSupervisor()">Limpiar</button>
+        </div>
+      </div>
+    </div>
+    <div style="height:80px"></div>`;
+
+  document.getElementById('contenidoRevisar').innerHTML = html;
+  setTimeout(activarFirmaSupervisor, 100);
+}
+
+function renderRespuestasLectura(plantilla, respuestas) {
+  // Agrupar igual que en el render normal: cuerpo por sección + cierre (fotos/firmas)
+  const cuerpo = [];
+  const cierre = [];
+  plantilla.preguntas.forEach((p, i) => {
+    const item = { ...p, idx: i };
+    if (p.tipo === 'foto' || p.tipo === 'firma') cierre.push(item);
+    else cuerpo.push(item);
+  });
+
+  const grupos = {};
+  const orden = [];
+  cuerpo.forEach(p => {
+    const sec = p.seccion || 'Datos generales';
+    if (!grupos[sec]) { grupos[sec] = []; orden.push(sec); }
+    grupos[sec].push(p);
+  });
+
+  let html = '';
+  orden.forEach(sec => {
+    html += `<div class="seccion-titulo">${sec}</div>`;
+    grupos[sec].forEach(p => { html += renderItemLectura(p, respuestas); });
+  });
+
+  const fotos = cierre.filter(p => p.tipo === 'foto');
+  const firmas = cierre.filter(p => p.tipo === 'firma');
+  if (fotos.length > 0) {
+    html += `<div class="seccion-titulo">Registro fotográfico</div>`;
+    fotos.forEach(p => { html += renderItemLectura(p, respuestas); });
+  }
+  if (firmas.length > 0) {
+    html += `<div class="seccion-titulo">Firmas del operador</div>`;
+    firmas.forEach(p => { html += renderItemLectura(p, respuestas); });
+  }
+  return html;
+}
+
+function renderItemLectura(p, respuestas) {
+  const r = respuestas[p.id];
+  let valor = '(sin respuesta)';
+  let color = 'var(--texto-suave)';
+
+  if (r !== undefined && r !== '' && r !== null) {
+    if (p.tipo === 'opcionMultiple') {
+      valor = String(r);
+      if (r === 'Bueno' || r === 'Si' || r === 'Sí' || r === 'Realizado') color = '#27500A';
+      else if (r === 'Malo' || r === 'No' || r === 'Crítico') color = '#791F1F';
+      else if (r === 'No Aplica') color = '#444441';
+      else if (r === 'Pendiente' || r === 'Regular') color = '#633806';
+      else color = 'var(--primario-oscuro)';
+    } else if (p.tipo === 'foto' || p.tipo === 'firma') {
+      // r puede ser url(s) separadas por |
+      const urls = String(r).split('|').filter(u => u.indexOf('http') === 0);
+      if (urls.length > 0) {
+        valor = urls.map(u => `<a href="${escapeAttr(u)}" target="_blank" style="color:var(--primario)">Ver imagen</a>`).join(' · ');
+      } else {
+        valor = String(r);
+      }
+    } else {
+      valor = String(r);
+    }
+  }
+
+  // Plan de acción si lo hay
+  const plan = respuestas[p.id + '_plan'];
+  const planHtml = plan ? `<div style="margin-top:8px;padding:8px;background:#FCEBEB;border-radius:6px;font-size:13px;color:#791F1F"><b>Plan de acción:</b> ${escapeHtml(plan)}</div>` : '';
+
+  return `<div class="pregunta">
+    <div class="num-y-texto">
+      <div class="num">${(p.idx ?? 0) + 1}</div>
+      <div class="texto">${escapeHtml(p.texto)}</div>
+    </div>
+    <div style="color:${color};font-weight:600;font-size:14px">${valor}</div>
+    ${planHtml}
+  </div>`;
+}
+
+function activarFirmaSupervisor() {
+  const canvas = document.getElementById('canvasSupervisor');
+  if (!canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = 140;
+  const ctx = canvas.getContext('2d');
+  ctx.lineWidth = 2;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = '#1F2937';
+  let dibujando = false, tiene = false;
+
+  function coords(e) {
+    const r = canvas.getBoundingClientRect();
+    if (e.touches) return { x: e.touches[0].clientX - r.left, y: e.touches[0].clientY - r.top };
+    return { x: e.clientX - r.left, y: e.clientY - r.top };
+  }
+  canvas.addEventListener('mousedown', e => { e.preventDefault(); dibujando = true; const c = coords(e); ctx.beginPath(); ctx.moveTo(c.x, c.y); });
+  canvas.addEventListener('mousemove', e => { if (!dibujando) return; e.preventDefault(); const c = coords(e); ctx.lineTo(c.x, c.y); ctx.stroke(); tiene = true; });
+  const fin = () => { if (dibujando && tiene) firmaSupervisorData = canvas.toDataURL('image/png'); dibujando = false; };
+  canvas.addEventListener('mouseup', fin);
+  canvas.addEventListener('mouseleave', fin);
+  canvas.addEventListener('touchstart', e => { e.preventDefault(); dibujando = true; const c = coords(e); ctx.beginPath(); ctx.moveTo(c.x, c.y); });
+  canvas.addEventListener('touchmove', e => { if (!dibujando) return; e.preventDefault(); const c = coords(e); ctx.lineTo(c.x, c.y); ctx.stroke(); tiene = true; });
+  canvas.addEventListener('touchend', fin);
+}
+
+function limpiarFirmaSupervisor() {
+  const canvas = document.getElementById('canvasSupervisor');
+  if (canvas) canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+  firmaSupervisorData = '';
+}
+
+async function decidirValidacion(decision) {
+  if (!firmaSupervisorData) {
+    alert('Falta la firma del supervisor.');
+    return;
+  }
+  const comentario = (document.getElementById('comentarioSupervisor') || {}).value || '';
+
+  if (decision === 'Rechazado' && !comentario.trim()) {
+    alert('Para rechazar, agrega un comentario explicando el motivo.');
+    return;
+  }
+  if (!confirm(`¿Confirmas ${decision === 'Aprobado' ? 'APROBAR' : 'RECHAZAR'} este formulario?`)) return;
+
+  // Generar PDF validado: tomar el contenido + agregar página final con firma del supervisor
+  let pdfValidadoBase64 = '';
+  try {
+    pdfValidadoBase64 = generarPDFValidado(decision, comentario);
+  } catch (e) {
+    console.error('Error generando PDF validado:', e);
+  }
+
+  const payload = {
+    accion: 'validar',
+    folio: formularioRevisar.folio,
+    validadoPor: rolActual,
+    decision: decision,
+    comentario: comentario,
+    firmaSupervisor: firmaSupervisorData,
+    pdfValidadoBase64: pdfValidadoBase64,
+  };
+
+  mostrarLoading('Registrando validación...');
+  try {
+    const resp = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+    });
+    const j = await resp.json();
+    if (!j.ok) throw new Error(j.error || 'Error desconocido');
+
+    document.getElementById('folioValidadoFinal').textContent = formularioRevisar.folio;
+    document.getElementById('modalValidadoTitulo').textContent = decision === 'Aprobado' ? 'Formulario aprobado' : 'Formulario rechazado';
+    document.getElementById('modalValidadoMsg').textContent = decision === 'Aprobado'
+      ? 'Se generó el PDF validado con tu firma.'
+      : 'Quedó registrado el rechazo y el comentario.';
+    document.getElementById('modalValidado').classList.add('visible');
+  } catch (err) {
+    alert('Error al guardar la validación: ' + err.message);
+  } finally {
+    ocultarLoading();
+  }
+}
+
+function cerrarModalValidado() {
+  document.getElementById('modalValidado').classList.remove('visible');
+  formularioRevisar = null;
+  firmaSupervisorData = '';
+  renderPendientes();
+}
+
+// Genera un PDF "validado" basado en el original + página final con firma supervisor
+function generarPDFValidado(decision, comentario) {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+  const f = formularioRevisar;
+
+  // Reutilizar generarContenidoPDF si tenemos los datos suficientes
+  if (f.plantilla) {
+    const insp = {
+      folio: f.folio,
+      plantilla: f.plantilla,
+      respuestas: f.respuestas || {},
+      fechaEnvio: f.fechaInspeccion,
+      ubicacion: '',
+      estado: '',
+    };
+    try { generarContenidoPDF(doc, insp); } catch(e) { console.error(e); }
+  } else {
+    // Sin plantilla, solo cabecera mínima
+    doc.setFontSize(14);
+    doc.text('Formulario ' + f.folio, 15, 20);
+  }
+
+  // Página final: validación
+  doc.addPage();
+  doc.setFillColor(24, 95, 165);
+  doc.rect(0, 0, 210, 25, 'F');
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(16);
+  doc.setFont('helvetica', 'bold');
+  doc.text('VALIDACIÓN DE SUPERVISOR', 15, 12);
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'normal');
+  doc.text('Geotec Boyles Bros', 15, 19);
+
+  let y = 40;
+  doc.setTextColor(31, 41, 55);
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Folio:', 15, y);
+  doc.setFont('helvetica', 'normal');
+  doc.text(f.folio, 35, y);
+  y += 7;
+
+  doc.setFont('helvetica', 'bold');
+  doc.text('Decisión:', 15, y);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(decision === 'Aprobado' ? 99 : 163, decision === 'Aprobado' ? 153 : 45, decision === 'Aprobado' ? 34 : 45);
+  doc.text(decision.toUpperCase(), 40, y);
+  y += 7;
+
+  doc.setTextColor(31, 41, 55);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Validado por:', 15, y);
+  doc.setFont('helvetica', 'normal');
+  doc.text(rolActual, 45, y);
+  y += 7;
+
+  doc.setFont('helvetica', 'bold');
+  doc.text('Fecha:', 15, y);
+  doc.setFont('helvetica', 'normal');
+  doc.text(new Date().toLocaleString('es-CL'), 35, y);
+  y += 10;
+
+  if (comentario) {
+    doc.setFont('helvetica', 'bold');
+    doc.text('Comentario del supervisor:', 15, y);
+    y += 6;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    const lineas = doc.splitTextToSize(comentario, 180);
+    doc.text(lineas, 15, y);
+    y += (lineas.length * 5) + 8;
+  }
+
+  // Firma supervisor
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Firma del supervisor:', 15, y);
+  y += 5;
+  if (firmaSupervisorData) {
+    try { doc.addImage(firmaSupervisorData, 'PNG', 15, y, 80, 30); } catch(e) {}
+  }
+
+  return doc.output('datauristring');
+}
+
+
 document.addEventListener('DOMContentLoaded', cargarApp);
 </script>
 </body>
